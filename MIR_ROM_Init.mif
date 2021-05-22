@@ -1,0 +1,48 @@
+-- Copyright (C) 2020  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and any partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details, at
+-- https://fpgasoftware.intel.com/eula.
+
+-- Quartus Prime generated Memory Initialization File (.mif)
+
+DEPTH = 128;            -- The size of memory in words
+WIDTH = 33;             -- The size of data in bits
+ADDRESS_RADIX = BIN;    -- The radix for address values
+DATA_RADIX = BIN;       -- The radix for data values
+
+CONTENT                 -- start of (address : data pairs)
+BEGIN
+[1000000 .. 1001111]    :	000000000000000100011100000000000;   -- JMP X
+[1010000 .. 1011111]    :	000000000000000100011100000100000;   -- JZE X
+[1100000 .. 1101111]    :	000000000000000100011100000100000;   -- JNE X
+[1110000 .. 1111111]    :	000000000000000100011101000000000;   -- JCY X
+[0100000 .. 0100111]    :	000000011000000100011000000100000;   -- MOM Y,W
+[0101000 .. 0101111]    :	000000000000000100011000001000000;   -- MOM W,Y
+[0110000 .. 0110111]    :	010100000100010000000011110100000;   -- ADW Ri,Rj
+[0111000 .. 0111111]    :	000000000000000100011100000000000;   -- BSR S
+[0010000 .. 0010111]    :	000000000000000000000000110000000;   -- MOV Ri,Rj ; MOV POi,Rj ; MOV Ri,POj
+[0011000 .. 0011111]    :	000100000100010000000000100100000;   -- MOV Ri,W  ; MOV POi,W
+[0001000 .. 0001001]    :	000000100000000100010000001000000;   -- MOK W,#K
+[0001010 .. 0001011]    :	011100100100010100010000001100000;   -- ANK W,#K
+[0001100 .. 0001101]    :	011000100100010100010000001100000;   -- ORK W,#K
+[0001110 .. 0001111]    :	010100100100010100010011001100000;   -- ADK W,#K
+0000100	                :   000000000000000100010000011000000;   -- MOV W,Rj  ; MOV W,PIj
+0000101	                :   011100000100010100010000011100000;   -- ANR W,Rj
+0000110             	:   011000000100010100010000011100000;   -- ORR W,Rj
+0000111	                :   010100000100010100010011011100000;   -- ADR W,Rj
+0000000	                :   001100000100010100010000001100000;   -- CPL W
+0000001	                :   101100000000000100011010000000000;   -- CLR CY
+0000010	                :   110000000000000100011010000000000;   -- SET CY
+0000011	                :   000000000000000100011100000000000;   -- RET
+
+END;
