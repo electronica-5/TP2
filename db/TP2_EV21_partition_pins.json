@@ -4,171 +4,171 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "mir_out[32]",
+					"name" : "MI[32]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[31]",
+					"name" : "MI[31]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[30]",
+					"name" : "MI[30]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[29]",
+					"name" : "MI[29]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[28]",
+					"name" : "MI[28]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[27]",
+					"name" : "MI[27]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[26]",
+					"name" : "MI[26]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[25]",
+					"name" : "MI[25]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[24]",
+					"name" : "MI[24]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[23]",
+					"name" : "MI[23]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[22]",
+					"name" : "MI[22]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[21]",
+					"name" : "MI[21]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[20]",
+					"name" : "MI[20]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[19]",
+					"name" : "MI[19]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[18]",
+					"name" : "MI[18]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[17]",
+					"name" : "MI[17]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[16]",
+					"name" : "MI[16]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[15]",
+					"name" : "MI[15]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[14]",
+					"name" : "MI[14]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[13]",
+					"name" : "MI[13]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[12]",
+					"name" : "MI[12]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[11]",
+					"name" : "MI[11]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[10]",
+					"name" : "MI[10]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[9]",
+					"name" : "MI[9]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[8]",
+					"name" : "MI[8]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[7]",
+					"name" : "MI[7]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[6]",
+					"name" : "MI[6]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[5]",
+					"name" : "MI[5]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[4]",
+					"name" : "MI[4]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[3]",
+					"name" : "MI[3]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[2]",
+					"name" : "MI[2]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[1]",
+					"name" : "MI[1]",
 					"strict" : false
 				},
 				{
-					"name" : "mir_out[0]",
+					"name" : "MI[0]",
 					"strict" : false
 				},
 				{
-					"name" : "en",
+					"name" : "E",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "Clk1",
 					"strict" : false
 				},
 				{
-					"name" : "addr[0]",
+					"name" : "B[0]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[1]",
+					"name" : "B[1]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[2]",
+					"name" : "B[2]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[3]",
+					"name" : "B[3]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[4]",
+					"name" : "B[4]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[5]",
+					"name" : "B[5]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[6]",
+					"name" : "B[6]",
 					"strict" : false
 				}
 			]

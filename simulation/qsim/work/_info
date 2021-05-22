@@ -10,23 +10,23 @@ z2
 cModel Technology
 Z0 dC:/Users/lisan/Documents/GitHub/Electronica_5/TP2/simulation/qsim
 vhard_block
-Z1 !s110 1621664955
+Z1 !s110 1621714444
 !i10b 1
 !s100 I[c]faffT[8]V^_kG>8J^3
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
 I_eYgPM9mP1^D9?HziG89l3
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z4 w1621664954
+Z4 w1621714443
 Z5 8TP2_EV21.vo
 Z6 FTP2_EV21.vo
-!i122 14
+!i122 22
 L0 838 34
 Z7 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z8 !s108 1621664955.000000
+Z8 !s108 1621714444.000000
 Z9 !s107 TP2_EV21.vo|
 Z10 !s90 -work|work|TP2_EV21.vo|
 !i113 1
@@ -35,15 +35,15 @@ Z12 tCvgOpt 0
 vTP2_EV21
 R1
 !i10b 1
-!s100 _=iQN18Czm4OQFaaTQK><2
+!s100 fobFK;>djGK`Obzm;ei1Y3
 R2
-I:JgkCLJYUXi8Y8YH[:Khf3
+I05UCzSN`IMYHe@N;NSN_W2
 R3
 R0
 R4
 R5
 R6
-!i122 14
+!i122 22
 L0 32 805
 R7
 r1
@@ -59,16 +59,16 @@ n@t@p2_@e@v21
 vTP2_EV21_vlg_vec_tst
 R1
 !i10b 1
-!s100 =?O?NEdHhBBU@T9DSnRfJ3
+!s100 HRkY845kK2Gm=jfg7E?Ek0
 R2
-IY<@<`bV688TBDj3TIb8J]0
+I0nROM@>QTaFc1@S=Bi_BE3
 R3
 R0
-w1621664953
+R4
 8Waveform1.vwf.vt
 FWaveform1.vwf.vt
-!i122 15
-L0 30 85
+!i122 23
+L0 30 108
 R7
 r1
 !s85 0

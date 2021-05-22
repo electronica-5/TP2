@@ -1,0 +1,5 @@
+function pattern_table(addr, data, out, mode)
+	input addr, data, mode;
+	output out;
+	
+end;

@@ -1,37 +1,82 @@
 |TP2_EV21
-mir_out[0] <= LPM_ROM:MIR_ROM.q[0]
-mir_out[1] <= LPM_ROM:MIR_ROM.q[1]
-mir_out[2] <= LPM_ROM:MIR_ROM.q[2]
-mir_out[3] <= LPM_ROM:MIR_ROM.q[3]
-mir_out[4] <= LPM_ROM:MIR_ROM.q[4]
-mir_out[5] <= LPM_ROM:MIR_ROM.q[5]
-mir_out[6] <= LPM_ROM:MIR_ROM.q[6]
-mir_out[7] <= LPM_ROM:MIR_ROM.q[7]
-mir_out[8] <= LPM_ROM:MIR_ROM.q[8]
-mir_out[9] <= LPM_ROM:MIR_ROM.q[9]
-mir_out[10] <= LPM_ROM:MIR_ROM.q[10]
-mir_out[11] <= LPM_ROM:MIR_ROM.q[11]
-mir_out[12] <= LPM_ROM:MIR_ROM.q[12]
-mir_out[13] <= LPM_ROM:MIR_ROM.q[13]
-mir_out[14] <= LPM_ROM:MIR_ROM.q[14]
-mir_out[15] <= LPM_ROM:MIR_ROM.q[15]
-mir_out[16] <= LPM_ROM:MIR_ROM.q[16]
-mir_out[17] <= LPM_ROM:MIR_ROM.q[17]
-mir_out[18] <= LPM_ROM:MIR_ROM.q[18]
-mir_out[19] <= LPM_ROM:MIR_ROM.q[19]
-mir_out[20] <= LPM_ROM:MIR_ROM.q[20]
-mir_out[21] <= LPM_ROM:MIR_ROM.q[21]
-mir_out[22] <= LPM_ROM:MIR_ROM.q[22]
-mir_out[23] <= LPM_ROM:MIR_ROM.q[23]
-mir_out[24] <= LPM_ROM:MIR_ROM.q[24]
-mir_out[25] <= LPM_ROM:MIR_ROM.q[25]
-mir_out[26] <= LPM_ROM:MIR_ROM.q[26]
-mir_out[27] <= LPM_ROM:MIR_ROM.q[27]
-mir_out[28] <= LPM_ROM:MIR_ROM.q[28]
-mir_out[29] <= LPM_ROM:MIR_ROM.q[29]
-mir_out[30] <= LPM_ROM:MIR_ROM.q[30]
-mir_out[31] <= LPM_ROM:MIR_ROM.q[31]
-mir_out[32] <= LPM_ROM:MIR_ROM.q[32]
+MI[0] <= MIR_ROM:inst.q[0]
+MI[1] <= MIR_ROM:inst.q[1]
+MI[2] <= MIR_ROM:inst.q[2]
+MI[3] <= MIR_ROM:inst.q[3]
+MI[4] <= MIR_ROM:inst.q[4]
+MI[5] <= MIR_ROM:inst.q[5]
+MI[6] <= MIR_ROM:inst.q[6]
+MI[7] <= MIR_ROM:inst.q[7]
+MI[8] <= MIR_ROM:inst.q[8]
+MI[9] <= MIR_ROM:inst.q[9]
+MI[10] <= MIR_ROM:inst.q[10]
+MI[11] <= MIR_ROM:inst.q[11]
+MI[12] <= MIR_ROM:inst.q[12]
+MI[13] <= MIR_ROM:inst.q[13]
+MI[14] <= MIR_ROM:inst.q[14]
+MI[15] <= MIR_ROM:inst.q[15]
+MI[16] <= MIR_ROM:inst.q[16]
+MI[17] <= MIR_ROM:inst.q[17]
+MI[18] <= MIR_ROM:inst.q[18]
+MI[19] <= MIR_ROM:inst.q[19]
+MI[20] <= MIR_ROM:inst.q[20]
+MI[21] <= MIR_ROM:inst.q[21]
+MI[22] <= MIR_ROM:inst.q[22]
+MI[23] <= MIR_ROM:inst.q[23]
+MI[24] <= MIR_ROM:inst.q[24]
+MI[25] <= MIR_ROM:inst.q[25]
+MI[26] <= MIR_ROM:inst.q[26]
+MI[27] <= MIR_ROM:inst.q[27]
+MI[28] <= MIR_ROM:inst.q[28]
+MI[29] <= MIR_ROM:inst.q[29]
+MI[30] <= MIR_ROM:inst.q[30]
+MI[31] <= MIR_ROM:inst.q[31]
+MI[32] <= MIR_ROM:inst.q[32]
+Clk1 => MIR_ROM:inst.clk
+E => MIR_ROM:inst.en
+B[0] => MIR_ROM:inst.addr[0]
+B[1] => MIR_ROM:inst.addr[1]
+B[2] => MIR_ROM:inst.addr[2]
+B[3] => MIR_ROM:inst.addr[3]
+B[4] => MIR_ROM:inst.addr[4]
+B[5] => MIR_ROM:inst.addr[5]
+B[6] => MIR_ROM:inst.addr[6]
+
+
+|TP2_EV21|MIR_ROM:inst
+q[0] <= LPM_ROM:MIR_ROM.q[0]
+q[1] <= LPM_ROM:MIR_ROM.q[1]
+q[2] <= LPM_ROM:MIR_ROM.q[2]
+q[3] <= LPM_ROM:MIR_ROM.q[3]
+q[4] <= LPM_ROM:MIR_ROM.q[4]
+q[5] <= LPM_ROM:MIR_ROM.q[5]
+q[6] <= LPM_ROM:MIR_ROM.q[6]
+q[7] <= LPM_ROM:MIR_ROM.q[7]
+q[8] <= LPM_ROM:MIR_ROM.q[8]
+q[9] <= LPM_ROM:MIR_ROM.q[9]
+q[10] <= LPM_ROM:MIR_ROM.q[10]
+q[11] <= LPM_ROM:MIR_ROM.q[11]
+q[12] <= LPM_ROM:MIR_ROM.q[12]
+q[13] <= LPM_ROM:MIR_ROM.q[13]
+q[14] <= LPM_ROM:MIR_ROM.q[14]
+q[15] <= LPM_ROM:MIR_ROM.q[15]
+q[16] <= LPM_ROM:MIR_ROM.q[16]
+q[17] <= LPM_ROM:MIR_ROM.q[17]
+q[18] <= LPM_ROM:MIR_ROM.q[18]
+q[19] <= LPM_ROM:MIR_ROM.q[19]
+q[20] <= LPM_ROM:MIR_ROM.q[20]
+q[21] <= LPM_ROM:MIR_ROM.q[21]
+q[22] <= LPM_ROM:MIR_ROM.q[22]
+q[23] <= LPM_ROM:MIR_ROM.q[23]
+q[24] <= LPM_ROM:MIR_ROM.q[24]
+q[25] <= LPM_ROM:MIR_ROM.q[25]
+q[26] <= LPM_ROM:MIR_ROM.q[26]
+q[27] <= LPM_ROM:MIR_ROM.q[27]
+q[28] <= LPM_ROM:MIR_ROM.q[28]
+q[29] <= LPM_ROM:MIR_ROM.q[29]
+q[30] <= LPM_ROM:MIR_ROM.q[30]
+q[31] <= LPM_ROM:MIR_ROM.q[31]
+q[32] <= LPM_ROM:MIR_ROM.q[32]
 clk => LPM_ROM:MIR_ROM.inclock
 clk => inst.IN0
 en => LPM_ROM:MIR_ROM.memenab
@@ -44,7 +89,7 @@ addr[5] => LPM_ROM:MIR_ROM.address[5]
 addr[6] => LPM_ROM:MIR_ROM.address[6]
 
 
-|TP2_EV21|LPM_ROM:MIR_ROM
+|TP2_EV21|MIR_ROM:inst|LPM_ROM:MIR_ROM
 address[0] => altrom:srom.address[0]
 address[1] => altrom:srom.address[1]
 address[2] => altrom:srom.address[2]
@@ -122,7 +167,7 @@ q[31] <= otri[31].DB_MAX_OUTPUT_PORT_TYPE
 q[32] <= otri[32].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TP2_EV21|LPM_ROM:MIR_ROM|altrom:srom
+|TP2_EV21|MIR_ROM:inst|LPM_ROM:MIR_ROM|altrom:srom
 address[0] => altsyncram:rom_block.address_a[0]
 address[1] => altsyncram:rom_block.address_a[1]
 address[2] => altsyncram:rom_block.address_a[2]
@@ -167,7 +212,7 @@ q[31] <= altsyncram:rom_block.q_a[31]
 q[32] <= altsyncram:rom_block.q_a[32]
 
 
-|TP2_EV21|LPM_ROM:MIR_ROM|altrom:srom|altsyncram:rom_block
+|TP2_EV21|MIR_ROM:inst|LPM_ROM:MIR_ROM|altrom:srom|altsyncram:rom_block
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -265,7 +310,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|TP2_EV21|LPM_ROM:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated
+|TP2_EV21|MIR_ROM:inst|LPM_ROM:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR

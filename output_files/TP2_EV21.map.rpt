@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TP2_EV21
-Sat May 22 03:19:13 2021
+Sat May 22 17:10:27 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -15,8 +15,8 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. General Register Statistics
- 10. Source assignments for LPM_ROM:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated
- 11. Parameter Settings for User Entity Instance: LPM_ROM:MIR_ROM
+ 10. Source assignments for MIR_ROM:inst|LPM_ROM:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated
+ 11. Parameter Settings for User Entity Instance: MIR_ROM:inst|LPM_ROM:MIR_ROM
  12. Post-Synthesis Netlist Statistics for Top Partition
  13. Elapsed Time Per Partition
  14. Analysis & Synthesis Messages
@@ -46,7 +46,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May 22 03:19:13 2021       ;
+; Analysis & Synthesis Status        ; Successful - Sat May 22 17:10:27 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; TP2_EV21                                    ;
 ; Top-level Entity Name              ; TP2_EV21                                    ;
@@ -171,6 +171,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------+---------+
 ; MIR_ROM_Init.mif                 ; yes             ; User Memory Initialization File    ; C:/Users/lisan/Documents/GitHub/Electronica_5/TP2/MIR_ROM_Init.mif           ;         ;
 ; TP2_EV21.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/lisan/Documents/GitHub/Electronica_5/TP2/TP2_EV21.bdf               ;         ;
+; MIR_ROM.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/lisan/Documents/GitHub/Electronica_5/TP2/MIR_ROM.bdf                ;         ;
 ; lpm_rom.tdf                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf           ;         ;
 ; altrom.inc                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; aglobal201.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc        ;         ;
@@ -188,59 +189,60 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-;                                             ;          ;
-; Total combinational functions               ; 0        ;
-; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 0        ;
-;     -- 3 input functions                    ; 0        ;
-;     -- <=2 input functions                  ; 0        ;
-;                                             ;          ;
-; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 0        ;
-;     -- arithmetic mode                      ; 0        ;
-;                                             ;          ;
-; Total registers                             ; 0        ;
-;     -- Dedicated logic registers            ; 0        ;
-;     -- I/O registers                        ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 42       ;
-; Total memory bits                           ; 4224     ;
-;                                             ;          ;
-; Embedded Multiplier 9-bit elements          ; 0        ;
-;                                             ;          ;
-; Maximum fan-out node                        ; en~input ;
-; Maximum fan-out                             ; 33       ;
-; Total fan-out                               ; 372      ;
-; Average fan-out                             ; 3.18     ;
-+---------------------------------------------+----------+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+;                                             ;         ;
+; Total combinational functions               ; 0       ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 0       ;
+;     -- 3 input functions                    ; 0       ;
+;     -- <=2 input functions                  ; 0       ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 0       ;
+;     -- arithmetic mode                      ; 0       ;
+;                                             ;         ;
+; Total registers                             ; 0       ;
+;     -- Dedicated logic registers            ; 0       ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 42      ;
+; Total memory bits                           ; 4224    ;
+;                                             ;         ;
+; Embedded Multiplier 9-bit elements          ; 0       ;
+;                                             ;         ;
+; Maximum fan-out node                        ; E~input ;
+; Maximum fan-out                             ; 33      ;
+; Total fan-out                               ; 372     ;
+; Average fan-out                             ; 3.18    ;
++---------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                  ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                       ; Entity Name     ; Library Name ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------+-----------------+--------------+
-; |TP2_EV21                                    ; 0 (0)               ; 0 (0)                     ; 4224        ; 0            ; 0       ; 0         ; 42   ; 0            ; |TP2_EV21                                                                                 ; TP2_EV21        ; work         ;
-;    |lpm_rom:MIR_ROM|                         ; 0 (0)               ; 0 (0)                     ; 4224        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP2_EV21|lpm_rom:MIR_ROM                                                                 ; lpm_rom         ; work         ;
-;       |altrom:srom|                          ; 0 (0)               ; 0 (0)                     ; 4224        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP2_EV21|lpm_rom:MIR_ROM|altrom:srom                                                     ; altrom          ; work         ;
-;          |altsyncram:rom_block|              ; 0 (0)               ; 0 (0)                     ; 4224        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP2_EV21|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block                                ; altsyncram      ; work         ;
-;             |altsyncram_cq01:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4224        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP2_EV21|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated ; altsyncram_cq01 ; work         ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------+-----------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                  ;
++-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                    ; Entity Name     ; Library Name ;
++-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |TP2_EV21                                       ; 0 (0)               ; 0 (0)                     ; 4224        ; 0            ; 0       ; 0         ; 42   ; 0            ; |TP2_EV21                                                                                              ; TP2_EV21        ; work         ;
+;    |MIR_ROM:inst|                               ; 0 (0)               ; 0 (0)                     ; 4224        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP2_EV21|MIR_ROM:inst                                                                                 ; MIR_ROM         ; work         ;
+;       |lpm_rom:MIR_ROM|                         ; 0 (0)               ; 0 (0)                     ; 4224        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP2_EV21|MIR_ROM:inst|lpm_rom:MIR_ROM                                                                 ; lpm_rom         ; work         ;
+;          |altrom:srom|                          ; 0 (0)               ; 0 (0)                     ; 4224        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP2_EV21|MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom                                                     ; altrom          ; work         ;
+;             |altsyncram:rom_block|              ; 0 (0)               ; 0 (0)                     ; 4224        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP2_EV21|MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block                                ; altsyncram      ; work         ;
+;                |altsyncram_cq01:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4224        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP2_EV21|MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated ; altsyncram_cq01 ; work         ;
++-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                               ;
-+--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------+
-; Name                                                                                       ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF              ;
-+--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------+
-; lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 128          ; 33           ; --           ; --           ; 4224 ; MIR_ROM_Init.mif ;
-+--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                            ;
++---------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------+
+; Name                                                                                                    ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF              ;
++---------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------+
+; MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 128          ; 33           ; --           ; --           ; 4224 ; MIR_ROM_Init.mif ;
++---------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------+
 
 
 +------------------------------------------------------+
@@ -258,32 +260,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Source assignments for LPM_ROM:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated ;
-+---------------------------------+--------------------+------+------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                       ;
-+---------------------------------+--------------------+------+------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                        ;
-+---------------------------------+--------------------+------+------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------+
+; Source assignments for MIR_ROM:inst|LPM_ROM:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                    ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                     ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
 
 
-+--------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: LPM_ROM:MIR_ROM ;
-+------------------------+------------------+------------------+
-; Parameter Name         ; Value            ; Type             ;
-+------------------------+------------------+------------------+
-; LPM_WIDTH              ; 33               ; Untyped          ;
-; LPM_WIDTHAD            ; 7                ; Untyped          ;
-; LPM_NUMWORDS           ; 128              ; Untyped          ;
-; LPM_ADDRESS_CONTROL    ; REGISTERED       ; Untyped          ;
-; LPM_OUTDATA            ; REGISTERED       ; Untyped          ;
-; LPM_FILE               ; MIR_ROM_Init.mif ; Untyped          ;
-; DEVICE_FAMILY          ; Cyclone IV E     ; Untyped          ;
-; AUTO_CARRY_CHAINS      ; ON               ; AUTO_CARRY       ;
-; IGNORE_CARRY_BUFFERS   ; OFF              ; IGNORE_CARRY     ;
-; AUTO_CASCADE_CHAINS    ; ON               ; AUTO_CASCADE     ;
-; IGNORE_CASCADE_BUFFERS ; OFF              ; IGNORE_CASCADE   ;
-+------------------------+------------------+------------------+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MIR_ROM:inst|LPM_ROM:MIR_ROM ;
++------------------------+------------------+-------------------------------+
+; Parameter Name         ; Value            ; Type                          ;
++------------------------+------------------+-------------------------------+
+; LPM_WIDTH              ; 33               ; Untyped                       ;
+; LPM_WIDTHAD            ; 7                ; Untyped                       ;
+; LPM_NUMWORDS           ; 128              ; Untyped                       ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED       ; Untyped                       ;
+; LPM_OUTDATA            ; REGISTERED       ; Untyped                       ;
+; LPM_FILE               ; MIR_ROM_Init.mif ; Untyped                       ;
+; DEVICE_FAMILY          ; Cyclone IV E     ; Untyped                       ;
+; AUTO_CARRY_CHAINS      ; ON               ; AUTO_CARRY                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF              ; IGNORE_CARRY                  ;
+; AUTO_CASCADE_CHAINS    ; ON               ; AUTO_CASCADE                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF              ; IGNORE_CASCADE                ;
++------------------------+------------------+-------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -316,28 +318,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat May 22 03:19:05 2021
+    Info: Processing started: Sat May 22 17:10:19 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TP2_EV21 -c TP2_EV21
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file tp2_ev21.bdf
     Info (12023): Found entity 1: TP2_EV21
+Info (12021): Found 1 design units, including 1 entities, in source file mir_rom.bdf
+    Info (12023): Found entity 1: MIR_ROM
 Info (12127): Elaborating entity "TP2_EV21" for the top level hierarchy
+Info (12128): Elaborating entity "MIR_ROM" for hierarchy "MIR_ROM:inst"
 Warning (275006): Can't find a definition for parameter LPM_FILE -- assuming MIR_ROM_Init.mif was intended to be a quoted string
-Info (12128): Elaborating entity "LPM_ROM" for hierarchy "LPM_ROM:MIR_ROM"
-Info (12130): Elaborated megafunction instantiation "LPM_ROM:MIR_ROM"
-Info (12133): Instantiated megafunction "LPM_ROM:MIR_ROM" with the following parameter:
+Info (12128): Elaborating entity "LPM_ROM" for hierarchy "MIR_ROM:inst|LPM_ROM:MIR_ROM"
+Info (12130): Elaborated megafunction instantiation "MIR_ROM:inst|LPM_ROM:MIR_ROM"
+Info (12133): Instantiated megafunction "MIR_ROM:inst|LPM_ROM:MIR_ROM" with the following parameter:
     Info (12134): Parameter "LPM_FILE" = "MIR_ROM_Init.mif"
     Info (12134): Parameter "LPM_NUMWORDS" = "128"
     Info (12134): Parameter "LPM_WIDTH" = "33"
     Info (12134): Parameter "LPM_WIDTHAD" = "7"
-Info (12128): Elaborating entity "altrom" for hierarchy "LPM_ROM:MIR_ROM|altrom:srom" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 55
-Info (12131): Elaborated megafunction instantiation "LPM_ROM:MIR_ROM|altrom:srom", which is child of megafunction instantiation "LPM_ROM:MIR_ROM" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 55
-Info (12128): Elaborating entity "altsyncram" for hierarchy "LPM_ROM:MIR_ROM|altrom:srom|altsyncram:rom_block" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.tdf Line: 89
-Info (12131): Elaborated megafunction instantiation "LPM_ROM:MIR_ROM|altrom:srom|altsyncram:rom_block", which is child of megafunction instantiation "LPM_ROM:MIR_ROM" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.tdf Line: 89
+Info (12128): Elaborating entity "altrom" for hierarchy "MIR_ROM:inst|LPM_ROM:MIR_ROM|altrom:srom" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 55
+Info (12131): Elaborated megafunction instantiation "MIR_ROM:inst|LPM_ROM:MIR_ROM|altrom:srom", which is child of megafunction instantiation "MIR_ROM:inst|LPM_ROM:MIR_ROM" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 55
+Info (12128): Elaborating entity "altsyncram" for hierarchy "MIR_ROM:inst|LPM_ROM:MIR_ROM|altrom:srom|altsyncram:rom_block" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.tdf Line: 89
+Info (12131): Elaborated megafunction instantiation "MIR_ROM:inst|LPM_ROM:MIR_ROM|altrom:srom|altsyncram:rom_block", which is child of megafunction instantiation "MIR_ROM:inst|LPM_ROM:MIR_ROM" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.tdf Line: 89
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_cq01.tdf
     Info (12023): Found entity 1: altsyncram_cq01 File: C:/Users/lisan/Documents/GitHub/Electronica_5/TP2/db/altsyncram_cq01.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_cq01" for hierarchy "LPM_ROM:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "altsyncram_cq01" for hierarchy "MIR_ROM:inst|LPM_ROM:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 75 device resources after synthesis - the final resource count might be different
@@ -345,9 +350,9 @@ Info (21057): Implemented 75 device resources after synthesis - the final resour
     Info (21059): Implemented 33 output pins
     Info (21064): Implemented 33 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4738 megabytes
-    Info: Processing ended: Sat May 22 03:19:13 2021
+    Info: Peak virtual memory: 4740 megabytes
+    Info: Processing ended: Sat May 22 17:10:27 2021
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Total CPU time (on all processors): 00:00:17
 
 
