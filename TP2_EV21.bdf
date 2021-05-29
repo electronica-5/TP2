@@ -156,6 +156,28 @@ https://fpgasoftware.intel.com/eula.
 		(rectangle (rect 16 16 160 96))
 	)
 )
+(symbol
+	(rect 664 240 776 320)
+	(text "ricardo" (rect 5 0 38 12)(font "Arial" ))
+	(text "inst1" (rect 8 64 30 81)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "a" (rect 0 0 5 12)(font "Arial" ))
+		(text "a" (rect 21 27 26 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 112 32)
+		(output)
+		(text "b" (rect 0 0 5 12)(font "Arial" ))
+		(text "b" (rect 87 27 92 39)(font "Arial" ))
+		(line (pt 112 32)(pt 96 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 96 64))
+	)
+)
 (connector
 	(pt 728 104)
 	(pt 768 104)
