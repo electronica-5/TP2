@@ -1,0 +1,114 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 312 224)
+	(text "Microinstruction_1" (rect 5 0 75 12)(font "Arial" ))
+	(text "inst" (rect 8 192 20 204)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "micro_instr_ROM[32..0]" (rect 0 0 99 12)(font "Arial" ))
+		(text "micro_instr_ROM[32..0]" (rect 21 27 120 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clock" (rect 0 0 20 12)(font "Arial" ))
+		(text "clock" (rect 21 43 41 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "data_address_in[10..0]" (rect 0 0 89 12)(font "Arial" ))
+		(text "data_address_in[10..0]" (rect 21 59 110 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 296 32)
+		(output)
+		(text "alu[3..0]" (rect 0 0 30 12)(font "Arial" ))
+		(text "alu[3..0]" (rect 245 27 275 39)(font "Arial" ))
+		(line (pt 296 32)(pt 280 32)(line_width 3))
+	)
+	(port
+		(pt 296 48)
+		(output)
+		(text "shifter[1..0]" (rect 0 0 43 12)(font "Arial" ))
+		(text "shifter[1..0]" (rect 232 43 275 55)(font "Arial" ))
+		(line (pt 296 48)(pt 280 48)(line_width 3))
+	)
+	(port
+		(pt 296 64)
+		(output)
+		(text "KMx" (rect 0 0 20 12)(font "Arial" ))
+		(text "KMx" (rect 255 59 275 71)(font "Arial" ))
+		(line (pt 296 64)(pt 280 64)(line_width 1))
+	)
+	(port
+		(pt 296 80)
+		(output)
+		(text "M[1..0]" (rect 0 0 27 12)(font "Arial" ))
+		(text "M[1..0]" (rect 248 75 275 87)(font "Arial" ))
+		(line (pt 296 80)(pt 280 80)(line_width 3))
+	)
+	(port
+		(pt 296 96)
+		(output)
+		(text "B[5..0]" (rect 0 0 25 12)(font "Arial" ))
+		(text "B[5..0]" (rect 250 91 275 103)(font "Arial" ))
+		(line (pt 296 96)(pt 280 96)(line_width 3))
+	)
+	(port
+		(pt 296 112)
+		(output)
+		(text "C[5..0]" (rect 0 0 27 12)(font "Arial" ))
+		(text "C[5..0]" (rect 248 107 275 119)(font "Arial" ))
+		(line (pt 296 112)(pt 280 112)(line_width 3))
+	)
+	(port
+		(pt 296 128)
+		(output)
+		(text "T[6..0]" (rect 0 0 25 12)(font "Arial" ))
+		(text "T[6..0]" (rect 250 123 275 135)(font "Arial" ))
+		(line (pt 296 128)(pt 280 128)(line_width 3))
+	)
+	(port
+		(pt 296 144)
+		(output)
+		(text "A[4..0]" (rect 0 0 29 12)(font "Arial" ))
+		(text "A[4..0]" (rect 246 139 275 151)(font "Arial" ))
+		(line (pt 296 144)(pt 280 144)(line_width 3))
+	)
+	(port
+		(pt 296 160)
+		(output)
+		(text "data_address_out[10..0]" (rect 0 0 95 12)(font "Arial" ))
+		(text "data_address_out[10..0]" (rect 180 155 275 167)(font "Arial" ))
+		(line (pt 296 160)(pt 280 160)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 280 192)(line_width 1))
+	)
+)

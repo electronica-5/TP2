@@ -13,7 +13,7 @@ module Microinstruction_2 (
 	ALU_out,
 	SH_out,
 	C_out,
-	T_out,
+	T_out
 );
 
 /*****************************************************************
@@ -25,7 +25,7 @@ habria que chequear que en el momento inicial no flashee cualquiera.
 	input [1:0] 		SH_in;
 	input [5:0] 		C_in;
 	input [6:0] 		T_in;
-	output reg [4:0] 	ALU_out;
+	output reg [3:0] 	ALU_out;
 	output reg [1:0] 	SH_out;
 	output reg [5:0] 	C_out;
 	output reg [6:0] 	T_out;
