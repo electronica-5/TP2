@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Sat May 22 17:10:27 2021
+Analysis & Synthesis Status : Successful - Sun May 30 19:50:42 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : TP2_EV21
 Top-level Entity Name : TP2_EV21
 Family : Cyclone IV E
-Total logic elements : 0
-    Total combinational functions : 0
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 42
+Total logic elements : 107
+    Total combinational functions : 37
+    Dedicated logic registers : 91
+Total registers : 91
+Total pins : 79
 Total virtual pins : 0
-Total memory bits : 4,224
+Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0

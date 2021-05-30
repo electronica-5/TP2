@@ -4,171 +4,295 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "MI[32]",
+					"name" : "BRANCH_UPDATE",
 					"strict" : false
 				},
 				{
-					"name" : "MI[31]",
+					"name" : "KMX",
 					"strict" : false
 				},
 				{
-					"name" : "MI[30]",
+					"name" : "ALU[3]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[29]",
+					"name" : "ALU[2]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[28]",
+					"name" : "ALU[1]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[27]",
+					"name" : "ALU[0]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[26]",
+					"name" : "C[5]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[25]",
+					"name" : "C[4]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[24]",
+					"name" : "C[3]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[23]",
+					"name" : "C[2]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[22]",
+					"name" : "C[1]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[21]",
+					"name" : "C[0]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[20]",
+					"name" : "DATA_ADD_OUT[10]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[19]",
+					"name" : "DATA_ADD_OUT[9]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[18]",
+					"name" : "DATA_ADD_OUT[8]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[17]",
+					"name" : "DATA_ADD_OUT[7]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[16]",
+					"name" : "DATA_ADD_OUT[6]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[15]",
+					"name" : "DATA_ADD_OUT[5]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[14]",
+					"name" : "DATA_ADD_OUT[4]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[13]",
+					"name" : "DATA_ADD_OUT[3]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[12]",
+					"name" : "DATA_ADD_OUT[2]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[11]",
+					"name" : "DATA_ADD_OUT[1]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[10]",
+					"name" : "DATA_ADD_OUT[0]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[9]",
+					"name" : "M[1]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[8]",
+					"name" : "M[0]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[7]",
+					"name" : "SH[1]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[6]",
+					"name" : "SH[0]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[5]",
+					"name" : "T[6]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[4]",
+					"name" : "T[5]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[3]",
+					"name" : "T[4]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[2]",
+					"name" : "T[3]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[1]",
+					"name" : "T[2]",
 					"strict" : false
 				},
 				{
-					"name" : "MI[0]",
+					"name" : "T[1]",
 					"strict" : false
 				},
 				{
-					"name" : "E",
+					"name" : "T[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Clk1",
+					"name" : "CLK",
 					"strict" : false
 				},
 				{
-					"name" : "B[0]",
+					"name" : "UIROM[26]",
 					"strict" : false
 				},
 				{
-					"name" : "B[1]",
+					"name" : "DATA_ADDR_IN[10]",
 					"strict" : false
 				},
 				{
-					"name" : "B[2]",
+					"name" : "DATA_ADDR_IN[9]",
 					"strict" : false
 				},
 				{
-					"name" : "B[3]",
+					"name" : "DATA_ADDR_IN[8]",
 					"strict" : false
 				},
 				{
-					"name" : "B[4]",
+					"name" : "DATA_ADDR_IN[7]",
 					"strict" : false
 				},
 				{
-					"name" : "B[5]",
+					"name" : "DATA_ADDR_IN[6]",
 					"strict" : false
 				},
 				{
-					"name" : "B[6]",
+					"name" : "DATA_ADDR_IN[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_ADDR_IN[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_ADDR_IN[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_ADDR_IN[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_ADDR_IN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_ADDR_IN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[25]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[5]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[3]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[7]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[4]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[9]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[24]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[6]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[11]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[8]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[10]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[32]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[31]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[30]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[29]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[13]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[12]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[15]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[14]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[16]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[28]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[27]",
+					"strict" : false
+				},
+				{
+					"name" : "UIROM[17]",
 					"strict" : false
 				}
 			]

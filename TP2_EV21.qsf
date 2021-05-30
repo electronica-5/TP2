@@ -60,4 +60,5 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name BDF_FILE MIR_ROM.bdf
 set_global_assignment -name BDF_FILE Pattern_Cell.bdf
 set_global_assignment -name VERILOG_FILE Pattern_Table.v
+set_global_assignment -name BDF_FILE pipeline.bdf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
