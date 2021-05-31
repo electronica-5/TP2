@@ -1,0 +1,15 @@
+module CYBlock (CLK, ALUC, CY_IN, CY_OUT);
+
+	input CLK, CY_OUT;
+	input [3:0] ALUC;
+		
+	output CY_IN;
+	
+	always @ (posedge CLK)
+	begin
+	
+	
+	
+	end
+		
+endmodule 

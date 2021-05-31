@@ -1,0 +1,35 @@
+module ALU (CLK, A, B, ALUC, CY_IN, CY_OUT, OUT);
+
+	input CLK, CY_IN;
+	input [15:0] A,B;
+	input [3:0] ALUC;
+	
+	output CY_OUT;
+	output reg [15:0] OUT;
+
+
+	always @ (posedge CLK)
+	begin
+	
+		case (ALUC)
+		
+			0:  OUT = A;
+			1:	 OUT = B;
+			2:  OUT = ~A;
+			3:	 OUT = ~B;
+			4:  OUT = A;
+			5:  OUT = A;
+			6:  OUT = A | B;
+			7:	 OUT = A & B;
+			8:  OUT = 16'd0;
+			9:  OUT = 16'd1;
+			10: OUT = 16'hFFFF;
+			11: CY_OUT = 1'b0;
+			12: CY_OUT = 1'b1;
+			default: OUT = 16'd0;
+			
+		endcase
+		
+
+
+endmodule 

@@ -1,0 +1,27 @@
+
+//Logic shift
+
+module ALU (IN, SH, OUT);
+
+	input [15:0] IN;
+	input [1:0] SH;
+	
+	output reg [15:0] OUT;
+
+	always @ (SH)
+	begin
+	
+		case (SH)
+		
+			0:  OUT = IN; //No Shift
+			1:	 OUT = {1'b0, IN[15:1]}; //Shift Right
+			2:  OUT = {IN[14:0], 1'b0}; //Shift Left
+
+			default: OUT = IN; //No Shift
+			
+		endcase
+	end
+		
+
+
+endmodule 
