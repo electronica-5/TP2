@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off TP2_EV21 -c TP2_EV21 --vector_source="C:/Users/Ian Diaz/Desktop/E5/TP2/Waveform2.vwf" --testbench_file="C:/Users/Ian Diaz/Desktop/E5/TP2/simulation/qsim/Waveform2.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off TP2_EV21 -c TP2_EV21 --vector_source="C:/Users/Ian Diaz/Desktop/E5/TP2/Waveform4.vwf" --testbench_file="C:/Users/Ian Diaz/Desktop/E5/TP2/simulation/qsim/Waveform4.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,8 +26,8 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Sun May 30 20:17:05 2021
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off TP2_EV21 -c TP2_EV21 --vector_source="C:/Users/Ian Diaz/Desktop/E5/TP2/Waveform2.vwf" --testbench_file="C:/Users/Ian Diaz/Desktop/E5/TP2/simulation/qsim/Waveform2.vwf.vt"
+    Info: Processing started: Mon May 31 13:52:12 2021
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off TP2_EV21 -c TP2_EV21 --vector_source="C:/Users/Ian Diaz/Desktop/E5/TP2/Waveform4.vwf" --testbench_file="C:/Users/Ian Diaz/Desktop/E5/TP2/simulation/qsim/Waveform4.vwf.vt"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
 ile when writing test bench files
@@ -57,14 +57,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Sun May 30 20:17:07 2021
+    Info: Processing started: Mon May 31 13:52:16 2021
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Ian Diaz/Desktop/E5/TP2/simulation/qsim/" TP2_EV21 -c TP2_EV21
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file TP2_EV21.vo in folder "C:/Users/Ian Diaz/Desktop/E5/TP2/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4633 megabytes
-    Info: Processing ended: Sun May 30 20:17:08 2021
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4631 megabytes
+    Info: Processing ended: Mon May 31 13:52:18 2021
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
@@ -81,6 +81,7 @@ c:/intelfpga_lite/20.1/modelsim_ase/win32aloem//vsim -c -do TP2_EV21.do
 
 Reading pref.tcl
 
+
 # 2020.1
 
 
@@ -89,59 +90,61 @@ Reading pref.tcl
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:17:11 on May 30,2021
+# Start time: 13:52:22 on May 31,2021
 # vlog -work work TP2_EV21.vo 
+
 # -- Compiling module TP2_EV21
 
 # -- Compiling module hard_block
 # 
 # Top level modules:
 # 	TP2_EV21
-# End time: 20:17:11 on May 30,2021, Elapsed time: 0:00:00
+
+# End time: 13:52:22 on May 31,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:17:11 on May 30,2021
-# vlog -work work Waveform2.vwf.vt 
+# Start time: 13:52:22 on May 31,2021
+# vlog -work work Waveform4.vwf.vt 
+
 # -- Compiling module TP2_EV21_vlg_vec_tst
 # 
 # Top level modules:
 # 	TP2_EV21_vlg_vec_tst
 
-# End time: 20:17:11 on May 30,2021, Elapsed time: 0:00:00
+# End time: 13:52:23 on May 31,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.TP2_EV21_vlg_vec_tst 
-# Start time: 20:17:11 on May 30,2021
+# Start time: 13:52:23 on May 31,2021
 # Loading work.TP2_EV21_vlg_vec_tst
 # Loading work.TP2_EV21
 # Loading work.hard_block
 # Loading cycloneive_ver.cycloneive_io_obuf
 # Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
 # Loading cycloneive_ver.cycloneive_clkctrl
 # Loading cycloneive_ver.cycloneive_mux41
 # Loading cycloneive_ver.cycloneive_ena_reg
-# Loading cycloneive_ver.cycloneive_lcell_comb
-# Loading altera_ver.dffeas
 # Loading altera_ver.PRIM_GDFF_LOW
 # after#26
-# ** Note: $finish    : Waveform2.vwf.vt(63)
-#    Time: 10 us  Iteration: 0  Instance: /TP2_EV21_vlg_vec_tst
-
-# End time: 20:17:12 on May 30,2021, Elapsed time: 0:00:01
+# ** Note: $finish    : Waveform4.vwf.vt(67)
+#    Time: 1 us  Iteration: 0  Instance: /TP2_EV21_vlg_vec_tst
+# End time: 13:52:25 on May 31,2021, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/Ian Diaz/Desktop/E5/TP2/Waveform2.vwf...
+Reading C:/Users/Ian Diaz/Desktop/E5/TP2/Waveform4.vwf...
 
 Reading C:/Users/Ian Diaz/Desktop/E5/TP2/simulation/qsim/TP2_EV21.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/Ian Diaz/Desktop/E5/TP2/simulation/qsim/TP2_EV21_20210530201712.sim.vwf
+Writing the resulting VWF to C:/Users/Ian Diaz/Desktop/E5/TP2/simulation/qsim/TP2_EV21_20210531135225.sim.vwf
 
 Finished VCD to VWF conversion.
 

@@ -31,7 +31,7 @@ habria que chequear que en el momento inicial no flashee cualquiera.
 	output reg [6:0] 	T_out;
 	
 
-	always @(posedge clock) 
+	always @* 
 	begin
 		ALU_out	=	ALU_in;
 		SH_out	=	SH_in;

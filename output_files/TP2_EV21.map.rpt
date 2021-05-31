@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TP2_EV21
-Sun May 30 19:50:42 2021
+Mon May 31 13:34:45 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -14,13 +14,11 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Source assignments for MIR_ROM:inst|LPM_ROM:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated
- 10. Parameter Settings for User Entity Instance: pipeline:TEST_PIPELINE|UC2:inst
- 11. Parameter Settings for User Entity Instance: pipeline:TEST_PIPELINE|UC1:inst6
- 12. Parameter Settings for User Entity Instance: MIR_ROM:inst|LPM_ROM:MIR_ROM
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: pipeline:inst|UC2:inst8
+ 10. Parameter Settings for User Entity Instance: pipeline:inst|UC1:inst4
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -47,16 +45,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun May 30 19:50:42 2021       ;
+; Analysis & Synthesis Status        ; Successful - Mon May 31 13:34:45 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; TP2_EV21                                    ;
 ; Top-level Entity Name              ; TP2_EV21                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 107                                         ;
-;     Total combinational functions  ; 37                                          ;
-;     Dedicated logic registers      ; 91                                          ;
-; Total registers                    ; 91                                          ;
-; Total pins                         ; 79                                          ;
+; Total logic elements               ; 105                                         ;
+;     Total combinational functions  ; 52                                          ;
+;     Dedicated logic registers      ; 92                                          ;
+; Total registers                    ; 92                                          ;
+; Total pins                         ; 84                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -166,36 +164,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                           ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------+---------+
-; MIR_ROM_Init.mif                 ; yes             ; User Memory Initialization File    ; C:/Users/Ian Diaz/Desktop/E5/TP2/MIR_ROM_Init.mif                            ;         ;
-; TP2_EV21.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Ian Diaz/Desktop/E5/TP2/TP2_EV21.bdf                                ;         ;
-; MIR_ROM.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Ian Diaz/Desktop/E5/TP2/MIR_ROM.bdf                                 ;         ;
-; Pattern_Table.v                  ; yes             ; User Verilog HDL File              ; C:/Users/Ian Diaz/Desktop/E5/TP2/Pattern_Table.v                             ;         ;
-; pipeline.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Ian Diaz/Desktop/E5/TP2/pipeline.bdf                                ;         ;
-; microinstruction_1.v             ; yes             ; Auto-Found Verilog HDL File        ; C:/Users/Ian Diaz/Desktop/E5/TP2/microinstruction_1.v                        ;         ;
-; uc2.v                            ; yes             ; Auto-Found Verilog HDL File        ; C:/Users/Ian Diaz/Desktop/E5/TP2/uc2.v                                       ;         ;
-; uc1.v                            ; yes             ; Auto-Found Verilog HDL File        ; C:/Users/Ian Diaz/Desktop/E5/TP2/uc1.v                                       ;         ;
-; microinstruction_2.v             ; yes             ; Auto-Found Verilog HDL File        ; C:/Users/Ian Diaz/Desktop/E5/TP2/microinstruction_2.v                        ;         ;
-; microinstruction_3.v             ; yes             ; Auto-Found Verilog HDL File        ; C:/Users/Ian Diaz/Desktop/E5/TP2/microinstruction_3.v                        ;         ;
-; lpm_rom.tdf                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf           ;         ;
-; altrom.inc                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc        ;         ;
-; altrom.tdf                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.tdf            ;         ;
-; memmodes.inc                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/others/maxplus2/memmodes.inc        ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; altsyncram.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.inc        ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altram.inc                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_cq01.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf                      ;         ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                    ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                          ; Library ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------+---------+
+; TP2_EV21.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Ian Diaz/Desktop/E5/TP2/TP2_EV21.bdf         ;         ;
+; pipeline.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Ian Diaz/Desktop/E5/TP2/pipeline.bdf         ;         ;
+; microinstruction_1.v             ; yes             ; Auto-Found Verilog HDL File        ; C:/Users/Ian Diaz/Desktop/E5/TP2/microinstruction_1.v ;         ;
+; uc2.v                            ; yes             ; Auto-Found Verilog HDL File        ; C:/Users/Ian Diaz/Desktop/E5/TP2/uc2.v                ;         ;
+; uc1.v                            ; yes             ; Auto-Found Verilog HDL File        ; C:/Users/Ian Diaz/Desktop/E5/TP2/uc1.v                ;         ;
+; microinstruction_2.v             ; yes             ; Auto-Found Verilog HDL File        ; C:/Users/Ian Diaz/Desktop/E5/TP2/microinstruction_2.v ;         ;
+; microinstruction_3.v             ; yes             ; Auto-Found Verilog HDL File        ; C:/Users/Ian Diaz/Desktop/E5/TP2/microinstruction_3.v ;         ;
+; decode_micro.v                   ; yes             ; Auto-Found Verilog HDL File        ; C:/Users/Ian Diaz/Desktop/E5/TP2/decode_micro.v       ;         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -203,46 +185,45 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 107       ;
+; Estimated Total logic elements              ; 105       ;
 ;                                             ;           ;
-; Total combinational functions               ; 37        ;
+; Total combinational functions               ; 52        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 36        ;
-;     -- 3 input functions                    ; 1         ;
-;     -- <=2 input functions                  ; 0         ;
+;     -- 4 input functions                    ; 29        ;
+;     -- 3 input functions                    ; 21        ;
+;     -- <=2 input functions                  ; 2         ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 37        ;
+;     -- normal mode                          ; 52        ;
 ;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
-; Total registers                             ; 91        ;
-;     -- Dedicated logic registers            ; 91        ;
+; Total registers                             ; 92        ;
+;     -- Dedicated logic registers            ; 92        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 79        ;
+; I/O pins                                    ; 84        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 91        ;
-; Total fan-out                               ; 442       ;
-; Average fan-out                             ; 1.55      ;
+; Maximum fan-out                             ; 49        ;
+; Total fan-out                               ; 509       ;
+; Average fan-out                             ; 1.63      ;
 +---------------------------------------------+-----------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                         ;
-+----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------------+--------------+
-; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Entity Name        ; Library Name ;
-+----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------------+--------------+
-; |TP2_EV21                        ; 37 (0)              ; 91 (0)                    ; 0           ; 0            ; 0       ; 0         ; 79   ; 0            ; |TP2_EV21                                                 ; TP2_EV21           ; work         ;
-;    |pipeline:TEST_PIPELINE|      ; 37 (0)              ; 91 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP2_EV21|pipeline:TEST_PIPELINE                          ; pipeline           ; work         ;
-;       |Microinstruction_1:inst2| ; 0 (0)               ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP2_EV21|pipeline:TEST_PIPELINE|Microinstruction_1:inst2 ; Microinstruction_1 ; work         ;
-;       |Microinstruction_2:inst3| ; 0 (0)               ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP2_EV21|pipeline:TEST_PIPELINE|Microinstruction_2:inst3 ; Microinstruction_2 ; work         ;
-;       |Microinstruction_3:inst4| ; 0 (0)               ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP2_EV21|pipeline:TEST_PIPELINE|Microinstruction_3:inst4 ; Microinstruction_3 ; work         ;
-;       |UC1:inst6|                ; 21 (21)             ; 21 (21)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP2_EV21|pipeline:TEST_PIPELINE|UC1:inst6                ; UC1                ; work         ;
-;       |UC2:inst|                 ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP2_EV21|pipeline:TEST_PIPELINE|UC2:inst                 ; UC2                ; work         ;
-+----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                              ; Entity Name        ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+--------------------+--------------+
+; |TP2_EV21                        ; 52 (0)              ; 92 (0)                    ; 0           ; 0            ; 0       ; 0         ; 84   ; 0            ; |TP2_EV21                                        ; TP2_EV21           ; work         ;
+;    |pipeline:inst|               ; 52 (1)              ; 92 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP2_EV21|pipeline:inst                          ; pipeline           ; work         ;
+;       |Microinstruction_1:inst2| ; 0 (0)               ; 44 (44)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP2_EV21|pipeline:inst|Microinstruction_1:inst2 ; Microinstruction_1 ; work         ;
+;       |Microinstruction_3:inst6| ; 0 (0)               ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP2_EV21|pipeline:inst|Microinstruction_3:inst6 ; Microinstruction_3 ; work         ;
+;       |UC1:inst4|                ; 38 (38)             ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP2_EV21|pipeline:inst|UC1:inst4                ; UC1                ; work         ;
+;       |UC2:inst8|                ; 13 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP2_EV21|pipeline:inst|UC2:inst8                ; UC2                ; work         ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -251,70 +232,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 91    ;
+; Total registers                              ; 92    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 19    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Source assignments for MIR_ROM:inst|LPM_ROM:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated ;
-+---------------------------------+--------------------+------+-------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                    ;
-+---------------------------------+--------------------+------+-------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                     ;
-+---------------------------------+--------------------+------+-------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: pipeline:TEST_PIPELINE|UC2:inst ;
-+----------------+-------+-----------------------------------------------------+
-; Parameter Name ; Value ; Type                                                ;
-+----------------+-------+-----------------------------------------------------+
-; WR_read        ; 0     ; Signed Integer                                      ;
-; WR_write       ; 1     ; Signed Integer                                      ;
-; R_read         ; 2     ; Signed Integer                                      ;
-; R_write        ; 3     ; Signed Integer                                      ;
-; C_read         ; 4     ; Signed Integer                                      ;
-; C_write        ; 5     ; Signed Integer                                      ;
-+----------------+-------+-----------------------------------------------------+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pipeline:inst|UC2:inst8 ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; WR_read        ; 0     ; Signed Integer                              ;
+; WR_write       ; 1     ; Signed Integer                              ;
+; R_read         ; 2     ; Signed Integer                              ;
+; R_write        ; 3     ; Signed Integer                              ;
+; C_read         ; 4     ; Signed Integer                              ;
+; C_write        ; 5     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: pipeline:TEST_PIPELINE|UC1:inst6 ;
-+----------------+--------+-----------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                ;
-+----------------+--------+-----------------------------------------------------+
-; T_out          ; 0      ; Signed Integer                                      ;
-; M_out          ; 0      ; Signed Integer                                      ;
-; C_out          ; 100011 ; Unsigned Binary                                     ;
-; ALU_o          ; 1111   ; Unsigned Binary                                     ;
-+----------------+--------+-----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: MIR_ROM:inst|LPM_ROM:MIR_ROM ;
-+------------------------+------------------+-------------------------------+
-; Parameter Name         ; Value            ; Type                          ;
-+------------------------+------------------+-------------------------------+
-; LPM_WIDTH              ; 33               ; Untyped                       ;
-; LPM_WIDTHAD            ; 7                ; Untyped                       ;
-; LPM_NUMWORDS           ; 128              ; Untyped                       ;
-; LPM_ADDRESS_CONTROL    ; REGISTERED       ; Untyped                       ;
-; LPM_OUTDATA            ; REGISTERED       ; Untyped                       ;
-; LPM_FILE               ; MIR_ROM_Init.mif ; Untyped                       ;
-; DEVICE_FAMILY          ; Cyclone IV E     ; Untyped                       ;
-; AUTO_CARRY_CHAINS      ; ON               ; AUTO_CARRY                    ;
-; IGNORE_CARRY_BUFFERS   ; OFF              ; IGNORE_CARRY                  ;
-; AUTO_CASCADE_CHAINS    ; ON               ; AUTO_CASCADE                  ;
-; IGNORE_CASCADE_BUFFERS ; OFF              ; IGNORE_CASCADE                ;
-+------------------------+------------------+-------------------------------+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pipeline:inst|UC1:inst4 ;
++----------------+--------+--------------------------------------------+
+; Parameter Name ; Value  ; Type                                       ;
++----------------+--------+--------------------------------------------+
+; T_out          ; 0      ; Signed Integer                             ;
+; M_out          ; 0      ; Signed Integer                             ;
+; C_out          ; 100011 ; Unsigned Binary                            ;
+; ALU_o          ; 1111   ; Unsigned Binary                            ;
++----------------+--------+--------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -323,16 +275,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 79                          ;
-; cycloneiii_ff         ; 91                          ;
-;     plain             ; 91                          ;
-; cycloneiii_lcell_comb ; 37                          ;
-;     normal            ; 37                          ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 36                          ;
+; boundary_port         ; 84                          ;
+; cycloneiii_ff         ; 92                          ;
+;     ENA               ; 19                          ;
+;     plain             ; 73                          ;
+; cycloneiii_lcell_comb ; 52                          ;
+;     normal            ; 52                          ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 21                          ;
+;         4 data inputs ; 29                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.38                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 1.48                        ;
 +-----------------------+-----------------------------+
 
 
@@ -351,7 +305,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun May 30 19:50:11 2021
+    Info: Processing started: Mon May 31 13:34:04 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TP2_EV21 -c TP2_EV21
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -366,97 +320,38 @@ Info (12021): Found 1 design units, including 1 entities, in source file pattern
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline.bdf
     Info (12023): Found entity 1: pipeline
 Info (12127): Elaborating entity "TP2_EV21" for the top level hierarchy
-Warning (275013): Port "clk" of type MIR_ROM and instance "inst" is missing source signal
-Info (12128): Elaborating entity "pipeline" for hierarchy "pipeline:TEST_PIPELINE"
+Info (12128): Elaborating entity "pipeline" for hierarchy "pipeline:inst"
 Warning (12125): Using design file microinstruction_1.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: Microinstruction_1 File: C:/Users/Ian Diaz/Desktop/E5/TP2/microinstruction_1.v Line: 7
-Info (12128): Elaborating entity "Microinstruction_1" for hierarchy "pipeline:TEST_PIPELINE|Microinstruction_1:inst2"
+Info (12128): Elaborating entity "Microinstruction_1" for hierarchy "pipeline:inst|Microinstruction_1:inst2"
 Warning (12125): Using design file uc2.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: UC2 File: C:/Users/Ian Diaz/Desktop/E5/TP2/uc2.v Line: 21
-Info (12128): Elaborating entity "UC2" for hierarchy "pipeline:TEST_PIPELINE|UC2:inst"
+Info (12128): Elaborating entity "UC2" for hierarchy "pipeline:inst|UC2:inst8"
 Warning (12125): Using design file uc1.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: UC1 File: C:/Users/Ian Diaz/Desktop/E5/TP2/uc1.v Line: 1
-Info (12128): Elaborating entity "UC1" for hierarchy "pipeline:TEST_PIPELINE|UC1:inst6"
-Warning (10230): Verilog HDL assignment warning at uc1.v(29): truncated value with size 32 to match size of target (7) File: C:/Users/Ian Diaz/Desktop/E5/TP2/uc1.v Line: 29
-Warning (10230): Verilog HDL assignment warning at uc1.v(30): truncated value with size 32 to match size of target (2) File: C:/Users/Ian Diaz/Desktop/E5/TP2/uc1.v Line: 30
+Info (12128): Elaborating entity "UC1" for hierarchy "pipeline:inst|UC1:inst4"
+Warning (10230): Verilog HDL assignment warning at uc1.v(33): truncated value with size 32 to match size of target (7) File: C:/Users/Ian Diaz/Desktop/E5/TP2/uc1.v Line: 33
+Warning (10230): Verilog HDL assignment warning at uc1.v(34): truncated value with size 32 to match size of target (2) File: C:/Users/Ian Diaz/Desktop/E5/TP2/uc1.v Line: 34
 Warning (12125): Using design file microinstruction_2.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: Microinstruction_2 File: C:/Users/Ian Diaz/Desktop/E5/TP2/microinstruction_2.v Line: 7
-Info (12128): Elaborating entity "Microinstruction_2" for hierarchy "pipeline:TEST_PIPELINE|Microinstruction_2:inst3"
+Info (12128): Elaborating entity "Microinstruction_2" for hierarchy "pipeline:inst|Microinstruction_2:inst5"
 Warning (12125): Using design file microinstruction_3.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: Microinstruction_3 File: C:/Users/Ian Diaz/Desktop/E5/TP2/microinstruction_3.v Line: 7
-Info (12128): Elaborating entity "Microinstruction_3" for hierarchy "pipeline:TEST_PIPELINE|Microinstruction_3:inst4"
-Info (12128): Elaborating entity "MIR_ROM" for hierarchy "MIR_ROM:inst"
-Warning (275006): Can't find a definition for parameter LPM_FILE -- assuming MIR_ROM_Init.mif was intended to be a quoted string
-Info (12128): Elaborating entity "LPM_ROM" for hierarchy "MIR_ROM:inst|LPM_ROM:MIR_ROM"
-Info (12130): Elaborated megafunction instantiation "MIR_ROM:inst|LPM_ROM:MIR_ROM"
-Info (12133): Instantiated megafunction "MIR_ROM:inst|LPM_ROM:MIR_ROM" with the following parameter:
-    Info (12134): Parameter "LPM_FILE" = "MIR_ROM_Init.mif"
-    Info (12134): Parameter "LPM_NUMWORDS" = "128"
-    Info (12134): Parameter "LPM_WIDTH" = "33"
-    Info (12134): Parameter "LPM_WIDTHAD" = "7"
-Info (12128): Elaborating entity "altrom" for hierarchy "MIR_ROM:inst|LPM_ROM:MIR_ROM|altrom:srom" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 55
-Info (12131): Elaborated megafunction instantiation "MIR_ROM:inst|LPM_ROM:MIR_ROM|altrom:srom", which is child of megafunction instantiation "MIR_ROM:inst|LPM_ROM:MIR_ROM" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 55
-Info (12128): Elaborating entity "altsyncram" for hierarchy "MIR_ROM:inst|LPM_ROM:MIR_ROM|altrom:srom|altsyncram:rom_block" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.tdf Line: 89
-Info (12131): Elaborated megafunction instantiation "MIR_ROM:inst|LPM_ROM:MIR_ROM|altrom:srom|altsyncram:rom_block", which is child of megafunction instantiation "MIR_ROM:inst|LPM_ROM:MIR_ROM" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.tdf Line: 89
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_cq01.tdf
-    Info (12023): Found entity 1: altsyncram_cq01 File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_cq01" for hierarchy "MIR_ROM:inst|LPM_ROM:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "pattern_table" for hierarchy "pattern_table:inst2"
-Warning (10034): Output port "out" at Pattern_Table.v(5) has no driver File: C:/Users/Ian Diaz/Desktop/E5/TP2/Pattern_Table.v Line: 5
-Warning (12158): Entity "pattern_table" contains only dangling pins
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[0]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 36
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[1]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 58
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[2]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 80
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[3]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 102
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[4]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 124
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[5]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 146
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[6]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 168
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[7]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 190
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[8]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 212
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[9]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 234
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[10]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 256
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[11]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 278
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[12]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 300
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[13]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 322
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[14]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 344
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[15]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 366
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[16]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 388
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[17]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 410
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[18]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 432
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[19]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 454
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[20]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 476
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[21]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 498
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[22]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 520
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[23]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 542
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[24]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 564
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[25]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 586
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[26]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 608
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[27]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 630
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[28]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 652
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[29]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 674
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[30]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 696
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[31]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 718
-        Warning (14320): Synthesized away node "MIR_ROM:inst|lpm_rom:MIR_ROM|altrom:srom|altsyncram:rom_block|altsyncram_cq01:auto_generated|q_a[32]" File: C:/Users/Ian Diaz/Desktop/E5/TP2/db/altsyncram_cq01.tdf Line: 740
+Info (12128): Elaborating entity "Microinstruction_3" for hierarchy "pipeline:inst|Microinstruction_3:inst6"
+Warning (12125): Using design file decode_micro.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Decode_micro File: C:/Users/Ian Diaz/Desktop/E5/TP2/decode_micro.v Line: 7
+Info (12128): Elaborating entity "Decode_micro" for hierarchy "pipeline:inst|Decode_micro:inst"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 6 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "UIROM[23]"
-    Warning (15610): No output dependent on input pin "UIROM[22]"
-    Warning (15610): No output dependent on input pin "UIROM[21]"
-    Warning (15610): No output dependent on input pin "UIROM[20]"
-    Warning (15610): No output dependent on input pin "UIROM[19]"
-    Warning (15610): No output dependent on input pin "UIROM[18]"
-Info (21057): Implemented 186 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 190 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 45 input pins
-    Info (21059): Implemented 34 output pins
-    Info (21061): Implemented 107 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 54 warnings
-    Info: Peak virtual memory: 4754 megabytes
-    Info: Processing ended: Sun May 30 19:50:42 2021
-    Info: Elapsed time: 00:00:31
-    Info: Total CPU time (on all processors): 00:00:35
+    Info (21059): Implemented 39 output pins
+    Info (21061): Implemented 106 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4743 megabytes
+    Info: Processing ended: Mon May 31 13:34:45 2021
+    Info: Elapsed time: 00:00:41
+    Info: Total CPU time (on all processors): 00:00:40
 
 

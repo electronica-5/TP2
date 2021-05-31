@@ -4,11 +4,35 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "BRANCH_UPDATE",
+					"name" : "KMX",
 					"strict" : false
 				},
 				{
-					"name" : "KMX",
+					"name" : "BRANCH",
+					"strict" : false
+				},
+				{
+					"name" : "HOLD",
+					"strict" : false
+				},
+				{
+					"name" : "A[4]",
+					"strict" : false
+				},
+				{
+					"name" : "A[3]",
+					"strict" : false
+				},
+				{
+					"name" : "A[2]",
+					"strict" : false
+				},
+				{
+					"name" : "A[1]",
+					"strict" : false
+				},
+				{
+					"name" : "A[0]",
 					"strict" : false
 				},
 				{
@@ -25,6 +49,30 @@
 				},
 				{
 					"name" : "ALU[0]",
+					"strict" : false
+				},
+				{
+					"name" : "B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "B[0]",
 					"strict" : false
 				},
 				{
@@ -112,31 +160,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "T[6]",
-					"strict" : false
-				},
-				{
-					"name" : "T[5]",
-					"strict" : false
-				},
-				{
-					"name" : "T[4]",
-					"strict" : false
-				},
-				{
-					"name" : "T[3]",
-					"strict" : false
-				},
-				{
-					"name" : "T[2]",
-					"strict" : false
-				},
-				{
-					"name" : "T[1]",
-					"strict" : false
-				},
-				{
-					"name" : "T[0]",
+					"name" : "uIROM[26]",
 					"strict" : false
 				},
 				{
@@ -144,155 +168,175 @@
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[26]",
+					"name" : "uIROM[5]",
 					"strict" : false
 				},
 				{
-					"name" : "DATA_ADDR_IN[10]",
+					"name" : "uIROM[0]",
 					"strict" : false
 				},
 				{
-					"name" : "DATA_ADDR_IN[9]",
+					"name" : "uIROM[1]",
 					"strict" : false
 				},
 				{
-					"name" : "DATA_ADDR_IN[8]",
+					"name" : "uIROM[2]",
 					"strict" : false
 				},
 				{
-					"name" : "DATA_ADDR_IN[7]",
+					"name" : "uIROM[3]",
 					"strict" : false
 				},
 				{
-					"name" : "DATA_ADDR_IN[6]",
+					"name" : "uIROM[7]",
 					"strict" : false
 				},
 				{
-					"name" : "DATA_ADDR_IN[5]",
+					"name" : "uIROM[4]",
 					"strict" : false
 				},
 				{
-					"name" : "DATA_ADDR_IN[4]",
+					"name" : "uIROM[9]",
 					"strict" : false
 				},
 				{
-					"name" : "DATA_ADDR_IN[3]",
+					"name" : "uIROM[23]",
 					"strict" : false
 				},
 				{
-					"name" : "DATA_ADDR_IN[2]",
+					"name" : "uIROM[22]",
 					"strict" : false
 				},
 				{
-					"name" : "DATA_ADDR_IN[1]",
+					"name" : "uIROM[21]",
 					"strict" : false
 				},
 				{
-					"name" : "DATA_ADDR_IN[0]",
+					"name" : "uIROM[20]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[25]",
+					"name" : "uIROM[19]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[5]",
+					"name" : "uIROM[18]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[0]",
+					"name" : "DATA_ADD[10]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[1]",
+					"name" : "DATA_ADD[9]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[2]",
+					"name" : "DATA_ADD[8]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[3]",
+					"name" : "DATA_ADD[7]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[7]",
+					"name" : "DATA_ADD[6]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[4]",
+					"name" : "DATA_ADD[5]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[9]",
+					"name" : "DATA_ADD[4]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[24]",
+					"name" : "DATA_ADD[3]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[6]",
+					"name" : "DATA_ADD[2]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[11]",
+					"name" : "DATA_ADD[1]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[8]",
+					"name" : "DATA_ADD[0]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[10]",
+					"name" : "uIROM[25]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[32]",
+					"name" : "uIROM[24]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[31]",
+					"name" : "uIROM[6]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[30]",
+					"name" : "uIROM[11]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[29]",
+					"name" : "uIROM[8]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[13]",
+					"name" : "uIROM[10]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[12]",
+					"name" : "uIROM[13]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[15]",
+					"name" : "uIROM[12]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[14]",
+					"name" : "uIROM[15]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[16]",
+					"name" : "uIROM[14]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[28]",
+					"name" : "uIROM[16]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[27]",
+					"name" : "uIROM[32]",
 					"strict" : false
 				},
 				{
-					"name" : "UIROM[17]",
+					"name" : "uIROM[31]",
+					"strict" : false
+				},
+				{
+					"name" : "uIROM[30]",
+					"strict" : false
+				},
+				{
+					"name" : "uIROM[29]",
+					"strict" : false
+				},
+				{
+					"name" : "uIROM[28]",
+					"strict" : false
+				},
+				{
+					"name" : "uIROM[27]",
+					"strict" : false
+				},
+				{
+					"name" : "uIROM[17]",
 					"strict" : false
 				}
 			]

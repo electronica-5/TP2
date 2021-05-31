@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/30/2021 20:17:06"
+// Generated on "05/31/2021 11:33:41"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          TP2_EV21
 // 
@@ -31,298 +31,336 @@ module TP2_EV21_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg CLK;
-reg [10:0] DATA_ADDR_IN;
-reg [32:0] UIROM;
+reg [10:0] DATA_ADD;
+reg [32:0] uIROM;
 // wires                                               
+wire [4:0] A;
 wire [3:0] ALU;
-wire BRANCH_UPDATE;
+wire [5:0] B;
+wire BRANCH;
 wire [5:0] C;
 wire [10:0] DATA_ADD_OUT;
 wire KMX;
 wire [1:0] M;
 wire [1:0] SH;
-wire [6:0] T;
 
 // assign statements (if any)                          
 TP2_EV21 i1 (
 // port map - connection between master ports and signals/registers   
+	.A(A),
 	.ALU(ALU),
-	.BRANCH_UPDATE(BRANCH_UPDATE),
+	.B(B),
+	.BRANCH(BRANCH),
 	.C(C),
 	.CLK(CLK),
+	.DATA_ADD(DATA_ADD),
 	.DATA_ADD_OUT(DATA_ADD_OUT),
-	.DATA_ADDR_IN(DATA_ADDR_IN),
 	.KMX(KMX),
 	.M(M),
 	.SH(SH),
-	.T(T),
-	.UIROM(UIROM)
+	.uIROM(uIROM)
 );
 initial 
 begin 
-#10000000 $finish;
+#1000000 $finish;
 end 
 
 // CLK
 always
 begin
 	CLK = 1'b0;
-	CLK = #100000 1'b1;
-	#100000;
+	CLK = #20000 1'b1;
+	#20000;
 end 
-// UIROM[ 32 ]
+// uIROM[ 32 ]
 initial
 begin
-	UIROM[32] = 1'b0;
+	uIROM[32] = 1'b0;
+	uIROM[32] = #100000 1'b1;
+	uIROM[32] = #40000 1'b0;
 end 
-// UIROM[ 31 ]
+// uIROM[ 31 ]
 initial
 begin
-	UIROM[31] = 1'b0;
-	UIROM[31] = #710000 1'b1;
-	UIROM[31] = #200000 1'b0;
+	uIROM[31] = 1'b0;
+	uIROM[31] = #60000 1'b1;
+	uIROM[31] = #40000 1'b0;
 end 
-// UIROM[ 30 ]
+// uIROM[ 30 ]
 initial
 begin
-	UIROM[30] = 1'b0;
+	uIROM[30] = 1'b0;
+	uIROM[30] = #100000 1'b1;
+	uIROM[30] = #40000 1'b0;
+	uIROM[30] = #40000 1'b1;
+	uIROM[30] = #40000 1'b0;
 end 
-// UIROM[ 29 ]
+// uIROM[ 29 ]
 initial
 begin
-	UIROM[29] = 1'b0;
-	UIROM[29] = #710000 1'b1;
-	UIROM[29] = #200000 1'b0;
+	uIROM[29] = 1'b0;
+	uIROM[29] = #60000 1'b1;
+	uIROM[29] = #80000 1'b0;
+	uIROM[29] = #40000 1'b1;
+	uIROM[29] = #40000 1'b0;
 end 
-// UIROM[ 28 ]
+// uIROM[ 28 ]
 initial
 begin
-	UIROM[28] = 1'b0;
+	uIROM[28] = 1'b0;
 end 
-// UIROM[ 27 ]
+// uIROM[ 27 ]
 initial
 begin
-	UIROM[27] = 1'b0;
+	uIROM[27] = 1'b0;
 end 
-// UIROM[ 26 ]
+// uIROM[ 26 ]
 initial
 begin
-	UIROM[26] = 1'b0;
-	UIROM[26] = #110000 1'b1;
-	UIROM[26] = #210000 1'b0;
-	UIROM[26] = #190000 1'b1;
-	UIROM[26] = #400000 1'b0;
+	uIROM[26] = 1'b0;
 end 
-// UIROM[ 25 ]
+// uIROM[ 25 ]
 initial
 begin
-	UIROM[25] = 1'b0;
+	uIROM[25] = 1'b0;
 end 
-// UIROM[ 24 ]
+// uIROM[ 24 ]
 initial
 begin
-	UIROM[24] = 1'b0;
+	uIROM[24] = 1'b0;
 end 
-// UIROM[ 23 ]
+// uIROM[ 23 ]
 initial
 begin
-	UIROM[23] = 1'b0;
-	UIROM[23] = #710000 1'b1;
-	UIROM[23] = #200000 1'b0;
+	uIROM[23] = 1'b0;
+	uIROM[23] = #60000 1'b1;
+	uIROM[23] = #160000 1'b0;
 end 
-// UIROM[ 22 ]
+// uIROM[ 22 ]
 initial
 begin
-	UIROM[22] = 1'b0;
+	uIROM[22] = 1'b0;
 end 
-// UIROM[ 21 ]
+// uIROM[ 21 ]
 initial
 begin
-	UIROM[21] = 1'b0;
+	uIROM[21] = 1'b0;
+	uIROM[21] = #100000 1'b1;
+	uIROM[21] = #80000 1'b0;
 end 
-// UIROM[ 20 ]
+// uIROM[ 20 ]
 initial
 begin
-	UIROM[20] = 1'b0;
+	uIROM[20] = 1'b0;
 end 
-// UIROM[ 19 ]
+// uIROM[ 19 ]
 initial
 begin
-	UIROM[19] = 1'b0;
-	UIROM[19] = #710000 1'b1;
-	UIROM[19] = #200000 1'b0;
+	uIROM[19] = 1'b0;
+	uIROM[19] = #60000 1'b1;
+	uIROM[19] = #160000 1'b0;
 end 
-// UIROM[ 18 ]
+// uIROM[ 18 ]
 initial
 begin
-	UIROM[18] = 1'b0;
+	uIROM[18] = 1'b0;
 end 
-// UIROM[ 17 ]
+// uIROM[ 17 ]
 initial
 begin
-	UIROM[17] = 1'b0;
-	UIROM[17] = #110000 1'b1;
-	UIROM[17] = #210000 1'b0;
-	UIROM[17] = #190000 1'b1;
-	UIROM[17] = #400000 1'b0;
+	uIROM[17] = 1'b0;
+	uIROM[17] = #60000 1'b1;
+	uIROM[17] = #80000 1'b0;
+	uIROM[17] = #40000 1'b1;
+	uIROM[17] = #40000 1'b0;
 end 
-// UIROM[ 16 ]
+// uIROM[ 16 ]
 initial
 begin
-	UIROM[16] = 1'b0;
+	uIROM[16] = 1'b0;
+	uIROM[16] = #60000 1'b1;
+	uIROM[16] = #40000 1'b0;
 end 
-// UIROM[ 15 ]
+// uIROM[ 15 ]
 initial
 begin
-	UIROM[15] = 1'b0;
+	uIROM[15] = 1'b0;
+	uIROM[15] = #60000 1'b1;
+	uIROM[15] = #40000 1'b0;
 end 
-// UIROM[ 14 ]
+// uIROM[ 14 ]
 initial
 begin
-	UIROM[14] = 1'b0;
+	uIROM[14] = 1'b0;
+	uIROM[14] = #60000 1'b1;
+	uIROM[14] = #40000 1'b0;
 end 
-// UIROM[ 13 ]
+// uIROM[ 13 ]
 initial
 begin
-	UIROM[13] = 1'b0;
-	UIROM[13] = #110000 1'b1;
-	UIROM[13] = #210000 1'b0;
-	UIROM[13] = #190000 1'b1;
-	UIROM[13] = #400000 1'b0;
+	uIROM[13] = 1'b0;
+	uIROM[13] = #60000 1'b1;
+	uIROM[13] = #80000 1'b0;
+	uIROM[13] = #40000 1'b1;
+	uIROM[13] = #40000 1'b0;
 end 
-// UIROM[ 12 ]
+// uIROM[ 12 ]
 initial
 begin
-	UIROM[12] = 1'b0;
+	uIROM[12] = 1'b0;
+	uIROM[12] = #60000 1'b1;
+	uIROM[12] = #80000 1'b0;
 end 
-// UIROM[ 11 ]
+// uIROM[ 11 ]
 initial
 begin
-	UIROM[11] = 1'b0;
+	uIROM[11] = 1'b0;
 end 
-// UIROM[ 10 ]
+// uIROM[ 10 ]
 initial
 begin
-	UIROM[10] = 1'b0;
-	UIROM[10] = #710000 1'b1;
-	UIROM[10] = #200000 1'b0;
+	uIROM[10] = 1'b0;
+	uIROM[10] = #60000 1'b1;
+	uIROM[10] = #80000 1'b0;
 end 
-// UIROM[ 9 ]
+// uIROM[ 9 ]
 initial
 begin
-	UIROM[9] = 1'b0;
-	UIROM[9] = #710000 1'b1;
-	UIROM[9] = #200000 1'b0;
+	uIROM[9] = 1'b0;
+	uIROM[9] = #60000 1'b1;
+	uIROM[9] = #40000 1'b0;
 end 
-// UIROM[ 8 ]
+// uIROM[ 8 ]
 initial
 begin
-	UIROM[8] = 1'b0;
-	UIROM[8] = #320000 1'b1;
-	UIROM[8] = #190000 1'b0;
+	uIROM[8] = 1'b0;
+	uIROM[8] = #60000 1'b1;
+	uIROM[8] = #40000 1'b0;
+	uIROM[8] = #40000 1'b1;
+	uIROM[8] = #40000 1'b0;
 end 
-// UIROM[ 7 ]
+// uIROM[ 7 ]
 initial
 begin
-	UIROM[7] = 1'b0;
-	UIROM[7] = #320000 1'b1;
-	UIROM[7] = #190000 1'b0;
+	uIROM[7] = 1'b0;
+	uIROM[7] = #60000 1'b1;
+	uIROM[7] = #40000 1'b0;
+	uIROM[7] = #40000 1'b1;
+	uIROM[7] = #40000 1'b0;
 end 
-// UIROM[ 6 ]
+// uIROM[ 6 ]
 initial
 begin
-	UIROM[6] = 1'b0;
-	UIROM[6] = #110000 1'b1;
-	UIROM[6] = #210000 1'b0;
-	UIROM[6] = #190000 1'b1;
-	UIROM[6] = #400000 1'b0;
+	uIROM[6] = 1'b0;
+	uIROM[6] = #180000 1'b1;
+	uIROM[6] = #40000 1'b0;
 end 
-// UIROM[ 5 ]
+// uIROM[ 5 ]
 initial
 begin
-	UIROM[5] = 1'b0;
-	UIROM[5] = #710000 1'b1;
-	UIROM[5] = #200000 1'b0;
+	uIROM[5] = 1'b0;
+	uIROM[5] = #60000 1'b1;
+	uIROM[5] = #40000 1'b0;
+	uIROM[5] = #80000 1'b1;
+	uIROM[5] = #40000 1'b0;
 end 
-// UIROM[ 4 ]
+// uIROM[ 4 ]
 initial
 begin
-	UIROM[4] = 1'b0;
+	uIROM[4] = 1'b0;
+	uIROM[4] = #100000 1'b1;
+	uIROM[4] = #120000 1'b0;
 end 
-// UIROM[ 3 ]
+// uIROM[ 3 ]
 initial
 begin
-	UIROM[3] = 1'b0;
+	uIROM[3] = 1'b0;
+	uIROM[3] = #140000 1'b1;
+	uIROM[3] = #40000 1'b0;
 end 
-// UIROM[ 2 ]
+// uIROM[ 2 ]
 initial
 begin
-	UIROM[2] = 1'b0;
+	uIROM[2] = 1'b0;
+	uIROM[2] = #100000 1'b1;
+	uIROM[2] = #120000 1'b0;
 end 
-// UIROM[ 1 ]
+// uIROM[ 1 ]
 initial
 begin
-	UIROM[1] = 1'b0;
+	uIROM[1] = 1'b0;
+	uIROM[1] = #140000 1'b1;
+	uIROM[1] = #40000 1'b0;
 end 
-// UIROM[ 0 ]
+// uIROM[ 0 ]
 initial
 begin
-	UIROM[0] = 1'b0;
+	uIROM[0] = 1'b0;
+	uIROM[0] = #60000 1'b1;
+	uIROM[0] = #80000 1'b0;
+	uIROM[0] = #40000 1'b1;
+	uIROM[0] = #40000 1'b0;
 end 
-// DATA_ADDR_IN[ 10 ]
+// DATA_ADD[ 10 ]
 initial
 begin
-	DATA_ADDR_IN[10] = 1'b1;
+	DATA_ADD[10] = 1'b0;
+	DATA_ADD[10] = #30000 1'b1;
 end 
-// DATA_ADDR_IN[ 9 ]
+// DATA_ADD[ 9 ]
 initial
 begin
-	DATA_ADDR_IN[9] = 1'b0;
+	DATA_ADD[9] = 1'b0;
 end 
-// DATA_ADDR_IN[ 8 ]
+// DATA_ADD[ 8 ]
 initial
 begin
-	DATA_ADDR_IN[8] = 1'b1;
+	DATA_ADD[8] = 1'b0;
+	DATA_ADD[8] = #30000 1'b1;
 end 
-// DATA_ADDR_IN[ 7 ]
+// DATA_ADD[ 7 ]
 initial
 begin
-	DATA_ADDR_IN[7] = 1'b0;
+	DATA_ADD[7] = 1'b0;
 end 
-// DATA_ADDR_IN[ 6 ]
+// DATA_ADD[ 6 ]
 initial
 begin
-	DATA_ADDR_IN[6] = 1'b1;
+	DATA_ADD[6] = 1'b0;
+	DATA_ADD[6] = #30000 1'b1;
 end 
-// DATA_ADDR_IN[ 5 ]
+// DATA_ADD[ 5 ]
 initial
 begin
-	DATA_ADDR_IN[5] = 1'b0;
+	DATA_ADD[5] = 1'b0;
 end 
-// DATA_ADDR_IN[ 4 ]
+// DATA_ADD[ 4 ]
 initial
 begin
-	DATA_ADDR_IN[4] = 1'b1;
+	DATA_ADD[4] = 1'b0;
+	DATA_ADD[4] = #30000 1'b1;
 end 
-// DATA_ADDR_IN[ 3 ]
+// DATA_ADD[ 3 ]
 initial
 begin
-	DATA_ADDR_IN[3] = 1'b0;
+	DATA_ADD[3] = 1'b0;
 end 
-// DATA_ADDR_IN[ 2 ]
+// DATA_ADD[ 2 ]
 initial
 begin
-	DATA_ADDR_IN[2] = 1'b1;
+	DATA_ADD[2] = 1'b0;
+	DATA_ADD[2] = #30000 1'b1;
 end 
-// DATA_ADDR_IN[ 1 ]
+// DATA_ADD[ 1 ]
 initial
 begin
-	DATA_ADDR_IN[1] = 1'b0;
+	DATA_ADD[1] = 1'b0;
 end 
-// DATA_ADDR_IN[ 0 ]
+// DATA_ADD[ 0 ]
 initial
 begin
-	DATA_ADDR_IN[0] = 1'b1;
+	DATA_ADD[0] = 1'b0;
+	DATA_ADD[0] = #30000 1'b1;
 end 
 endmodule
 
