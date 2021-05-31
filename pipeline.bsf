@@ -1,0 +1,121 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 360 240)
+	(text "pipeline" (rect 5 0 53 19)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 203 24 220)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "micro_instr_ROM[32..0]" (rect 0 0 140 19)(font "Intel Clear" (font_size 8)))
+		(text "micro_instr_ROM[32..0]" (rect 21 27 161 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "DATA_ADDR[10..0]" (rect 0 0 115 19)(font "Intel Clear" (font_size 8)))
+		(text "DATA_ADDR[10..0]" (rect 21 43 136 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "CLK" (rect 0 0 23 19)(font "Intel Clear" (font_size 8)))
+		(text "CLK" (rect 21 59 44 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 344 32)
+		(output)
+		(text "KMX" (rect 0 0 27 19)(font "Intel Clear" (font_size 8)))
+		(text "KMX" (rect 296 27 323 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 344 32)(pt 328 32))
+	)
+	(port
+		(pt 344 48)
+		(output)
+		(text "M[1..0]" (rect 0 0 41 19)(font "Intel Clear" (font_size 8)))
+		(text "M[1..0]" (rect 282 43 323 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 344 48)(pt 328 48)(line_width 3))
+	)
+	(port
+		(pt 344 64)
+		(output)
+		(text "A[4..0]" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
+		(text "A[4..0]" (rect 285 59 323 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 344 64)(pt 328 64)(line_width 3))
+	)
+	(port
+		(pt 344 80)
+		(output)
+		(text "B[5..0]" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
+		(text "B[5..0]" (rect 285 75 323 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 344 80)(pt 328 80)(line_width 3))
+	)
+	(port
+		(pt 344 96)
+		(output)
+		(text "DATA_ADDR_OUT[10..0]" (rect 0 0 149 19)(font "Intel Clear" (font_size 8)))
+		(text "DATA_ADDR_OUT[10..0]" (rect 174 91 323 110)(font "Intel Clear" (font_size 8)))
+		(line (pt 344 96)(pt 328 96)(line_width 3))
+	)
+	(port
+		(pt 344 112)
+		(output)
+		(text "ALU[3..0]" (rect 0 0 55 19)(font "Intel Clear" (font_size 8)))
+		(text "ALU[3..0]" (rect 268 107 323 126)(font "Intel Clear" (font_size 8)))
+		(line (pt 344 112)(pt 328 112)(line_width 3))
+	)
+	(port
+		(pt 344 128)
+		(output)
+		(text "SH[1..0]" (rect 0 0 48 19)(font "Intel Clear" (font_size 8)))
+		(text "SH[1..0]" (rect 275 123 323 142)(font "Intel Clear" (font_size 8)))
+		(line (pt 344 128)(pt 328 128)(line_width 3))
+	)
+	(port
+		(pt 344 144)
+		(output)
+		(text "C[5..0]" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
+		(text "C[5..0]" (rect 285 139 323 158)(font "Intel Clear" (font_size 8)))
+		(line (pt 344 144)(pt 328 144)(line_width 3))
+	)
+	(port
+		(pt 344 160)
+		(output)
+		(text "BRANCH_UPDATE" (rect 0 0 109 19)(font "Intel Clear" (font_size 8)))
+		(text "BRANCH_UPDATE" (rect 214 155 323 174)(font "Intel Clear" (font_size 8)))
+		(line (pt 344 160)(pt 328 160))
+	)
+	(port
+		(pt 344 176)
+		(output)
+		(text "HOLD" (rect 0 0 35 19)(font "Intel Clear" (font_size 8)))
+		(text "HOLD" (rect 288 171 323 190)(font "Intel Clear" (font_size 8)))
+		(line (pt 344 176)(pt 328 176))
+	)
+	(drawing
+		(rectangle (rect 16 16 328 208))
+	)
+)
