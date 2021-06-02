@@ -24,7 +24,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 128 -104 296 -88)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "branch[13..0]" (rect 5 0 70 12)(font "Arial" ))
+	(text "branch[13..0]" (rect 5 0 69 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -40,7 +40,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 112 -88 296 -72)
 	(text "INPUT" (rect 141 0 169 10)(font "Arial" (font_size 6)))
-	(text "branch_addr[10..0]" (rect 5 0 94 17)(font "Intel Clear" ))
+	(text "branch_addr[10..0]" (rect 5 0 93 17)(font "Intel Clear" ))
 	(pt 184 8)
 	(drawing
 		(line (pt 100 12)(pt 125 12))
@@ -56,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 128 -40 296 -24)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "execution_done" (rect 5 0 80 17)(font "Intel Clear" ))
+	(text "execution_done" (rect 5 0 79 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -72,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 128 -72 296 -56)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "W[15..0]" (rect 5 0 48 12)(font "Arial" ))
+	(text "W[15..0]" (rect 5 0 47 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -104,7 +104,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 72 120 240 136)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "clock" (rect 5 0 31 12)(font "Arial" ))
+	(text "clock" (rect 5 0 30 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -116,8 +116,24 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
 )
+(pin
+	(input)
+	(rect 120 -120 296 -104)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "jump_addr[10..0]" (rect 5 0 87 12)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
 (symbol
-	(rect 376 96 552 208)
+	(rect 360 96 536 208)
 	(text "predictor_trigger_control" (rect 5 0 123 12)(font "Arial" ))
 	(text "inst" (rect 8 96 25 108)(font "Arial" ))
 	(port
@@ -153,162 +169,1171 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 632 -128 912 16)
-	(text "predictor_input_latch" (rect 5 0 106 12)(font "Arial" ))
-	(text "inst2" (rect 8 128 30 145)(font "Intel Clear" ))
+	(rect 1472 -136 1760 8)
+	(text "predictor_bht" (rect 5 0 68 12)(font "Arial" ))
+	(text "inst1" (rect 8 128 30 145)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "branch[13..0]" (rect 0 0 64 12)(font "Arial" ))
-		(text "branch[13..0]" (rect 21 27 85 39)(font "Arial" ))
+		(text "branch_addr[10..0]" (rect 0 0 92 12)(font "Arial" ))
+		(text "branch_addr[10..0]" (rect 21 27 113 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
 		(pt 0 48)
 		(input)
-		(text "branch_addr[10..0]" (rect 0 0 92 12)(font "Arial" ))
-		(text "branch_addr[10..0]" (rect 21 43 113 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
+		(text "predict" (rect 0 0 33 12)(font "Arial" ))
+		(text "predict" (rect 21 43 54 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
 	)
 	(port
 		(pt 0 64)
 		(input)
-		(text "W[15..0]" (rect 0 0 42 12)(font "Arial" ))
-		(text "W[15..0]" (rect 21 59 63 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
+		(text "update" (rect 0 0 33 12)(font "Arial" ))
+		(text "update" (rect 21 59 54 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
 	)
 	(port
 		(pt 0 80)
 		(input)
-		(text "CY" (rect 0 0 16 12)(font "Arial" ))
-		(text "CY" (rect 21 75 37 87)(font "Arial" ))
+		(text "branch_result" (rect 0 0 66 12)(font "Arial" ))
+		(text "branch_result" (rect 21 75 87 87)(font "Arial" ))
 		(line (pt 0 80)(pt 16 80))
 	)
 	(port
 		(pt 0 96)
 		(input)
-		(text "exec_done" (rect 0 0 53 12)(font "Arial" ))
-		(text "exec_done" (rect 21 91 74 103)(font "Arial" ))
+		(text "clock" (rect 0 0 25 12)(font "Arial" ))
+		(text "clock" (rect 21 91 46 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 288 32)
+		(output)
+		(text "prediction" (rect 0 0 47 12)(font "Arial" ))
+		(text "prediction" (rect 228 27 275 39)(font "Arial" ))
+		(line (pt 288 32)(pt 272 32))
+	)
+	(port
+		(pt 288 48)
+		(output)
+		(text "prediction_state_debug[1..0]" (rect 0 0 139 12)(font "Arial" ))
+		(text "prediction_state_debug[1..0]" (rect 150 43 289 55)(font "Arial" ))
+		(line (pt 288 48)(pt 272 48)(line_width 3))
+	)
+	(port
+		(pt 288 64)
+		(output)
+		(text "prediction_addr_debug[10..0]" (rect 0 0 141 12)(font "Arial" ))
+		(text "prediction_addr_debug[10..0]" (rect 148 59 289 71)(font "Arial" ))
+		(line (pt 288 64)(pt 272 64)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 272 128))
+	)
+)
+(symbol
+	(rect 608 -248 856 -168)
+	(text "predictor_predict_enable_control" (rect 5 0 163 12)(font "Arial" ))
+	(text "inst3" (rect 8 64 30 81)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "branch_type[2..0]" (rect 0 0 87 12)(font "Arial" ))
+		(text "branch_type[2..0]" (rect 21 27 108 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "predict" (rect 0 0 33 12)(font "Arial" ))
+		(text "predict" (rect 200 27 233 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32))
+	)
+	(port
+		(pt 248 48)
+		(output)
+		(text "unconditional_jump" (rect 0 0 93 12)(font "Arial" ))
+		(text "unconditional_jump" (rect 149 43 242 55)(font "Arial" ))
+		(line (pt 248 48)(pt 232 48))
+	)
+	(drawing
+		(rectangle (rect 16 16 232 64))
+	)
+)
+(symbol
+	(rect 1288 -96 1352 -48)
+	(text "AND2" (rect 1 0 25 10)(font "Arial" (font_size 6)))
+	(text "inst5" (rect 3 37 25 54)(font "Intel Clear" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 14 32))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(line (pt 42 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 14 12)(pt 30 12))
+		(line (pt 14 37)(pt 31 37))
+		(line (pt 14 12)(pt 14 37))
+		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
+	)
+)
+(symbol
+	(rect 1288 -160 1352 -112)
+	(text "AND2" (rect 1 0 25 10)(font "Arial" (font_size 6)))
+	(text "inst6" (rect 3 37 25 54)(font "Intel Clear" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 14 32))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(line (pt 42 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 14 12)(pt 30 12))
+		(line (pt 14 37)(pt 31 37))
+		(line (pt 14 12)(pt 14 37))
+		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
+	)
+)
+(symbol
+	(rect 1240 -288 1352 -200)
+	(text "BUSMUX" (rect 28 0 91 16)(font "Arial" (font_size 10)))
+	(text "inst8" (rect 3 77 25 94)(font "Intel Clear" ))
+	(port
+		(pt 0 64)
+		(input)
+		(text "datab[WIDTH-1..0]" (rect 6 51 108 65)(font "Arial" (font_size 8)))
+		(text "datab[]" (rect 6 51 44 65)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 44 64)(line_width 3))
+	)
+	(port
+		(pt 56 88)
+		(input)
+		(text "sel" (rect 59 70 75 84)(font "Arial" (font_size 8)))
+		(text "sel" (rect 59 70 75 84)(font "Arial" (font_size 8)))
+		(line (pt 56 88)(pt 56 72))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "dataa[WIDTH-1..0]" (rect 6 19 108 33)(font "Arial" (font_size 8)))
+		(text "dataa[]" (rect 6 19 44 33)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 44 32)(line_width 3))
+	)
+	(port
+		(pt 112 48)
+		(output)
+		(text "result[WIDTH-1..0]" (rect 75 35 177 49)(font "Arial" (font_size 8)))
+		(text "result[]" (rect 75 35 113 49)(font "Arial" (font_size 8)))
+		(line (pt 68 48)(pt 112 48)(line_width 3))
+	)
+	(parameter
+		"WIDTH"
+		"11"
+		"Width of I/O, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" "40" "48" "56" "64" 
+	)
+	(drawing
+		(text "0" (rect 52 31 56 41)(font "Arial" (font_size 6)))
+		(text "1" (rect 52 55 56 65)(font "Arial" (font_size 6)))
+		(line (pt 68 64)(pt 68 32))
+		(line (pt 44 80)(pt 44 16))
+		(line (pt 44 16)(pt 68 32))
+		(line (pt 44 80)(pt 68 64))
+	)
+	(annotation_block (parameter)(rect 1352 -328 1472 -290))
+)
+(symbol
+	(rect 840 208 1096 320)
+	(text "predictor_fifo_input_data" (rect 5 0 127 12)(font "Arial" ))
+	(text "inst10" (rect 8 96 36 113)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "branch_addr[10..0]" (rect 0 0 92 12)(font "Arial" ))
+		(text "branch_addr[10..0]" (rect 21 27 113 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "jump_addr[10..0]" (rect 0 0 82 12)(font "Arial" ))
+		(text "jump_addr[10..0]" (rect 21 43 103 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "branch_type[2..0]" (rect 0 0 87 12)(font "Arial" ))
+		(text "branch_type[2..0]" (rect 21 59 108 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "prediction" (rect 0 0 47 12)(font "Arial" ))
+		(text "prediction" (rect 21 75 68 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 256 32)
+		(output)
+		(text "packed_data[24..0]" (rect 0 0 94 12)(font "Arial" ))
+		(text "packed_data[24..0]" (rect 156 27 250 39)(font "Arial" ))
+		(line (pt 256 32)(pt 240 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 240 96))
+	)
+)
+(symbol
+	(rect 616 -144 896 32)
+	(text "predictor_input_latch" (rect 5 0 106 12)(font "Arial" ))
+	(text "inst11" (rect 8 160 36 177)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "jump_addr[10..0]" (rect 0 0 82 12)(font "Arial" ))
+		(text "jump_addr[10..0]" (rect 21 27 103 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "branch[13..0]" (rect 0 0 64 12)(font "Arial" ))
+		(text "branch[13..0]" (rect 21 43 85 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "branch_addr[10..0]" (rect 0 0 92 12)(font "Arial" ))
+		(text "branch_addr[10..0]" (rect 21 59 113 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "W[15..0]" (rect 0 0 42 12)(font "Arial" ))
+		(text "W[15..0]" (rect 21 75 63 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "CY" (rect 0 0 16 12)(font "Arial" ))
+		(text "CY" (rect 21 91 37 103)(font "Arial" ))
 		(line (pt 0 96)(pt 16 96))
 	)
 	(port
 		(pt 0 112)
 		(input)
-		(text "clock" (rect 0 0 25 12)(font "Arial" ))
-		(text "clock" (rect 21 107 46 119)(font "Arial" ))
+		(text "exec_done" (rect 0 0 53 12)(font "Arial" ))
+		(text "exec_done" (rect 21 107 74 119)(font "Arial" ))
 		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "clock" (rect 0 0 25 12)(font "Arial" ))
+		(text "clock" (rect 21 123 46 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128))
 	)
 	(port
 		(pt 280 32)
 		(output)
-		(text "latched_branch[13..0]" (rect 0 0 106 12)(font "Arial" ))
-		(text "latched_branch[13..0]" (rect 170 27 276 39)(font "Arial" ))
+		(text "latched_jump_addr[10..0]" (rect 0 0 123 12)(font "Arial" ))
+		(text "latched_jump_addr[10..0]" (rect 155 27 278 39)(font "Arial" ))
 		(line (pt 280 32)(pt 264 32)(line_width 3))
 	)
 	(port
 		(pt 280 48)
 		(output)
-		(text "latched_branch_addr[10..0]" (rect 0 0 133 12)(font "Arial" ))
-		(text "latched_branch_addr[10..0]" (rect 147 43 280 55)(font "Arial" ))
+		(text "latched_branch[13..0]" (rect 0 0 106 12)(font "Arial" ))
+		(text "latched_branch[13..0]" (rect 170 43 276 55)(font "Arial" ))
 		(line (pt 280 48)(pt 264 48)(line_width 3))
 	)
 	(port
 		(pt 280 64)
 		(output)
-		(text "latched_W[15..0]" (rect 0 0 83 12)(font "Arial" ))
-		(text "latched_W[15..0]" (rect 189 59 272 71)(font "Arial" ))
+		(text "latched_branch_addr[10..0]" (rect 0 0 133 12)(font "Arial" ))
+		(text "latched_branch_addr[10..0]" (rect 147 59 280 71)(font "Arial" ))
 		(line (pt 280 64)(pt 264 64)(line_width 3))
 	)
 	(port
 		(pt 280 80)
 		(output)
-		(text "latched_CY" (rect 0 0 57 12)(font "Arial" ))
-		(text "latched_CY" (rect 211 75 268 87)(font "Arial" ))
-		(line (pt 280 80)(pt 264 80))
+		(text "latched_W[15..0]" (rect 0 0 83 12)(font "Arial" ))
+		(text "latched_W[15..0]" (rect 189 75 272 87)(font "Arial" ))
+		(line (pt 280 80)(pt 264 80)(line_width 3))
 	)
 	(port
 		(pt 280 96)
 		(output)
-		(text "latched_exec_done" (rect 0 0 94 12)(font "Arial" ))
-		(text "latched_exec_done" (rect 180 91 274 103)(font "Arial" ))
+		(text "latched_CY" (rect 0 0 57 12)(font "Arial" ))
+		(text "latched_CY" (rect 211 91 268 103)(font "Arial" ))
 		(line (pt 280 96)(pt 264 96))
 	)
-	(drawing
-		(rectangle (rect 16 16 264 128))
+	(port
+		(pt 280 112)
+		(output)
+		(text "latched_exec_done" (rect 0 0 94 12)(font "Arial" ))
+		(text "latched_exec_done" (rect 180 107 274 119)(font "Arial" ))
+		(line (pt 280 112)(pt 264 112))
 	)
+	(drawing
+		(rectangle (rect 16 16 264 160))
+	)
+)
+(symbol
+	(rect 1208 248 1272 296)
+	(text "AND2" (rect 1 0 25 10)(font "Arial" (font_size 6)))
+	(text "inst7" (rect 3 37 25 54)(font "Intel Clear" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 14 32))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(line (pt 42 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 14 12)(pt 30 12))
+		(line (pt 14 37)(pt 31 37))
+		(line (pt 14 12)(pt 14 37))
+		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
+	)
+)
+(symbol
+	(rect 1208 304 1272 352)
+	(text "AND2" (rect 1 0 25 10)(font "Arial" (font_size 6)))
+	(text "inst12" (rect 3 37 31 54)(font "Intel Clear" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 14 32))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(line (pt 42 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 14 12)(pt 30 12))
+		(line (pt 14 37)(pt 31 37))
+		(line (pt 14 12)(pt 14 37))
+		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
+	)
+)
+(symbol
+	(rect 1704 208 1944 320)
+	(text "predictor_fifo_output_stage" (rect 5 0 140 12)(font "Arial" ))
+	(text "inst4" (rect 8 96 30 113)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "data[24..0]" (rect 0 0 53 12)(font "Arial" ))
+		(text "data[24..0]" (rect 21 27 74 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 240 32)
+		(output)
+		(text "fifo_branch_addr[10..0]" (rect 0 0 115 12)(font "Arial" ))
+		(text "fifo_branch_addr[10..0]" (rect 122 27 237 39)(font "Arial" ))
+		(line (pt 240 32)(pt 224 32)(line_width 3))
+	)
+	(port
+		(pt 240 48)
+		(output)
+		(text "fifo_jump_addr[10..0]" (rect 0 0 106 12)(font "Arial" ))
+		(text "fifo_jump_addr[10..0]" (rect 130 43 236 55)(font "Arial" ))
+		(line (pt 240 48)(pt 224 48)(line_width 3))
+	)
+	(port
+		(pt 240 64)
+		(output)
+		(text "fifo_branch_type[1..0]" (rect 0 0 110 12)(font "Arial" ))
+		(text "fifo_branch_type[1..0]" (rect 126 59 236 71)(font "Arial" ))
+		(line (pt 240 64)(pt 224 64)(line_width 3))
+	)
+	(port
+		(pt 240 80)
+		(output)
+		(text "fifo_branch_taken" (rect 0 0 89 12)(font "Arial" ))
+		(text "fifo_branch_taken" (rect 144 75 233 87)(font "Arial" ))
+		(line (pt 240 80)(pt 224 80))
+	)
+	(drawing
+		(rectangle (rect 16 16 224 96))
+	)
+)
+(symbol
+	(rect 1480 216 1624 344)
+	(text "LPM_FIFO" (rect 41 0 115 16)(font "Arial" (font_size 10)))
+	(text "inst9" (rect 3 116 25 133)(font "Intel Clear" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clock" (rect 20 63 49 77)(font "Arial" (font_size 8)))
+		(text "clock" (rect 20 63 49 77)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 16 72))
+	)
+	(port
+		(pt 0 24)
+		(input)
+		(text "data[LPM_WIDTH-1..0]" (rect 20 15 146 29)(font "Arial" (font_size 8)))
+		(text "data[]" (rect 20 15 51 29)(font "Arial" (font_size 8)))
+		(line (pt 0 24)(pt 16 24)(line_width 3))
+	)
+	(port
+		(pt 0 40)
+		(input)
+		(text "wrreq" (rect 20 31 55 45)(font "Arial" (font_size 8)))
+		(text "wrreq" (rect 20 31 55 45)(font "Arial" (font_size 8)))
+		(line (pt 0 40)(pt 16 40))
+	)
+	(port
+		(pt 0 56)
+		(input)
+		(text "rdreq" (rect 20 47 50 61)(font "Arial" (font_size 8)))
+		(text "rdreq" (rect 20 47 50 61)(font "Arial" (font_size 8)))
+		(line (pt 0 56)(pt 16 56))
+	)
+	(port
+		(pt 0 104)
+		(input)
+		(text "aclr" (rect 20 95 41 109)(font "Arial" (font_size 8)))
+		(text "aclr" (rect 20 95 41 109)(font "Arial" (font_size 8)))
+		(line (pt 0 104)(pt 16 104))
+	)
+	(port
+		(pt 0 88)
+		(input)
+		(text "sclr" (rect 20 79 41 93)(font "Arial" (font_size 8)))
+		(text "sclr" (rect 20 79 41 93)(font "Arial" (font_size 8)))
+		(line (pt 0 88)(pt 16 88))
+	)
+	(port
+		(pt 144 24)
+		(output)
+		(text "q[LPM_WIDTH-1..0]" (rect 112 15 220 29)(font "Arial" (font_size 8)))
+		(text "q[]" (rect 112 15 126 29)(font "Arial" (font_size 8)))
+		(line (pt 128 24)(pt 144 24)(line_width 3))
+	)
+	(port
+		(pt 144 56)
+		(output)
+		(text "empty" (rect 95 47 129 61)(font "Arial" (font_size 8)))
+		(text "empty" (rect 95 47 129 61)(font "Arial" (font_size 8)))
+		(line (pt 128 56)(pt 144 56))
+	)
+	(port
+		(pt 144 72)
+		(output)
+		(text "full" (rect 109 63 125 77)(font "Arial" (font_size 8)))
+		(text "full" (rect 110 63 126 77)(font "Arial" (font_size 8)))
+		(line (pt 128 72)(pt 144 72))
+	)
+	(port
+		(pt 144 104)
+		(output)
+		(text "usedw[LPM_WIDTHU-1..0]" (rect 83 95 232 109)(font "Arial" (font_size 8)))
+		(text "usedw[]" (rect 84 95 131 109)(font "Arial" (font_size 8)))
+		(line (pt 128 104)(pt 144 104)(line_width 3))
+	)
+	(parameter
+		"ALLOW_RWCYCLE_WHEN_FULL"
+		"\"OFF\""
+		"Specifies if a read & write cycle is allowed when then FIFO is full"
+		"\"ON\"" "\"OFF\"" 
+	)
+	(parameter
+		"LPM_NUMWORDS"
+		"8"
+		"Number of memory words"
+		"   2" "   4" "   8" "  16" "  32" "  64" " 128" " 256" " 512" "1024" "2048" "4096" 
+	)
+	(parameter
+		"LPM_SHOWAHEAD"
+		"\"OFF\""
+		"Specifies if q[] output preceeds or follows rdreq"
+		"\"ON\"" "\"OFF\"" 
+	)
+	(parameter
+		"LPM_WIDTH"
+		"25"
+		"Data width in bits, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" "40" "48" "56" "64" 
+	)
+	(parameter
+		"LPM_WIDTHU"
+		"ceil(log2(LPM_NUMWORDS))"
+		"usedw[] width in bits"
+		"ceil(log2(LPM_NUMWORDS))" 
+	)
+	(parameter
+		"OVERFLOW_CHECKING"
+		"\"ON\""
+		"Specifies if overflow is checked"
+		"\"ON\"" "\"OFF\"" 
+	)
+	(parameter
+		"UNDERFLOW_CHECKING"
+		"\"ON\""
+		"Specifies if underflow is checked"
+		"\"ON\"" "\"OFF\"" 
+	)
+	(parameter
+		"USE_EAB"
+		"\"ON\""
+		"Specifies EAB use"
+		"\"ON\"" "\"OFF\"" 
+	)
+	(drawing
+		(line (pt 16 16)(pt 128 16))
+		(line (pt 16 112)(pt 128 112))
+		(line (pt 128 112)(pt 128 16))
+		(line (pt 16 112)(pt 16 16))
+	)
+	(annotation_block (parameter)(rect 1560 24 1916 195))
+)
+(symbol
+	(rect 1760 320 1944 432)
+	(text "predictor_execution_check" (rect 5 0 135 12)(font "Arial" ))
+	(text "inst2" (rect 8 96 30 113)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "W[15..0]" (rect 0 0 42 12)(font "Arial" ))
+		(text "W[15..0]" (rect 21 27 63 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "CY" (rect 0 0 16 12)(font "Arial" ))
+		(text "CY" (rect 21 43 37 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 184 32)
+		(output)
+		(text "W_zero" (rect 0 0 36 12)(font "Arial" ))
+		(text "W_zero" (rect 133 27 169 39)(font "Arial" ))
+		(line (pt 184 32)(pt 168 32))
+	)
+	(port
+		(pt 184 48)
+		(output)
+		(text "W_negative" (rect 0 0 59 12)(font "Arial" ))
+		(text "W_negative" (rect 114 43 173 55)(font "Arial" ))
+		(line (pt 184 48)(pt 168 48))
+	)
+	(port
+		(pt 184 64)
+		(output)
+		(text "carry" (rect 0 0 25 12)(font "Arial" ))
+		(text "carry" (rect 142 59 167 71)(font "Arial" ))
+		(line (pt 184 64)(pt 168 64))
+	)
+	(drawing
+		(rectangle (rect 16 16 168 96))
+	)
+)
+(symbol
+	(rect 2216 -320 2480 -208)
+	(text "predictor_output_latch" (rect 5 0 113 12)(font "Arial" ))
+	(text "inst13" (rect 8 96 36 113)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "jump_addr[10..0]" (rect 0 0 82 12)(font "Arial" ))
+		(text "jump_addr[10..0]" (rect 21 27 103 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "preload" (rect 0 0 35 12)(font "Arial" ))
+		(text "preload" (rect 21 43 56 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "restore" (rect 0 0 34 12)(font "Arial" ))
+		(text "restore" (rect 21 59 55 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "clock" (rect 0 0 25 12)(font "Arial" ))
+		(text "clock" (rect 21 75 46 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 264 32)
+		(output)
+		(text "latched_jump_addr[10..0]" (rect 0 0 123 12)(font "Arial" ))
+		(text "latched_jump_addr[10..0]" (rect 139 27 262 39)(font "Arial" ))
+		(line (pt 264 32)(pt 248 32)(line_width 3))
+	)
+	(port
+		(pt 264 48)
+		(output)
+		(text "latched_preload" (rect 0 0 76 12)(font "Arial" ))
+		(text "latched_preload" (rect 179 43 255 55)(font "Arial" ))
+		(line (pt 264 48)(pt 248 48))
+	)
+	(port
+		(pt 264 64)
+		(output)
+		(text "latched_restore" (rect 0 0 75 12)(font "Arial" ))
+		(text "latched_restore" (rect 180 59 255 71)(font "Arial" ))
+		(line (pt 264 64)(pt 248 64))
+	)
+	(drawing
+		(rectangle (rect 16 16 248 96))
+	)
+)
+(symbol
+	(rect 1936 -336 2048 -248)
+	(text "BUSMUX" (rect 28 0 91 16)(font "Arial" (font_size 10)))
+	(text "inst14" (rect 3 77 31 94)(font "Intel Clear" ))
+	(port
+		(pt 0 64)
+		(input)
+		(text "datab[WIDTH-1..0]" (rect 6 51 108 65)(font "Arial" (font_size 8)))
+		(text "datab[]" (rect 6 51 44 65)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 44 64)(line_width 3))
+	)
+	(port
+		(pt 56 88)
+		(input)
+		(text "sel" (rect 59 70 75 84)(font "Arial" (font_size 8)))
+		(text "sel" (rect 59 70 75 84)(font "Arial" (font_size 8)))
+		(line (pt 56 88)(pt 56 72))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "dataa[WIDTH-1..0]" (rect 6 19 108 33)(font "Arial" (font_size 8)))
+		(text "dataa[]" (rect 6 19 44 33)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 44 32)(line_width 3))
+	)
+	(port
+		(pt 112 48)
+		(output)
+		(text "result[WIDTH-1..0]" (rect 75 35 177 49)(font "Arial" (font_size 8)))
+		(text "result[]" (rect 75 35 113 49)(font "Arial" (font_size 8)))
+		(line (pt 68 48)(pt 112 48)(line_width 3))
+	)
+	(parameter
+		"WIDTH"
+		"11"
+		"Width of I/O, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" "40" "48" "56" "64" 
+	)
+	(drawing
+		(text "0" (rect 52 31 56 41)(font "Arial" (font_size 6)))
+		(text "1" (rect 52 55 56 65)(font "Arial" (font_size 6)))
+		(line (pt 68 64)(pt 68 32))
+		(line (pt 44 80)(pt 44 16))
+		(line (pt 44 16)(pt 68 32))
+		(line (pt 44 80)(pt 68 64))
+	)
+	(annotation_block (parameter)(rect 2048 -376 2168 -338))
+)
+(symbol
+	(rect 2112 208 2368 384)
+	(text "predictor_prediction_check" (rect 5 0 135 12)(font "Arial" ))
+	(text "inst15" (rect 8 160 36 177)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "branch_addr[10..0]" (rect 0 0 92 12)(font "Arial" ))
+		(text "branch_addr[10..0]" (rect 21 27 113 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "jump_addr[10..0]" (rect 0 0 82 12)(font "Arial" ))
+		(text "jump_addr[10..0]" (rect 21 43 103 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "branch_type[1..0]" (rect 0 0 87 12)(font "Arial" ))
+		(text "branch_type[1..0]" (rect 21 59 108 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "branch_taken" (rect 0 0 66 12)(font "Arial" ))
+		(text "branch_taken" (rect 21 75 87 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "W_zero" (rect 0 0 36 12)(font "Arial" ))
+		(text "W_zero" (rect 21 91 57 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "W_negative" (rect 0 0 59 12)(font "Arial" ))
+		(text "W_negative" (rect 21 107 80 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "carry" (rect 0 0 25 12)(font "Arial" ))
+		(text "carry" (rect 21 123 46 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 256 32)
+		(output)
+		(text "branch_successful" (rect 0 0 93 12)(font "Arial" ))
+		(text "branch_successful" (rect 157 27 250 39)(font "Arial" ))
+		(line (pt 256 32)(pt 240 32))
+	)
+	(port
+		(pt 256 48)
+		(output)
+		(text "branch_result" (rect 0 0 66 12)(font "Arial" ))
+		(text "branch_result" (rect 180 43 246 55)(font "Arial" ))
+		(line (pt 256 48)(pt 240 48))
+	)
+	(port
+		(pt 256 64)
+		(output)
+		(text "failback_addr[10..0]" (rect 0 0 97 12)(font "Arial" ))
+		(text "failback_addr[10..0]" (rect 153 59 250 71)(font "Arial" ))
+		(line (pt 256 64)(pt 240 64)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 240 160))
+	)
+)
+(connector
+	(pt 1472 -104)
+	(pt 1416 -104)
+	(bus)
+)
+(connector
+	(pt 1472 -88)
+	(pt 1392 -88)
+)
+(connector
+	(text "update_trigger" (rect 1202 -96 1271 -79)(font "Intel Clear" ))
+	(pt 1192 -80)
+	(pt 1288 -80)
+)
+(connector
+	(pt 1352 -72)
+	(pt 1472 -72)
+)
+(connector
+	(text "latched_branch_addr" (rect 1130 -240 1230 -223)(font "Intel Clear" ))
+	(pt 1240 -224)
+	(pt 1120 -224)
+	(bus)
+)
+(connector
+	(pt 1416 -240)
+	(pt 1352 -240)
+	(bus)
+)
+(connector
+	(pt 1416 -104)
+	(pt 1416 -240)
+	(bus)
+)
+(connector
+	(pt 568 128)
+	(pt 568 -16)
+)
+(connector
+	(pt 568 -16)
+	(pt 616 -16)
+)
+(connector
+	(pt 296 -96)
+	(pt 616 -96)
+	(bus)
+)
+(connector
+	(pt 296 -80)
+	(pt 616 -80)
+	(bus)
+)
+(connector
+	(pt 296 -64)
+	(pt 616 -64)
+	(bus)
+)
+(connector
+	(pt 296 -48)
+	(pt 616 -48)
+)
+(connector
+	(pt 296 -32)
+	(pt 616 -32)
+)
+(connector
+	(text "latched_branch" (rect 906 -112 979 -95)(font "Intel Clear" ))
+	(pt 896 -96)
+	(pt 1000 -96)
+	(bus)
+)
+(connector
+	(text "latched_branch_addr" (rect 906 -96 1006 -79)(font "Intel Clear" ))
+	(pt 896 -80)
+	(pt 1000 -80)
+	(bus)
+)
+(connector
+	(text "latched_W" (rect 906 -80 957 -63)(font "Intel Clear" ))
+	(pt 896 -64)
+	(pt 1000 -64)
+	(bus)
+)
+(connector
+	(text "latched_CY" (rect 906 -64 961 -47)(font "Intel Clear" ))
+	(pt 896 -48)
+	(pt 1000 -48)
+)
+(connector
+	(text "latched_exec_done" (rect 906 -48 998 -31)(font "Intel Clear" ))
+	(pt 896 -32)
+	(pt 1000 -32)
+)
+(connector
+	(pt 1096 240)
+	(pt 1480 240)
+	(bus)
+)
+(connector
+	(text "prediction" (rect 1770 -120 1816 -103)(font "Intel Clear" ))
+	(pt 1832 -104)
+	(pt 1760 -104)
+)
+(connector
+	(text "latched_branch_addr" (rect 706 224 806 241)(font "Intel Clear" ))
+	(pt 840 240)
+	(pt 696 240)
+	(bus)
+)
+(connector
+	(text "latched_branch[2..0]" (rect 490 -232 586 -215)(font "Intel Clear" ))
+	(pt 608 -216)
+	(pt 464 -216)
+	(bus)
+)
+(connector
+	(text "unconditional_jump" (rect 866 -216 959 -199)(font "Intel Clear" ))
+	(pt 960 -200)
+	(pt 856 -200)
+)
+(connector
+	(text "predict" (rect 866 -232 897 -215)(font "Intel Clear" ))
+	(pt 960 -216)
+	(pt 856 -216)
+)
+(connector
+	(text "latched_jump_addr" (rect 906 -128 998 -111)(font "Intel Clear" ))
+	(pt 896 -112)
+	(pt 1000 -112)
+	(bus)
+)
+(connector
+	(pt 296 -112)
+	(pt 616 -112)
+	(bus)
+)
+(connector
+	(text "latched_jump_addr" (rect 706 240 798 257)(font "Intel Clear" ))
+	(pt 840 256)
+	(pt 696 256)
+	(bus)
+)
+(connector
+	(text "latched_branch[13..11]" (rect 706 256 814 273)(font "Intel Clear" ))
+	(pt 840 272)
+	(pt 696 272)
+	(bus)
+)
+(connector
+	(text "prediction" (rect 706 272 752 289)(font "Intel Clear" ))
+	(pt 840 288)
+	(pt 696 288)
+)
+(connector
+	(text "predict" (rect 1122 264 1153 281)(font "Intel Clear" ))
+	(pt 1208 280)
+	(pt 1112 280)
+)
+(connector
+	(text "predict_trigger" (rect 1122 248 1190 265)(font "Intel Clear" ))
+	(pt 1112 264)
+	(pt 1208 264)
+)
+(connector
+	(pt 1272 272)
+	(pt 1320 272)
+)
+(connector
+	(pt 1320 272)
+	(pt 1320 256)
+)
+(connector
+	(pt 1320 256)
+	(pt 1480 256)
+)
+(connector
+	(pt 1272 328)
+	(pt 1344 328)
+)
+(connector
+	(pt 1344 328)
+	(pt 1344 272)
+)
+(connector
+	(pt 1344 272)
+	(pt 1480 272)
+)
+(connector
+	(text "update_trigger" (rect 1122 304 1191 321)(font "Intel Clear" ))
+	(pt 1112 320)
+	(pt 1208 320)
+)
+(connector
+	(text "laltched_exec_done" (rect 1122 320 1217 337)(font "Intel Clear" ))
+	(pt 1112 336)
+	(pt 1208 336)
+)
+(connector
+	(text "clock" (rect 1386 272 1410 289)(font "Intel Clear" ))
+	(pt 1480 288)
+	(pt 1376 288)
+)
+(connector
+	(pt 1624 240)
+	(pt 1704 240)
+	(bus)
+)
+(connector
+	(text "fifo_branch_addr" (rect 1130 -272 1210 -255)(font "Intel Clear" ))
+	(pt 1240 -256)
+	(pt 1120 -256)
+	(bus)
+)
+(connector
+	(text "fifo_branch_type" (rect 1954 256 2034 273)(font "Intel Clear" ))
+	(pt 1944 272)
+	(pt 2112 272)
+	(bus)
+)
+(connector
+	(pt 1944 288)
+	(pt 2112 288)
+)
+(connector
+	(text "latched_W" (rect 1674 336 1725 353)(font "Intel Clear" ))
+	(pt 1760 352)
+	(pt 1664 352)
+	(bus)
+)
+(connector
+	(text "latched_CY" (rect 1674 352 1729 369)(font "Intel Clear" ))
+	(pt 1664 368)
+	(pt 1760 368)
+)
+(connector
+	(pt 1992 352)
+	(pt 1992 304)
+)
+(connector
+	(pt 1944 352)
+	(pt 1992 352)
+)
+(connector
+	(pt 1944 368)
+	(pt 2008 368)
+)
+(connector
+	(pt 2008 368)
+	(pt 2008 320)
+)
+(connector
+	(pt 1944 384)
+	(pt 2024 384)
+)
+(connector
+	(pt 2024 384)
+	(pt 2024 336)
+)
+(connector
+	(pt 1992 304)
+	(pt 2112 304)
+)
+(connector
+	(pt 2008 320)
+	(pt 2112 320)
+)
+(connector
+	(pt 2024 336)
+	(pt 2112 336)
+)
+(connector
+	(text "latched_exec_done" (rect 1202 -80 1294 -63)(font "Intel Clear" ))
+	(pt 1192 -64)
+	(pt 1288 -64)
 )
 (connector
 	(pt 240 128)
-	(pt 376 128)
-)
-(connector
-	(pt 552 144)
-	(pt 592 144)
-)
-(connector
-	(pt 552 160)
-	(pt 592 160)
-)
-(connector
-	(pt 568 128)
-	(pt 568 -16)
-)
-(connector
-	(pt 568 -16)
-	(pt 632 -16)
-)
-(connector
-	(pt 552 128)
-	(pt 568 128)
+	(pt 360 128)
 )
 (connector
 	(pt 568 128)
 	(pt 592 128)
 )
 (connector
-	(pt 296 -48)
-	(pt 632 -48)
+	(pt 536 128)
+	(pt 568 128)
 )
 (connector
-	(pt 296 -32)
-	(pt 632 -32)
+	(pt 536 144)
+	(pt 576 144)
 )
 (connector
-	(pt 296 -64)
-	(pt 632 -64)
+	(pt 536 160)
+	(pt 576 160)
+)
+(connector
+	(pt 1392 -136)
+	(pt 1352 -136)
+)
+(connector
+	(pt 1392 -88)
+	(pt 1392 -136)
+)
+(connector
+	(text "predict" (rect 1202 -144 1233 -127)(font "Intel Clear" ))
+	(pt 1288 -128)
+	(pt 1192 -128)
+)
+(connector
+	(text "predict_trigger" (rect 1202 -160 1270 -143)(font "Intel Clear" ))
+	(pt 1192 -144)
+	(pt 1288 -144)
+)
+(connector
+	(pt 2048 -288)
+	(pt 2216 -288)
 	(bus)
 )
 (connector
-	(pt 296 -80)
-	(pt 632 -80)
+	(text "latched_jump_addr" (rect 1826 -320 1918 -303)(font "Intel Clear" ))
+	(pt 1816 -304)
+	(pt 1936 -304)
 	(bus)
 )
 (connector
-	(pt 296 -96)
-	(pt 632 -96)
+	(text "branch_successful" (rect 2378 224 2464 241)(font "Intel Clear" ))
+	(pt 2368 240)
+	(pt 2480 240)
+)
+(connector
+	(text "branch_result" (rect 2378 240 2442 257)(font "Intel Clear" ))
+	(pt 2368 256)
+	(pt 2480 256)
+)
+(connector
+	(text "failback_addr" (rect 2378 256 2442 273)(font "Intel Clear" ))
+	(pt 2368 272)
+	(pt 2480 272)
 	(bus)
 )
 (connector
-	(pt 912 -48)
-	(pt 936 -48)
-)
-(connector
-	(pt 912 -32)
-	(pt 936 -32)
-)
-(connector
-	(pt 912 -64)
-	(pt 936 -64)
+	(text "fifo_branch_addr" (rect 1954 224 2034 241)(font "Intel Clear" ))
+	(pt 2112 240)
+	(pt 1944 240)
 	(bus)
 )
 (connector
-	(pt 912 -80)
-	(pt 936 -80)
+	(text "fifo_jump_addr" (rect 1954 240 2025 257)(font "Intel Clear" ))
+	(pt 2112 256)
+	(pt 1944 256)
 	(bus)
 )
 (connector
-	(pt 912 -96)
-	(pt 936 -96)
+	(text "failback_addr" (rect 1826 -288 1890 -271)(font "Intel Clear" ))
+	(pt 1816 -272)
+	(pt 1936 -272)
 	(bus)
 )
 (junction (pt 568 128))

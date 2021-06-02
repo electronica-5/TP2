@@ -1,0 +1,18 @@
+module predictor_bht (	input [10:0] 	branch_addr,
+								input				predict_update,
+								input 			branch_result,
+								input 			clock,
+								output			prediction);
+								
+	reg [255:0] mem [12:0];
+	integer i;
+	
+	initial begin
+		for (i = 0; i < 256; i = i + 1) begin
+			mem[i] = 0;
+		end
+	end
+	
+	always @ (posedge clock) begin
+		// hacer prediccion
+	end
