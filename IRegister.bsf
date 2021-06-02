@@ -48,23 +48,23 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 240 48)
 		(output)
-		(text "bsr_det" (rect 0 0 30 12)(font "Arial" ))
-		(text "bsr_det" (rect 189 43 219 55)(font "Arial" ))
-		(line (pt 240 48)(pt 224 48)(line_width 1))
+		(text "relative_jump[9..0]" (rect 0 0 73 12)(font "Arial" ))
+		(text "relative_jump[9..0]" (rect 146 43 219 55)(font "Arial" ))
+		(line (pt 240 48)(pt 224 48)(line_width 3))
 	)
 	(port
 		(pt 240 64)
 		(output)
-		(text "ret_det" (rect 0 0 28 12)(font "Arial" ))
-		(text "ret_det" (rect 191 59 219 71)(font "Arial" ))
+		(text "bsr_det" (rect 0 0 30 12)(font "Arial" ))
+		(text "bsr_det" (rect 189 59 219 71)(font "Arial" ))
 		(line (pt 240 64)(pt 224 64)(line_width 1))
 	)
 	(port
 		(pt 240 80)
 		(output)
-		(text "relative_jump[10..0]" (rect 0 0 76 12)(font "Arial" ))
-		(text "relative_jump[10..0]" (rect 143 75 219 87)(font "Arial" ))
-		(line (pt 240 80)(pt 224 80)(line_width 3))
+		(text "ret_det" (rect 0 0 28 12)(font "Arial" ))
+		(text "ret_det" (rect 191 75 219 87)(font "Arial" ))
+		(line (pt 240 80)(pt 224 80)(line_width 1))
 	)
 	(parameter
 		"bsr"

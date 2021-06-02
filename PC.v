@@ -9,15 +9,17 @@ module PC (
 	incr,
 	preload,
 	addr,
+	relative_addr,
 	jsr, //jump to subrutine
 	ret,
 	pc
 );
 	input incr;
 	input preload;
-	input [10:0] addr;
 	input jsr;
 	input ret;
+	input [10:0] addr;
+	input [9:0] relative_addr;
 	output reg [10:0] pc = 11'd0;
 
 	reg [10:0] saved_pc;
@@ -43,7 +45,7 @@ module PC (
 			// Si me llega un salto a subrutina, guardo la siguiente posicion del PC y cambio el registro interno del PC
 			// a PC= PC+S siendo S el salto relativo desde PC hacia la subrutina.
 			saved_pc = pc;
-			pc_latch = pc + addr[9:0];
+			pc_latch = pc + relative_addr;
 			pc = pc_latch;
 		end
 		if(ret_flag == 1) begin

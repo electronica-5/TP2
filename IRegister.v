@@ -3,9 +3,9 @@ module IRegister(
 	PR_code, 
 	enable,					// viene de hacer CLK and !HOLD
 	IR_code,
+	relative_jump,
 	bsr_det,
-	ret_det,
-	relative_jump);
+	ret_det);
 	
 	input [21:0]PR_code;
 	input enable;
@@ -13,7 +13,7 @@ module IRegister(
 	output reg [21:0]IR_code;
 	output reg bsr_det;
 	output reg ret_det;
-	output reg [10:0] relative_jump;
+	output reg [9:0] relative_jump;
 
 	parameter bsr = 12'b011100000000;
 	parameter ret = 22'b0000011000000000000000;
@@ -36,7 +36,7 @@ module IRegister(
 			begin
 					bsr_det=1;
 					ret_det=0;
-					relative_jump = PR_code[10:0];
+					relative_jump = PR_code[9:0];
 			end
 			
 		else
