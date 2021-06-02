@@ -27,8 +27,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 32)
 		(input)
-		(text "branch[13..0]" (rect 0 0 50 12)(font "Arial" ))
-		(text "branch[13..0]" (rect 21 27 71 39)(font "Arial" ))
+		(text "branch[21..0]" (rect 0 0 50 12)(font "Arial" ))
+		(text "branch[21..0]" (rect 21 27 71 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
@@ -76,8 +76,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 280 48)
 		(output)
-		(text "latched_branch[13..0]" (rect 0 0 83 12)(font "Arial" ))
-		(text "latched_branch[13..0]" (rect 176 43 259 55)(font "Arial" ))
+		(text "latched_branch[21..0]" (rect 0 0 83 12)(font "Arial" ))
+		(text "latched_branch[21..0]" (rect 176 43 259 55)(font "Arial" ))
 		(line (pt 280 48)(pt 264 48)(line_width 3))
 	)
 	(port

@@ -3,44 +3,16 @@ module predictor_trigger_control (	input 		clock,
 												output reg	update_trigger,
 												output reg	predict_trigger,
 												output reg	output_trigger);
-	integer i = 0;				
+	reg [1:0] c = 3;
 	always @ (posedge clock) begin
-		i = i + 1;
-		if (i == 1) begin
-			latch_trigger <= clock;
-			update_trigger <= 0;
-			predict_trigger <= 0;
-			output_trigger <= 0;
-		end
-		
-		if (i == 2) begin
-			latch_trigger <= 0;
-			update_trigger <= clock;
-			predict_trigger <= 0;
-			output_trigger <= 0;
-		end
-		
-		if (i == 3) begin
-			latch_trigger <= 0;
-			update_trigger <= 0;
-			predict_trigger <= clock;
-			output_trigger <= 0;
-		end
-		
-		if (i == 4) begin
-			latch_trigger <= 0;
-			update_trigger <= 0;
-			predict_trigger <= 0;
-			output_trigger <= clock;
-		end
-		
-		if (i == 5) begin
-			i = 0;
-			latch_trigger <= 0;
-			update_trigger <= 0;
-			predict_trigger <= 0;
-			output_trigger <= clock;
-		end
+		c <= c + 1;
 	end
+	
+
+	latch_trigger <= c == 0 ? clock : 0;
+	update_trigger <= c == 1 ? clock : 0;
+	predict_trigger <= c == 2 ? clock : 0;
+	output_trigger <= c == 3 ? clock : 0;
+
 	
 endmodule
