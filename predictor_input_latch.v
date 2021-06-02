@@ -4,6 +4,7 @@ module predictor_input_latch (	input [13:0]	branch,
 											input				CY,
 											input				exec_done,
 											input				clock,
+											output reg [10:0] latched_jump_addr,
 											output reg [13:0]	latched_branch,
 											output reg [10:0] latched_branch_addr,
 											output reg [15:0]	latched_W,
@@ -16,6 +17,7 @@ module predictor_input_latch (	input [13:0]	branch,
 		latched_W <= W;
 		latched_CY <= CY;
 		latched_exec_done <= exec_done;
+		latched_jump_addr <= branch_addr[10:0];
 	end
 	
 endmodule
