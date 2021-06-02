@@ -31,15 +31,15 @@ module predictor_trigger_control (	input 		clock,
 			latch_trigger <= 0;
 			update_trigger <= 0;
 			predict_trigger <= 0;
-			output_trigger <= Clock;
+			output_trigger <= clock;
 		end
 		
-		if (i = 5) begin
+		if (i == 5) begin
 			i = 0;
 			latch_trigger <= 0;
 			update_trigger <= 0;
 			predict_trigger <= 0;
-			output_trigger <= Clock;
+			output_trigger <= clock;
 		end
 	end
 	
