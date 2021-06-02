@@ -1,0 +1,16 @@
+module predictor_prediction_check (	input [1:0]	branch_type,
+												input			branch_taken,
+												input			W_zero,
+												input			W_negative,
+												input			carry,
+												output reg	branch_successfull);
+												
+	always begin
+		case (branch_type)
+			2'b01 : branch_successfull <= W_zero == branch_taken ? 1 : 0;
+			2'b10 : branch_successfull <= w_negative == branch_taken ? 1 : 0;
+			2'b11 : branch_successfull <= carry == branch_taken ? 1 : 0;
+		endcase
+	end
+	
+endmodule
