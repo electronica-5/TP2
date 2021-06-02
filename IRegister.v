@@ -18,26 +18,33 @@ module IRegister(
 	
 	always @(posedge enable)
 		begin
-				if( PR_code == ret )
-					begin
-							ret_det=1;
-							bsr_det=0;
-						
-					end
-				else if (PR_code[21:10] == bsr)
-					begin
-							bsr_det=1;
-							ret_det=0;
-					end
-			
-				else
-					begin
-							bsr_det=0;
-							ret_det=0;
-					end
 				IR_code= PR_code;
 		end
 
+		
+	always @(PR_code)
+	begin
+		if( PR_code == ret )
+			begin
+				ret_det=1;
+				bsr_det=0;
+					
+			end
+		else if (PR_code[21:10] == bsr)
+			begin
+					bsr_det=1;
+					ret_det=0;
+			end
+			
+		else
+			begin
+					bsr_det=0;
+					ret_det=0;
+			end
+		
+		
+	end
+		
 
 	endmodule
 	
