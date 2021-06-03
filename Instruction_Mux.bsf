@@ -21,14 +21,14 @@ https://fpgasoftware.intel.com/eula.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 312 96)
+	(rect 16 16 264 96)
 	(text "Instruction_Mux" (rect 5 0 68 12)(font "Arial" ))
 	(text "inst" (rect 8 64 20 76)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "micro_inst_generated[32..0]" (rect 0 0 110 12)(font "Arial" ))
-		(text "micro_inst_generated[32..0]" (rect 21 27 131 39)(font "Arial" ))
+		(text "Q[32..0]" (rect 0 0 31 12)(font "Arial" ))
+		(text "Q[32..0]" (rect 21 27 52 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
@@ -39,13 +39,13 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
-		(pt 296 32)
+		(pt 248 32)
 		(output)
 		(text "micro_instr_out[32..0]" (rect 0 0 87 12)(font "Arial" ))
-		(text "micro_instr_out[32..0]" (rect 188 27 275 39)(font "Arial" ))
-		(line (pt 296 32)(pt 280 32)(line_width 3))
+		(text "micro_instr_out[32..0]" (rect 140 27 227 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 280 64)(line_width 1))
+		(rectangle (rect 16 16 232 64)(line_width 1))
 	)
 )
