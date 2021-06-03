@@ -22,9 +22,9 @@ https://fpgasoftware.intel.com/eula.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 128 224 328 240)
+	(rect 72 208 272 224)
 	(text "INPUT" (rect 157 0 185 10)(font "Arial" (font_size 6)))
-	(text "INTRUCTION[21..0]" (rect 5 0 106 12)(font "Arial" ))
+	(text "INTRUCTION[21..0]" (rect 5 0 105 12)(font "Arial" ))
 	(pt 200 8)
 	(drawing
 		(line (pt 116 12)(pt 141 12))
@@ -40,7 +40,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 160 240 328 256)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "CLK" (rect 5 0 27 12)(font "Arial" ))
+	(text "CLK" (rect 5 0 26 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -52,8 +52,53 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
 )
+(pin
+	(output)
+	(rect 1080 312 1283 328)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "MICRO_INSTR[32..0]" (rect 90 0 197 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
 (symbol
-	(rect 480 200 640 296)
+	(rect 712 288 1008 368)
+	(text "Instruction_Mux" (rect 5 0 82 12)(font "Arial" ))
+	(text "inst2" (rect 8 64 30 81)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "micro_inst_generated[32..0]" (rect 0 0 136 12)(font "Arial" ))
+		(text "micro_inst_generated[32..0]" (rect 21 27 157 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "instruction[21..0]" (rect 0 0 82 12)(font "Arial" ))
+		(text "instruction[21..0]" (rect 21 43 103 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 296 32)
+		(output)
+		(text "micro_instr_out[32..0]" (rect 0 0 107 12)(font "Arial" ))
+		(text "micro_instr_out[32..0]" (rect 185 27 292 39)(font "Arial" ))
+		(line (pt 296 32)(pt 280 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 280 64))
+	)
+)
+(symbol
+	(rect 464 200 624 296)
 	(text "MIR_ROM" (rect 5 0 62 19)(font "Intel Clear" (font_size 8)))
 	(text "inst" (rect 8 75 24 92)(font "Intel Clear" ))
 	(port
@@ -71,13 +116,6 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 48)(pt 16 48))
 	)
 	(port
-		(pt 0 64)
-		(input)
-		(text "en" (rect 0 0 14 19)(font "Intel Clear" (font_size 8)))
-		(text "en" (rect 21 59 35 78)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
 		(pt 160 32)
 		(output)
 		(text "q[32..0]" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
@@ -89,12 +127,44 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (connector
-	(text "INSTRUCTION[21..15]" (rect 376 216 477 233)(font "Intel Clear" ))
-	(pt 480 232)
-	(pt 376 232)
+	(pt 712 320)
+	(pt 680 320)
+	(bus)
+)
+(connector
+	(pt 1008 320)
+	(pt 1080 320)
+	(bus)
+)
+(connector
+	(pt 680 320)
+	(pt 680 232)
 	(bus)
 )
 (connector
 	(pt 328 248)
-	(pt 480 248)
+	(pt 464 248)
+)
+(connector
+	(pt 624 232)
+	(pt 680 232)
+	(bus)
+)
+(connector
+	(text "instr[21..0]" (rect 272 200 321 217)(font "Intel Clear" ))
+	(pt 272 216)
+	(pt 312 216)
+	(bus)
+)
+(connector
+	(text "instr[21..15]" (rect 360 216 415 233)(font "Intel Clear" ))
+	(pt 360 232)
+	(pt 464 232)
+	(bus)
+)
+(connector
+	(text "instr[21..0]" (rect 632 320 681 337)(font "Intel Clear" ))
+	(pt 712 336)
+	(pt 632 336)
+	(bus)
 )
