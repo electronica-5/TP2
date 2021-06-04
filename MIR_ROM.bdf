@@ -22,9 +22,9 @@ https://fpgasoftware.intel.com/eula.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 592 184 760 200)
+	(rect 592 168 760 184)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "clk" (rect 5 0 19 17)(font "Intel Clear" ))
+	(text "addr[6..0]" (rect 5 0 52 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -38,9 +38,9 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
-	(rect 592 168 760 184)
+	(rect 592 184 760 200)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "addr[6..0]" (rect 5 0 52 12)(font "Arial" ))
+	(text "clock" (rect 5 0 31 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -69,32 +69,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 800 192 848 224)
-	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
-	(text "inst" (rect 3 21 20 33)(font "Arial" ))
-	(port
-		(pt 0 16)
-		(input)
-		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
-		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
-		(line (pt 0 16)(pt 13 16))
-	)
-	(port
-		(pt 48 16)
-		(output)
-		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
-		(line (pt 39 16)(pt 48 16))
-	)
-	(drawing
-		(line (pt 13 25)(pt 13 7))
-		(line (pt 13 7)(pt 31 16))
-		(line (pt 13 25)(pt 31 16))
-		(circle (rect 31 12 39 20))
-	)
-)
-(symbol
-	(rect 888 152 1000 248)
+	(rect 880 152 992 248)
 	(text "LPM_ROM" (rect 25 0 100 16)(font "Arial" (font_size 10)))
 	(text "MIR_ROM" (rect 3 85 57 99)(font "Arial" (font_size 8)))
 	(port
@@ -160,7 +135,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 96 80)(pt 96 16))
 		(line (pt 16 80)(pt 16 16))
 	)
-	(annotation_block (parameter)(rect 1000 16 1224 111))
+	(annotation_block (parameter)(rect 992 16 1216 111))
 )
 (symbol
 	(rect 536 192 568 208)
@@ -179,33 +154,8 @@ https://fpgasoftware.intel.com/eula.
 )
 (connector
 	(pt 760 176)
-	(pt 888 176)
+	(pt 880 176)
 	(bus)
-)
-(connector
-	(pt 784 192)
-	(pt 784 208)
-)
-(connector
-	(pt 784 208)
-	(pt 800 208)
-)
-(connector
-	(pt 848 208)
-	(pt 888 208)
-)
-(connector
-	(pt 1000 200)
-	(pt 1032 200)
-	(bus)
-)
-(connector
-	(pt 760 192)
-	(pt 784 192)
-)
-(connector
-	(pt 784 192)
-	(pt 888 192)
 )
 (connector
 	(pt 552 208)
@@ -213,6 +163,27 @@ https://fpgasoftware.intel.com/eula.
 )
 (connector
 	(pt 552 224)
-	(pt 888 224)
+	(pt 880 224)
 )
-(junction (pt 784 192))
+(connector
+	(pt 992 200)
+	(pt 1032 200)
+	(bus)
+)
+(connector
+	(pt 880 208)
+	(pt 864 208)
+)
+(connector
+	(pt 864 208)
+	(pt 864 192)
+)
+(connector
+	(pt 880 192)
+	(pt 864 192)
+)
+(connector
+	(pt 864 192)
+	(pt 760 192)
+)
+(junction (pt 864 192))

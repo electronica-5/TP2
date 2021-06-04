@@ -1,0 +1,41 @@
+module MI_ROM (
+    instruction,
+    micro_instruction
+);
+    input [21:0] instruction;
+    output reg [32:0] micro_instruction;
+
+    parameter [3:0] ALU=4'b0000;
+    parameter [1:0] SH= 0;
+    parameter Kmx =1'b0;
+    parameter MW=1'b0;
+    parameter MR=1'b0;
+    parameter [5:0] Bus_B=0;
+    parameter [5:0] Bus_C=0;
+    parameter [6:0] Type=0;
+    parameter [4:0] Bus_A;
+
+    always @(instruction)
+        begin
+           if(instruction[21:10] == 11'b10000000000) //jUMP X
+            begin
+                ALU=0;
+                SH=0;
+                Kmx=0;
+                MR=0;
+                MW=0;
+                Bus_B=6'b100010;
+                Bus_C=6'b100010;
+                Type=7'b=1000000;
+                Bus_A=5'b00000;
+                micro_instruction= {ALU,SH,Kmx,MR,MW,Bus_B,Bus_C,Type,Bus_A};
+            end
+
+
+
+
+
+
+        end
+
+endmodule
