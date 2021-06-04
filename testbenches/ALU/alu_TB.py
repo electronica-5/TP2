@@ -54,7 +54,7 @@ async def alu_test_2(dut):
         
         await Timer(1, units='ns')
 
-        assert dut.OUT.value == alu_model(A, B, CY_IN, ALU_C)[0] , f"ALU result is incorrect: {dut.OUT.value} != {alu_model(A, B, CY_IN, ALU_C)[0]}"
+        assert dut.OUT.value == alu_model(A, B, CY_IN, ALU_C)[0] , f"ALU result is incorrect: {dut.OUT.value} != {alu_model(A, B, CY_IN, ALU_C)[0]} A was {A}"
 
 @cocotb.test()
 async def alu_test_3(dut):
@@ -71,7 +71,7 @@ async def alu_test_3(dut):
         
         await Timer(1, units='ns')
 
-        assert dut.OUT.value == alu_model(A, B, CY_IN, ALU_C)[0] , f"ALU result is incorrect: {dut.OUT.value} != {alu_model(A, B, CY_IN, ALU_C)[0]}"
+        assert dut.OUT.value == alu_model(A, B, CY_IN, ALU_C)[0] , f"ALU result is incorrect: {dut.OUT.value} != {alu_model(A, B, CY_IN, ALU_C)[0]} B was {B}"
 
 @cocotb.test()
 async def alu_test_4(dut):

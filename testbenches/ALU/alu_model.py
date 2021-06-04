@@ -1,18 +1,22 @@
 from cocotb.binary import BinaryValue 
+
+
+
 def alu_model (A, B, CY_IN, ALUC):
     out=BinaryValue('x')
     cy_out=BinaryValue('x')
+    
     if (ALUC==0):
         out=A    
     elif(ALUC==1):
         out=B    
     elif(ALUC==2):
-        out=~A    
+        out = ~A+1+(1<<16)  
     elif(ALUC==3):
-        out=~B
+        out = ~B+1+(1<<16) 
     elif(ALUC==4):
         out=(A+B) & 0b1111111111111111
-        cy=(A+B)>>16
+        cy_out=(A+B)>>16
     elif(ALUC==5):
         out=(A+B+CY_IN) & 0b1111111111111111
         cy_out=(A+B+CY_IN)>>16
