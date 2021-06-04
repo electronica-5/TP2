@@ -128,7 +128,7 @@ module MI_ROM (
                     MR=0;
                     MW=0;
                     Bus_B= 6'b100010;
-                    Bus_C= ;
+                    Bus_C= 6'b100011;
                     T_word=7'b1000000;
                     Bus_A=0;
                     micro_instruction= {ALU,SH,Kmx,MR,MW,Bus_B,Bus_C,T_word,Bus_A};
