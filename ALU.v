@@ -15,8 +15,8 @@ module ALU (A, B, ALUC, CY_IN, CY_OUT, OUT);
 		
 			0:	 OUT = A;
 			1:	 OUT = B;
-			2:  OUT = ~A;
-			3:	 OUT = ~B;
+			2:  OUT = ~A+16'd1;
+			3:	 OUT = ~B+16'd1;
 			4:  begin
 				 AUX = A + B;
 				 OUT = AUX[15:0];
@@ -29,8 +29,8 @@ module ALU (A, B, ALUC, CY_IN, CY_OUT, OUT);
 				 end
 			6:  OUT = A | B;
 			7:	 OUT = A & B;
-			8:  OUT = 16'd00000000000000000;
-			9:  OUT = 16'd11111111111111111;
+			8:  OUT = 16'd0;
+			9:  OUT = 16'd1;
 			10: OUT = 16'hFFFF;
 			11: CY_OUT = 0;
 			12: CY_OUT = 1;
