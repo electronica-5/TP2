@@ -167,26 +167,9 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(output)
-	(rect 1736 -208 1752 -32)
+	(rect 1728 -232 1744 -56)
 	(text "OUTPUT" (rect 0 137 10 175)(font "Arial" (font_size 6))(vertical))
 	(text "micro[32..0]" (rect 0 27 12 86)(font "Arial" )(vertical))
-	(pt 8 176)
-	(drawing
-		(line (pt 8 176)(pt 8 124))
-		(line (pt 4 124)(pt 4 98))
-		(line (pt 12 124)(pt 12 98))
-		(line (pt 12 124)(pt 4 124))
-		(line (pt 4 98)(pt 8 94))
-		(line (pt 8 94)(pt 12 98))
-		(line (pt 12 98)(pt 8 94))
-	)
-	(rotate90)
-)
-(pin
-	(output)
-	(rect 1712 -248 1728 -72)
-	(text "OUTPUT" (rect 0 137 10 175)(font "Arial" (font_size 6))(vertical))
-	(text "Q[32..0]" (rect 0 46 12 86)(font "Arial" )(vertical))
 	(pt 8 176)
 	(drawing
 		(line (pt 8 176)(pt 8 124))
@@ -902,7 +885,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 1416 -64 1712 32)
+	(rect 1416 -56 1712 40)
 	(text "MicroInstrGenerator" (rect 5 0 121 19)(font "Intel Clear" (font_size 8)))
 	(text "inst14" (rect 8 75 36 92)(font "Intel Clear" ))
 	(port
@@ -922,16 +905,9 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 296 32)
 		(output)
-		(text "Q[32..0]" (rect 0 0 48 19)(font "Intel Clear" (font_size 8)))
-		(text "Q[32..0]" (rect 227 27 275 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 296 32)(pt 280 32)(line_width 3))
-	)
-	(port
-		(pt 296 48)
-		(output)
 		(text "MICRO_INSTR[32..0]" (rect 0 0 123 19)(font "Intel Clear" (font_size 8)))
-		(text "MICRO_INSTR[32..0]" (rect 152 43 275 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 296 48)(pt 280 48)(line_width 3))
+		(text "MICRO_INSTR[32..0]" (rect 152 27 275 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 32)(pt 280 32)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 280 80))
@@ -1059,12 +1035,6 @@ https://fpgasoftware.intel.com/eula.
 	(text "C_CTRL[5..0]" (rect 2194 72 2256 89)(font "Intel Clear" ))
 	(pt 2184 88)
 	(pt 2256 88)
-	(bus)
-)
-(connector
-	(text "IR_OUT[10..0]" (rect 1736 -24 1802 -7)(font "Intel Clear" ))
-	(pt 1840 -8)
-	(pt 1800 -8)
 	(bus)
 )
 (connector
@@ -1296,12 +1266,6 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "IR_OUT[21..0]" (rect 1304 -40 1370 -23)(font "Intel Clear" ))
-	(pt 1296 -24)
-	(pt 1352 -24)
-	(bus)
-)
-(connector
 	(text "HOLD" (rect 2194 104 2222 121)(font "Intel Clear" ))
 	(pt 2184 120)
 	(pt 2280 120)
@@ -1310,22 +1274,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 2440 -120)
 	(pt 2464 -120)
 	(bus)
-)
-(connector
-	(pt 368 -24)
-	(pt 416 -24)
-)
-(connector
-	(pt 416 -24)
-	(pt 456 -24)
-)
-(connector
-	(pt 416 -104)
-	(pt 416 -24)
-)
-(connector
-	(pt 1016 -104)
-	(pt 1016 -8)
 )
 (connector
 	(pt 1016 -8)
@@ -1341,58 +1289,77 @@ https://fpgasoftware.intel.com/eula.
 	(pt 776 56)
 )
 (connector
+	(pt 1352 -40)
+	(pt 1352 -24)
+	(bus)
+)
+(connector
+	(text "IR_OUT[21..0]" (rect 1304 -40 1370 -23)(font "Intel Clear" ))
+	(pt 1296 -24)
+	(pt 1352 -24)
+	(bus)
+)
+(connector
+	(text "IR_OUT[10..0]" (rect 1752 -24 1818 -7)(font "Intel Clear" ))
+	(pt 1744 -8)
+	(pt 1840 -8)
+	(bus)
+)
+(connector
+	(pt 1736 -24)
+	(pt 1736 -56)
+	(bus)
+)
+(connector
+	(pt 1712 -24)
+	(pt 1736 -24)
+	(bus)
+)
+(connector
+	(pt 1736 -24)
+	(pt 1840 -24)
+	(bus)
+)
+(connector
+	(pt 1416 -8)
+	(pt 1392 -8)
+)
+(connector
+	(pt 1016 -104)
+	(pt 1016 -8)
+)
+(connector
+	(pt 1352 -24)
+	(pt 1416 -24)
+	(bus)
+)
+(connector
+	(pt 416 -104)
+	(pt 416 -24)
+)
+(connector
+	(pt 368 -24)
+	(pt 416 -24)
+)
+(connector
+	(pt 416 -24)
+	(pt 456 -24)
+)
+(connector
+	(pt 1392 -104)
+	(pt 1392 -8)
+)
+(connector
 	(pt 416 -104)
 	(pt 1016 -104)
 )
 (connector
 	(pt 1016 -104)
-	(pt 1408 -104)
-)
-(connector
-	(pt 1352 -32)
-	(pt 1416 -32)
-	(bus)
-)
-(connector
-	(pt 1408 -16)
-	(pt 1416 -16)
-)
-(connector
-	(pt 1408 -104)
-	(pt 1408 -16)
-)
-(connector
-	(pt 1744 -16)
-	(pt 1712 -16)
-	(bus)
-)
-(connector
-	(pt 1720 -32)
-	(pt 1712 -32)
-	(bus)
-)
-(connector
-	(pt 1720 -72)
-	(pt 1720 -32)
-	(bus)
-)
-(connector
-	(pt 1352 -40)
-	(pt 1352 -32)
-	(bus)
-)
-(connector
-	(pt 1352 -32)
-	(pt 1352 -24)
-	(bus)
-)
-(connector
-	(pt 1744 -32)
-	(pt 1744 -16)
-	(bus)
+	(pt 1392 -104)
 )
 (junction (pt 2440 360))
 (junction (pt 2440 -120))
 (junction (pt 416 -24))
+(junction (pt 1352 -24))
+(junction (pt 1736 -24))
 (junction (pt 1016 -104))
-(junction (pt 1352 -32))

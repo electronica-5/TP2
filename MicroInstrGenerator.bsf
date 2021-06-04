@@ -41,16 +41,9 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 296 32)
 		(output)
-		(text "Q[32..0]" (rect 0 0 48 19)(font "Intel Clear" (font_size 8)))
-		(text "Q[32..0]" (rect 227 27 275 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 296 32)(pt 280 32)(line_width 3))
-	)
-	(port
-		(pt 296 48)
-		(output)
 		(text "MICRO_INSTR[32..0]" (rect 0 0 123 19)(font "Intel Clear" (font_size 8)))
-		(text "MICRO_INSTR[32..0]" (rect 152 43 275 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 296 48)(pt 280 48)(line_width 3))
+		(text "MICRO_INSTR[32..0]" (rect 152 27 275 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 32)(pt 280 32)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 280 80))
