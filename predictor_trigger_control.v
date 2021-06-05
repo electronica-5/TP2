@@ -2,17 +2,75 @@ module predictor_trigger_control (	input 		clock,
 												output reg	latch_trigger,
 												output reg	update_trigger,
 												output reg	predict_trigger,
-												output reg	output_trigger);
-	reg [1:0] c = 3;
+												output reg	output_trigger,
+												output reg 	update_enable, 
+												output reg 	predict_enable,
+												output reg 	output_enable);
+												
+												
+	integer i = 0; 
+	integer j = 0;											
 	always @ (posedge clock) begin
-		c <= c + 1;
+		case (i)
+			0: begin
+				latch_trigger <= 1;
+				update_trigger <= 0;
+				predict_trigger <= 0;
+				output_trigger <= 0;
+				i = i + 1;
+			end
+			1 : begin
+				latch_trigger <= 0;
+				update_trigger <= 1;
+				predict_trigger <= 0;
+				output_trigger <= 0;
+				i = i + 1;
+			end
+			2 : begin
+				latch_trigger <= 0;
+				update_trigger <= 0;
+				predict_trigger <= 1;
+				output_trigger <= 0;
+				i = i + 1;
+			end
+			3 : begin
+				latch_trigger <= 0;
+				update_trigger <= 0;
+				predict_trigger <= 0;
+				output_trigger <= 1;
+				
+				i = 0;
+			end
+		endcase
 	end
 	
-
-	latch_trigger <= c == 0 ? clock : 0;
-	update_trigger <= c == 1 ? clock : 0;
-	predict_trigger <= c == 2 ? clock : 0;
-	output_trigger <= c == 3 ? clock : 0;
-
+	always @ (negedge clock) begin
+		case (j)
+			0: begin
+				update_enable <= 1;
+				predict_enable <= 0;
+				output_enable <= 0;
+				j = j + 1;
+			end
+			1: begin
+				update_enable <= 0;
+				predict_enable <= 1;
+				output_enable <= 0;
+				j = j + 1;
+			end
+			2: begin
+				update_enable <= 0;
+				predict_enable <= 0;
+				output_enable <= 1;
+				j = j + 1;
+			end
+			3: begin
+				update_enable <= 0;
+				predict_enable <= 0;
+				output_enable <= 0;
+				j = 0;
+			end
+		endcase
+	end
 	
 endmodule
