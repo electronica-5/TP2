@@ -76,8 +76,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 256 32)
 		(output)
-		(text "prediction_success" (rect 0 0 75 12)(font "Arial" ))
-		(text "prediction_success" (rect 160 27 235 39)(font "Arial" ))
+		(text "prediction_failed" (rect 0 0 62 12)(font "Arial" ))
+		(text "prediction_failed" (rect 173 27 235 39)(font "Arial" ))
 		(line (pt 256 32)(pt 240 32)(line_width 1))
 	)
 	(port

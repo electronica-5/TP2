@@ -5,22 +5,25 @@ module predictor_prediction_check (	input [10:0]			branch_addr,
 												input						W_zero,
 												input						W_negative,
 												input						carry,
-												output reg				prediction_success,
+												output reg				prediction_failed,
 												output reg				branch_result,
 												output reg [10:0]		failback_addr);
-												
+				
+	initial begin
+		prediction_failed = 0;
+	end
 	always begin
 		case (branch_type)
 			2'b01 : begin
-				prediction_success <= W_zero == branch_taken ? 1 : 0;
+				prediction_failed <= W_zero == branch_taken ? 0 : 1;
 				branch_result <= W_zero ? 1 : 0;
 			end
 			2'b10 : begin
-				prediction_success <= W_negative == branch_taken ? 1 : 0;
+				prediction_failed <= W_negative == branch_taken ? 0 : 1;
 				branch_result <= W_negative ? 1 : 0;
 			end
 			2'b11 : begin 
-				prediction_success <= carry == branch_taken ? 1 : 0;
+				prediction_failed <= carry == branch_taken ? 0 : 1;
 				branch_result <= carry ? 1 : 0;
 			end
 		endcase
