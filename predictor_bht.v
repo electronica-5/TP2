@@ -3,8 +3,7 @@ module predictor_bht	 (	input [10:0]	latched_branch_addr,
 								input				predict_clock,
 								input				update_clock,
 								input 			branch_result,
-								output reg		prediction,
-								output reg [1:0] updated_state);
+								output reg		prediction);
 								
 	reg [12:0] mem [255:0];
 	integer i;
@@ -36,6 +35,5 @@ module predictor_bht	 (	input [10:0]	latched_branch_addr,
 			2'b11 : mem[fifo_branch_addr[7:0]][1:0] = branch_result ? 2'b11 : 2'b10;
 		endcase
 		mem[fifo_branch_addr[7:0]][12:2] = fifo_branch_addr;
-		updated_state = mem[fifo_branch_addr[7:0]][1:0];
 	end
 endmodule
