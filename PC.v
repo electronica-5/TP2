@@ -12,7 +12,8 @@ module PC (
 	relative_addr,
 	jsr, //jump to subrutine
 	ret,
-	pc
+	pc,
+	pc_prev
 );
 	input incr;
 	input preload;
@@ -21,6 +22,7 @@ module PC (
 	input [10:0] addr;
 	input [9:0] relative_addr;
 	output reg [10:0] pc = 11'd0;
+	output reg [10:0] pc_prev = 11'd0;
 
 	reg [10:0] saved_pc;
 	reg [10:0] pc_latch = 11'd0;
@@ -32,6 +34,7 @@ module PC (
 		
 		if(preload_flag == 0 && jsr_flag == 0 && ret_flag == 0)begin
 			pc_latch = pc_latch + 1;
+			pc_prev = pc;
 			pc = pc_latch;
 			// Siempre que me llegue un posedge del 'clock', actualizo la salida del PC por el que tengo
 			// guardado en el registro interno
