@@ -18,7 +18,7 @@ Detalles de los bits de T: 	(0 -> Menos significativo)
 *********************************************************/
 
 
-module UC2 (A2, B2, T2, C3, T3, C4, T4, C5, T5, HOLD, branch_update);
+module UC2 (A2, B2, T2, C3, T3, C4, T4, C5, T5, CLK, HOLD, branch_update);
 /********************************************************************
 Bloque UC-2 encargado de hacer la lógica para Holdear el pipeline en 
 caso de que se necesite utilizar un registro/carry en una microintrucción
@@ -38,6 +38,7 @@ es decir, cuando la microinstrucción del branch entre a la etapa de
 	input [6:0] T4;
 	input [5:0] C5;
 	input [6:0] T5;
+	input CLK;
 	output reg HOLD;
 	output reg branch_update;
 
@@ -48,7 +49,7 @@ es decir, cuando la microinstrucción del branch entre a la etapa de
 	parameter C_read = 4;
 	parameter C_write = 5;
 
-	always @*
+	always @(negedge CLK)
 	begin
 		HOLD = 0;
 		branch_update = 0;

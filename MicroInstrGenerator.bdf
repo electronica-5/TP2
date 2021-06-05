@@ -1,0 +1,222 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect 48 208 224 224)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "INTRUCTION[21..0]" (rect 9 0 109 12)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 0 240 176 256)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "CLK" (rect 9 0 30 12)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(output)
+	(rect 952 312 1128 328)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "MICRO_INSTR[32..0]" (rect 90 0 197 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(symbol
+	(rect 456 192 616 288)
+	(text "MIR_ROM" (rect 5 0 62 19)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 75 24 92)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "addr[6..0]" (rect 0 0 59 19)(font "Intel Clear" (font_size 8)))
+		(text "addr[6..0]" (rect 21 27 80 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clock" (rect 0 0 29 19)(font "Intel Clear" (font_size 8)))
+		(text "clock" (rect 21 43 50 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "q[32..0]" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
+		(text "q[32..0]" (rect 92 27 139 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 160 32)(pt 144 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 144 80))
+	)
+)
+(symbol
+	(rect 664 288 912 400)
+	(text "Instruction_Mux" (rect 5 0 82 12)(font "Arial" ))
+	(text "inst2" (rect 8 96 31 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Q[32..0]" (rect 0 0 40 12)(font "Arial" ))
+		(text "Q[32..0]" (rect 21 27 61 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "instruction[21..0]" (rect 0 0 82 12)(font "Arial" ))
+		(text "instruction[21..0]" (rect 21 43 103 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 59 35 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "micro_instr_out[32..0]" (rect 0 0 107 12)(font "Arial" ))
+		(text "micro_instr_out[32..0]" (rect 137 27 227 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 232 96))
+	)
+)
+(symbol
+	(rect 328 384 584 464)
+	(text "flip_flop_ian" (rect 5 0 65 12)(font "Arial" ))
+	(text "inst1" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "instruction_in[21..0]" (rect 0 0 96 12)(font "Arial" ))
+		(text "instruction_in[21..0]" (rect 21 27 117 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 43 35 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 256 32)
+		(output)
+		(text "instruction_out[21..0]" (rect 0 0 103 12)(font "Arial" ))
+		(text "instruction_out[21..0]" (rect 148 27 235 39)(font "Arial" ))
+		(line (pt 256 32)(pt 240 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 240 64))
+	)
+)
+(connector
+	(pt 328 336)
+	(pt 328 216)
+	(bus)
+)
+(connector
+	(pt 328 336)
+	(pt 664 336)
+	(bus)
+)
+(connector
+	(pt 912 320)
+	(pt 952 320)
+	(bus)
+)
+(connector
+	(text "instr[21..0]" (rect 248 200 297 217)(font "Intel Clear" ))
+	(pt 224 216)
+	(pt 328 216)
+	(bus)
+)
+(connector
+	(pt 176 248)
+	(pt 272 248)
+)
+(connector
+	(pt 272 352)
+	(pt 664 352)
+)
+(connector
+	(text "instr[21..15]" (rect 352 208 407 225)(font "Intel Clear" ))
+	(pt 352 224)
+	(pt 456 224)
+	(bus)
+)
+(connector
+	(pt 664 320)
+	(pt 664 224)
+	(bus)
+)
+(connector
+	(pt 664 224)
+	(pt 616 224)
+	(bus)
+)
+(connector
+	(pt 272 240)
+	(pt 456 240)
+)
+(connector
+	(pt 272 240)
+	(pt 272 248)
+)
+(connector
+	(pt 272 248)
+	(pt 272 352)
+)
+(junction (pt 272 248))

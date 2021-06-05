@@ -1,0 +1,19 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1622817457" />
+    <testcase name="alu_test_0" classname="alu_TB" file="E:\userdata\documents\materias\ev\TP2\testbenches\ALU\alu_TB.py" lineno="8" time="0.03500485420227051" sim_time_ns="500.001" ratio_time="14283.761820883932" />
+    <testcase name="alu_test_1" classname="alu_TB" file="E:\userdata\documents\materias\ev\TP2\testbenches\ALU\alu_TB.py" lineno="25" time="0.03807830810546875" sim_time_ns="500.001" ratio_time="13130.86176557804" />
+    <testcase name="alu_test_2" classname="alu_TB" file="E:\userdata\documents\materias\ev\TP2\testbenches\ALU\alu_TB.py" lineno="42" time="0.03891468048095703" sim_time_ns="500.001" ratio_time="12848.647189707142" />
+    <testcase name="alu_test_3" classname="alu_TB" file="E:\userdata\documents\materias\ev\TP2\testbenches\ALU\alu_TB.py" lineno="59" time="0.03899431228637695" sim_time_ns="500.001" ratio_time="12822.40846634139" />
+    <testcase name="alu_test_4" classname="alu_TB" file="E:\userdata\documents\materias\ev\TP2\testbenches\ALU\alu_TB.py" lineno="76" time="0.04305386543273926" sim_time_ns="500.0010000000002" ratio_time="11613.382328727834" />
+    <testcase name="alu_test_5" classname="alu_TB" file="E:\userdata\documents\materias\ev\TP2\testbenches\ALU\alu_TB.py" lineno="94" time="0.04675555229187012" sim_time_ns="500.00099999999975" ratio_time="10693.93848411326" />
+    <testcase name="alu_test_6" classname="alu_TB" file="E:\userdata\documents\materias\ev\TP2\testbenches\ALU\alu_TB.py" lineno="112" time="0.03518819808959961" sim_time_ns="500.0010000000002" ratio_time="14209.337992438517" />
+    <testcase name="alu_test_7" classname="alu_TB" file="E:\userdata\documents\materias\ev\TP2\testbenches\ALU\alu_TB.py" lineno="129" time="0.03489947319030762" sim_time_ns="500.00099999999975" ratio_time="14326.892479822918" />
+    <testcase name="alu_test_8" classname="alu_TB" file="E:\userdata\documents\materias\ev\TP2\testbenches\ALU\alu_TB.py" lineno="146" time="0.03386354446411133" sim_time_ns="500.0010000000002" ratio_time="14765.170271230838" />
+    <testcase name="alu_test_9" classname="alu_TB" file="E:\userdata\documents\materias\ev\TP2\testbenches\ALU\alu_TB.py" lineno="163" time="0.034332990646362305" sim_time_ns="500.0010000000002" ratio_time="14563.281280973319" />
+    <testcase name="alu_test_10" classname="alu_TB" file="E:\userdata\documents\materias\ev\TP2\testbenches\ALU\alu_TB.py" lineno="180" time="0.03529930114746094" sim_time_ns="500.0010000000002" ratio_time="14164.614701896586" />
+    <testcase name="alu_test_11" classname="alu_TB" file="E:\userdata\documents\materias\ev\TP2\testbenches\ALU\alu_TB.py" lineno="197" time="0.03377676010131836" sim_time_ns="500.0009999999993" ratio_time="14803.10718080043" />
+    <testcase name="alu_test_12" classname="alu_TB" file="E:\userdata\documents\materias\ev\TP2\testbenches\ALU\alu_TB.py" lineno="214" time="0.035021066665649414" sim_time_ns="500.0010000000002" ratio_time="14277.149373363565" />
+    <testcase name="alu_test_XX" classname="alu_TB" file="E:\userdata\documents\materias\ev\TP2\testbenches\ALU\alu_TB.py" lineno="231" time="0.037003278732299805" sim_time_ns="500.0010000000002" ratio_time="13512.34315254216" />
+  </testsuite>
+</testsuites>

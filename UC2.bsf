@@ -88,6 +88,13 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 160)(pt 16 160)(line_width 3))
 	)
 	(port
+		(pt 0 176)
+		(input)
+		(text "CLK" (rect 0 0 20 12)(font "Arial" ))
+		(text "CLK" (rect 21 171 41 183)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176)(line_width 1))
+	)
+	(port
 		(pt 192 32)
 		(output)
 		(text "HOLD" (rect 0 0 27 12)(font "Arial" ))
