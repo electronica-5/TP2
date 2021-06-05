@@ -72,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 448 288 624 304)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "CLK_BRANCH" (rect 5 0 80 12)(font "Arial" ))
+	(text "CLK_BRANCH" (rect 9 0 83 12)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12))
@@ -86,9 +86,9 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
-	(rect 392 440 560 456)
+	(rect 528 472 696 488)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "resto" (rect 5 0 30 12)(font "Arial" ))
+	(text "RST" (rect 5 0 23 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -102,9 +102,9 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
-	(rect 400 464 568 480)
+	(rect 528 456 696 472)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "clockkk" (rect 5 0 42 17)(font "Intel Clear" ))
+	(text "C5[5..0]" (rect 5 0 46 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -300,9 +300,9 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(output)
-	(rect 768 448 944 464)
+	(rect 928 456 1104 472)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "salida" (rect 90 0 118 17)(font "Intel Clear" ))
+	(text "Cout[5..0]" (rect 90 0 139 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -515,6 +515,13 @@ https://fpgasoftware.intel.com/eula.
 		(text "CLK" (rect 0 0 23 19)(font "Intel Clear" (font_size 8)))
 		(text "CLK" (rect 21 59 44 78)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "RESTORE" (rect 0 0 56 19)(font "Intel Clear" (font_size 8)))
+		(text "RESTORE" (rect 21 75 77 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
 	)
 	(port
 		(pt 344 32)
@@ -1177,9 +1184,9 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 568 424 760 504)
+	(rect 1024 216 1216 296)
 	(text "latch_restore" (rect 5 0 68 12)(font "Arial" ))
-	(text "inst16" (rect 8 64 36 81)(font "Intel Clear" ))
+	(text "inst16" (rect 8 64 37 76)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -1198,7 +1205,7 @@ https://fpgasoftware.intel.com/eula.
 		(pt 192 32)
 		(output)
 		(text "restore_latched" (rect 0 0 75 12)(font "Arial" ))
-		(text "restore_latched" (rect 108 27 183 39)(font "Arial" ))
+		(text "restore_latched" (rect 108 27 171 39)(font "Arial" ))
 		(line (pt 192 32)(pt 176 32))
 	)
 	(parameter
@@ -1209,7 +1216,36 @@ https://fpgasoftware.intel.com/eula.
 	(drawing
 		(rectangle (rect 16 16 176 64))
 	)
-	(annotation_block (parameter)(rect 760 384 936 424))
+	(annotation_block (parameter)(rect 1216 176 1392 216))
+)
+(symbol
+	(rect 696 432 864 512)
+	(text "MUX_C" (rect 5 0 41 12)(font "Arial" ))
+	(text "inst17" (rect 8 64 36 81)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "C5[5..0]" (rect 0 0 40 12)(font "Arial" ))
+		(text "C5[5..0]" (rect 21 27 61 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "restore" (rect 0 0 34 12)(font "Arial" ))
+		(text "restore" (rect 21 43 55 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 168 32)
+		(output)
+		(text "Cout[5..0]" (rect 0 0 49 12)(font "Arial" ))
+		(text "Cout[5..0]" (rect 106 27 155 39)(font "Arial" ))
+		(line (pt 168 32)(pt 152 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 152 64))
+	)
 )
 (connector
 	(pt 456 56)
@@ -1720,18 +1756,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 2280 120)
 )
 (connector
-	(pt 768 456)
-	(pt 760 456)
-)
-(connector
-	(pt 560 456)
-	(pt 560 448)
-)
-(connector
-	(pt 568 456)
-	(pt 560 456)
-)
-(connector
 	(text "<<__$DEF_ALIAS918>>" (rect 2274 344 2386 361)(font "Intel Clear" )(invisible))
 	(pt 2264 360)
 	(pt 2440 360)
@@ -1745,6 +1769,31 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 1368 408)
 	(pt 1384 408)
+)
+(connector
+	(pt 1304 360)
+	(pt 1336 360)
+	(bus)
+)
+(connector
+	(text "DATA_ADDR[9..0]" (rect 1304 344 1388 361)(font "Intel Clear" ))
+	(pt 1336 360)
+	(pt 1384 360)
+	(bus)
+)
+(connector
+	(pt 968 248)
+	(pt 1024 248)
+)
+(connector
+	(text "CLK" (rect 986 248 1006 265)(font "Intel Clear" ))
+	(pt 1024 264)
+	(pt 976 264)
+)
+(connector
+	(pt 1600 328)
+	(pt 1656 328)
+	(bus)
 )
 (connector
 	(pt 1656 328)
@@ -1762,19 +1811,18 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(pt 1304 360)
-	(pt 1336 360)
-	(bus)
+	(text "RESTORE" (rect 1226 232 1272 249)(font "Intel Clear" ))
+	(pt 1216 248)
+	(pt 1264 248)
 )
 (connector
-	(text "DATA_ADDR[9..0]" (rect 1304 344 1388 361)(font "Intel Clear" ))
-	(pt 1336 360)
-	(pt 1384 360)
-	(bus)
+	(text "RESTORE" (rect 1762 8 1808 25)(font "Intel Clear" ))
+	(pt 1832 24)
+	(pt 1752 24)
 )
 (connector
-	(pt 1600 328)
-	(pt 1656 328)
+	(pt 864 464)
+	(pt 928 464)
 	(bus)
 )
 (junction (pt 2440 360))

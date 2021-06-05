@@ -46,6 +46,13 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 64)(pt 16 64))
 	)
 	(port
+		(pt 0 80)
+		(input)
+		(text "RESTORE" (rect 0 0 56 19)(font "Intel Clear" (font_size 8)))
+		(text "RESTORE" (rect 21 75 77 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
 		(pt 344 32)
 		(output)
 		(text "KMX" (rect 0 0 27 19)(font "Intel Clear" (font_size 8)))
