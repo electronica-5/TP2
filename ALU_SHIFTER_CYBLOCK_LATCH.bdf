@@ -184,14 +184,14 @@ https://fpgasoftware.intel.com/eula.
 		(pt 192 32)
 		(output)
 		(text "CY_OUT" (rect 0 0 44 12)(font "Arial" ))
-		(text "CY_OUT" (rect 134 27 178 39)(font "Arial" ))
+		(text "CY_OUT" (rect 134 27 171 39)(font "Arial" ))
 		(line (pt 192 32)(pt 176 32))
 	)
 	(port
 		(pt 192 48)
 		(output)
 		(text "OUT[15..0]" (rect 0 0 54 12)(font "Arial" ))
-		(text "OUT[15..0]" (rect 126 43 180 55)(font "Arial" ))
+		(text "OUT[15..0]" (rect 126 43 171 55)(font "Arial" ))
 		(line (pt 192 48)(pt 176 48)(line_width 3))
 	)
 	(drawing
@@ -227,7 +227,7 @@ https://fpgasoftware.intel.com/eula.
 		(pt 176 32)
 		(output)
 		(text "OUT[15..0]" (rect 0 0 54 12)(font "Arial" ))
-		(text "OUT[15..0]" (rect 110 27 164 39)(font "Arial" ))
+		(text "OUT[15..0]" (rect 110 27 155 39)(font "Arial" ))
 		(line (pt 176 32)(pt 160 32)(line_width 3))
 	)
 	(drawing
@@ -256,7 +256,7 @@ https://fpgasoftware.intel.com/eula.
 		(pt 176 32)
 		(output)
 		(text "OUT[15..0]" (rect 0 0 54 12)(font "Arial" ))
-		(text "OUT[15..0]" (rect 110 27 164 39)(font "Arial" ))
+		(text "OUT[15..0]" (rect 110 27 155 39)(font "Arial" ))
 		(line (pt 176 32)(pt 160 32)(line_width 3))
 	)
 	(drawing
@@ -292,7 +292,7 @@ https://fpgasoftware.intel.com/eula.
 		(pt 176 32)
 		(output)
 		(text "CY_IN" (rect 0 0 34 12)(font "Arial" ))
-		(text "CY_IN" (rect 127 27 161 39)(font "Arial" ))
+		(text "CY_IN" (rect 127 27 155 39)(font "Arial" ))
 		(line (pt 176 32)(pt 160 32))
 	)
 	(drawing
@@ -321,7 +321,7 @@ https://fpgasoftware.intel.com/eula.
 		(pt 176 32)
 		(output)
 		(text "OUT[15..0]" (rect 0 0 54 12)(font "Arial" ))
-		(text "OUT[15..0]" (rect 110 27 164 39)(font "Arial" ))
+		(text "OUT[15..0]" (rect 110 27 155 39)(font "Arial" ))
 		(line (pt 176 32)(pt 160 32)(line_width 3))
 	)
 	(drawing
@@ -331,7 +331,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 504 368 680 448)
 	(text "Latch_16" (rect 5 0 49 12)(font "Arial" ))
-	(text "Latch_B" (rect 8 64 46 81)(font "Intel Clear" ))
+	(text "Latch_B" (rect 8 64 48 76)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -350,7 +350,7 @@ https://fpgasoftware.intel.com/eula.
 		(pt 176 32)
 		(output)
 		(text "OUT[15..0]" (rect 0 0 54 12)(font "Arial" ))
-		(text "OUT[15..0]" (rect 110 27 164 39)(font "Arial" ))
+		(text "OUT[15..0]" (rect 110 27 155 39)(font "Arial" ))
 		(line (pt 176 32)(pt 160 32)(line_width 3))
 	)
 	(drawing
@@ -360,7 +360,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 1128 288 1304 368)
 	(text "Latch_16" (rect 5 0 49 12)(font "Arial" ))
-	(text "Latch_C" (rect 8 64 46 81)(font "Intel Clear" ))
+	(text "Latch_C" (rect 8 64 49 76)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -379,7 +379,7 @@ https://fpgasoftware.intel.com/eula.
 		(pt 176 32)
 		(output)
 		(text "OUT[15..0]" (rect 0 0 54 12)(font "Arial" ))
-		(text "OUT[15..0]" (rect 110 27 164 39)(font "Arial" ))
+		(text "OUT[15..0]" (rect 110 27 155 39)(font "Arial" ))
 		(line (pt 176 32)(pt 160 32)(line_width 3))
 	)
 	(drawing
