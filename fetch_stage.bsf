@@ -1,0 +1,72 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 288 144)
+	(text "fetch_stage" (rect 5 0 73 19)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 107 24 124)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "preload" (rect 0 0 46 19)(font "Intel Clear" (font_size 8)))
+		(text "preload" (rect 21 27 67 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "preload_addr[10..0]" (rect 0 0 120 19)(font "Intel Clear" (font_size 8)))
+		(text "preload_addr[10..0]" (rect 21 43 141 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clock" (rect 0 0 29 19)(font "Intel Clear" (font_size 8)))
+		(text "clock" (rect 21 59 50 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "hold" (rect 0 0 25 19)(font "Intel Clear" (font_size 8)))
+		(text "hold" (rect 21 75 46 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 272 32)
+		(output)
+		(text "instr_addr[10..0]" (rect 0 0 100 19)(font "Intel Clear" (font_size 8)))
+		(text "instr_addr[10..0]" (rect 151 27 251 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 272 32)(pt 256 32)(line_width 3))
+	)
+	(port
+		(pt 272 48)
+		(output)
+		(text "instruction[21..0]" (rect 0 0 100 19)(font "Intel Clear" (font_size 8)))
+		(text "instruction[21..0]" (rect 151 43 251 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 272 48)(pt 256 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 256 112))
+	)
+)

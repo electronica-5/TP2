@@ -18,7 +18,7 @@ module IRegister(
 	parameter bsr = 12'b011100000000;
 	parameter ret = 22'b0000011000000000000000;
 	
-	always @(posedge enable)
+	always @(*)
 		begin
 				IR_code= PR_code;
 		end
