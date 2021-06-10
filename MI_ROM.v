@@ -3,28 +3,30 @@ module MI_ROM (
 	micro_instruction,
 	clk,
 	HOLD,
-	test,
-	test2
+	DATA_ADDR
 );
-    input [21:0] instruction;
+    
+	input [21:0] instruction;
 	input clk;
 	input HOLD;
-    output reg [32:0] micro_instruction;
 
-    reg [3:0] ALU=4'b0000;
-    reg [1:0] SH= 2'b00;
-    reg Kmx =1'b0;
-    reg MW=1'b0;
-    reg MR=1'b0;
-    reg [5:0] Bus_B =0;
-    reg [5:0] Bus_C=0;
-    reg [6:0] T_word=0;
-    reg [4:0] Bus_A;
+	output reg [10:0] DATA_ADDR;
+	output reg [32:0] micro_instruction;
+
+	reg [3:0] ALU=4'b0000;
+	reg [1:0] SH= 2'b00;
+	reg Kmx =1'b0;
+	reg MW=1'b0;
+	reg MR=1'b0;
+	reg [5:0] Bus_B =0;
+	reg [5:0] Bus_C=0;
+	reg [6:0] T_word=0;
+	reg [4:0] Bus_A;
 	
-	output reg [10:0]test; 
-	output reg [10:0]test2;
-    always @(negedge clk)
+
+   always @(negedge clk)
 	begin
+		DATA_ADDR = instruction;
 		if(HOLD == 0) 
 		begin
 			if(instruction[21:11] == 11'b10000000000) //jUMP X   linea 3

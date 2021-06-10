@@ -55,16 +55,9 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 256 48)
 		(output)
-		(text "test[10..0]" (rect 0 0 37 12)(font "Arial" ))
-		(text "test[10..0]" (rect 198 43 235 55)(font "Arial" ))
+		(text "DATA_ADDR[10..0]" (rect 0 0 89 12)(font "Arial" ))
+		(text "DATA_ADDR[10..0]" (rect 146 43 235 55)(font "Arial" ))
 		(line (pt 256 48)(pt 240 48)(line_width 3))
-	)
-	(port
-		(pt 256 64)
-		(output)
-		(text "test2[10..0]" (rect 0 0 42 12)(font "Arial" ))
-		(text "test2[10..0]" (rect 193 59 235 71)(font "Arial" ))
-		(line (pt 256 64)(pt 240 64)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 240 96)(line_width 1))
