@@ -1,10 +1,16 @@
-MOK W,#10
+MOK W,#10   //hola como estas gato
+
 MOV 0,W
-MOK W,#19
+MOK W,#19   // ESTO ES UN COMENTARIO
 ADW 1,0
+
+//hola, comentando locoooo
+
+// assassddasdasdasdadsdasd
+
 MOV W,1
 MOM 0,W
-MOK W,#7
+MOK W,#7    //ASD ASD ASD ASD ASD
 ADW 1,0
 MOM W,0
 ADW 2,1
