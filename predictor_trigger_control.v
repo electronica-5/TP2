@@ -38,7 +38,6 @@ module predictor_trigger_control (	input 		clock,
 				update_trigger <= 0;
 				predict_trigger <= 0;
 				output_trigger <= 1;
-				
 				i = 0;
 			end
 		endcase

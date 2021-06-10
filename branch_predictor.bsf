@@ -21,9 +21,9 @@ https://fpgasoftware.intel.com/eula.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 288 176)
+	(rect 16 16 288 208)
 	(text "branch_predictor" (rect 5 0 106 19)(font "Intel Clear" (font_size 8)))
-	(text "inst" (rect 8 139 24 156)(font "Intel Clear" ))
+	(text "inst" (rect 8 171 24 188)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -67,6 +67,13 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 112)(pt 16 112))
 	)
 	(port
+		(pt 0 128)
+		(input)
+		(text "hold" (rect 0 0 25 19)(font "Intel Clear" (font_size 8)))
+		(text "hold" (rect 21 123 46 142)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
 		(pt 272 32)
 		(output)
 		(text "jump_addr[10..0]" (rect 0 0 105 19)(font "Intel Clear" (font_size 8)))
@@ -87,7 +94,42 @@ https://fpgasoftware.intel.com/eula.
 		(text "restore" (rect 210 59 251 78)(font "Intel Clear" (font_size 8)))
 		(line (pt 272 64)(pt 256 64))
 	)
+	(port
+		(pt 272 80)
+		(output)
+		(text "fifo_br_taken" (rect 0 0 80 19)(font "Intel Clear" (font_size 8)))
+		(text "fifo_br_taken" (rect 171 75 251 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 272 80)(pt 256 80))
+	)
+	(port
+		(pt 272 96)
+		(output)
+		(text "W_positive" (rect 0 0 66 19)(font "Intel Clear" (font_size 8)))
+		(text "W_positive" (rect 185 91 251 110)(font "Intel Clear" (font_size 8)))
+		(line (pt 272 96)(pt 256 96))
+	)
+	(port
+		(pt 272 112)
+		(output)
+		(text "latched_W[15..0]" (rect 0 0 101 19)(font "Intel Clear" (font_size 8)))
+		(text "latched_W[15..0]" (rect 150 107 251 126)(font "Intel Clear" (font_size 8)))
+		(line (pt 272 112)(pt 256 112)(line_width 3))
+	)
+	(port
+		(pt 272 128)
+		(output)
+		(text "fifo_brtype[1..0]" (rect 0 0 97 19)(font "Intel Clear" (font_size 8)))
+		(text "fifo_brtype[1..0]" (rect 154 123 251 142)(font "Intel Clear" (font_size 8)))
+		(line (pt 272 128)(pt 256 128)(line_width 3))
+	)
+	(port
+		(pt 272 144)
+		(output)
+		(text "fifo_data[24..0]" (rect 0 0 93 19)(font "Intel Clear" (font_size 8)))
+		(text "fifo_data[24..0]" (rect 158 139 251 158)(font "Intel Clear" (font_size 8)))
+		(line (pt 272 144)(pt 256 144)(line_width 3))
+	)
 	(drawing
-		(rectangle (rect 16 16 256 144))
+		(rectangle (rect 16 16 256 176))
 	)
 )

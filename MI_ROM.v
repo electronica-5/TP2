@@ -3,28 +3,30 @@ module MI_ROM (
 	micro_instruction,
 	clk,
 	HOLD,
-	test,
-	test2
+	DATA_ADDR
 );
-    input [21:0] instruction;
+    
+	input [21:0] instruction;
 	input clk;
 	input HOLD;
-    output reg [32:0] micro_instruction;
 
-    reg [3:0] ALU=4'b0000;
-    reg [1:0] SH= 2'b00;
-    reg Kmx =1'b0;
-    reg MW=1'b0;
-    reg MR=1'b0;
-    reg [5:0] Bus_B =0;
-    reg [5:0] Bus_C=0;
-    reg [6:0] T_word=0;
-    reg [4:0] Bus_A;
+	output reg [10:0] DATA_ADDR;
+	output reg [32:0] micro_instruction;
+
+	reg [3:0] ALU=4'b0000;
+	reg [1:0] SH= 2'b00;
+	reg Kmx =1'b0;
+	reg MW=1'b0;
+	reg MR=1'b0;
+	reg [5:0] Bus_B =0;
+	reg [5:0] Bus_C=0;
+	reg [6:0] T_word=0;
+	reg [4:0] Bus_A;
 	
-	output reg [10:0]test; 
-	output reg [10:0]test2;
-    always @(negedge clk)
+
+   always @(negedge clk)
 	begin
+		DATA_ADDR = instruction;
 		if(HOLD == 0) 
 		begin
 			if(instruction[21:11] == 11'b10000000000) //jUMP X   linea 3
@@ -352,7 +354,7 @@ module MI_ROM (
 				end
 			else if(instruction == 22'b0000001000000000000000) //CLR CY Linea 27 Excel 
 				begin
-					ALU=4'b0000;
+					ALU=4'b1011;
 					SH=2'b00;
 					Kmx=1'b0;
 					MR=1'b0;
@@ -365,7 +367,7 @@ module MI_ROM (
 				end
 			else if(instruction == 22'b0000010000000000000000) //SET CY Linea 28 Excel 
 				begin
-					ALU=4'b0000;
+					ALU=4'b1100;
 					SH=2'b00;
 					Kmx=1'b0;
 					MR=1'b0;
