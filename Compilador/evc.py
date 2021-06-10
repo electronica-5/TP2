@@ -206,9 +206,12 @@ CONTENT BEGIN
 				temp_string = temp_string.rjust(22,'0')
 				if i != len(instructions) - 1 :
 					line = f"		{i}	:	{temp_string};\n"
+					out_file.write(line)
 				else:
-					line = f"		[{i}..2047]	:	{temp_string};\n"
-				out_file.write(line)
+					line = f"		{i}	:	{temp_string};\n"
+					out_file.write(line)
+					line = f"		[{i+1}..2047]	:	0000000000000000000000;\n"
+					out_file.write(line)
 			else:
 				if len(line) >= 1:
 					if line[0][0] != '/' or line[0][1] != '/':
