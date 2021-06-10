@@ -62,8 +62,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 112)
 		(input)
-		(text "W_negative" (rect 0 0 49 12)(font "Arial" ))
-		(text "W_negative" (rect 21 107 70 119)(font "Arial" ))
+		(text "W_positive" (rect 0 0 46 12)(font "Arial" ))
+		(text "W_positive" (rect 21 107 67 119)(font "Arial" ))
 		(line (pt 0 112)(pt 16 112)(line_width 1))
 	)
 	(port

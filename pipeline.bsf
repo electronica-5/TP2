@@ -111,8 +111,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 344 160)
 		(output)
-		(text "BRANCH_UPDATE" (rect 0 0 109 19)(font "Intel Clear" (font_size 8)))
-		(text "BRANCH_UPDATE" (rect 214 155 323 174)(font "Intel Clear" (font_size 8)))
+		(text "BRANCH_UP" (rect 0 0 76 19)(font "Intel Clear" (font_size 8)))
+		(text "BRANCH_UP" (rect 247 155 323 174)(font "Intel Clear" (font_size 8)))
 		(line (pt 344 160)(pt 328 160))
 	)
 	(port

@@ -67,6 +67,13 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 112)(pt 16 112))
 	)
 	(port
+		(pt 0 128)
+		(input)
+		(text "hold" (rect 0 0 25 19)(font "Intel Clear" (font_size 8)))
+		(text "hold" (rect 21 123 46 142)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
 		(pt 272 32)
 		(output)
 		(text "jump_addr[10..0]" (rect 0 0 105 19)(font "Intel Clear" (font_size 8)))

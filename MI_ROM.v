@@ -352,7 +352,7 @@ module MI_ROM (
 				end
 			else if(instruction == 22'b0000001000000000000000) //CLR CY Linea 27 Excel 
 				begin
-					ALU=4'b0000;
+					ALU=4'b1011;
 					SH=2'b00;
 					Kmx=1'b0;
 					MR=1'b0;
@@ -365,7 +365,7 @@ module MI_ROM (
 				end
 			else if(instruction == 22'b0000010000000000000000) //SET CY Linea 28 Excel 
 				begin
-					ALU=4'b0000;
+					ALU=4'b1100;
 					SH=2'b00;
 					Kmx=1'b0;
 					MR=1'b0;

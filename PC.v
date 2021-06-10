@@ -1,10 +1,11 @@
-module PC ( input               clock,
-            input               preload,
-				input [10:0]        preload_addr,
-            input [9:0]        relative_addr,
-				input               jsr,
-            input               ret,
-            output reg [10:0]   pc);
+module PC ( input               	clock,
+            input               	preload,
+				input [10:0]       	preload_addr,
+            input [9:0]        	relative_addr,
+				input               	jsr,
+            input               	ret,
+            output reg [10:0]   	pc,
+				output reg [10:0]		incr_pc);
 
     reg [10:0] addr_mem;
     reg [10:0] curr_pc;
@@ -26,5 +27,6 @@ module PC ( input               clock,
             pc = curr_pc + 1;
         end
         curr_pc = pc;
+		  incr_pc = pc + 1;
     end
 endmodule

@@ -22,7 +22,7 @@ https://fpgasoftware.intel.com/eula.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 0 40 176 56)
+	(rect -224 32 -48 48)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "clock" (rect 9 0 34 12)(font "Arial" ))
 	(pt 176 8)
@@ -105,6 +105,22 @@ https://fpgasoftware.intel.com/eula.
 	(rect 88 -560 264 -544)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "W[15..0]" (rect 9 0 51 12)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect -224 48 -48 64)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "hold" (rect 9 0 29 12)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12))
@@ -472,49 +488,6 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 16 112)(pt 16 16))
 	)
 	(annotation_block (parameter)(rect 1560 32 1916 203))
-)
-(symbol
-	(rect 1760 320 1944 432)
-	(text "predictor_execution_check" (rect 5 0 135 12)(font "Arial" ))
-	(text "inst2" (rect 8 96 31 108)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "W[15..0]" (rect 0 0 42 12)(font "Arial" ))
-		(text "W[15..0]" (rect 21 27 63 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "CY" (rect 0 0 16 12)(font "Arial" ))
-		(text "CY" (rect 21 43 37 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 184 32)
-		(output)
-		(text "W_zero" (rect 0 0 36 12)(font "Arial" ))
-		(text "W_zero" (rect 133 27 163 39)(font "Arial" ))
-		(line (pt 184 32)(pt 168 32))
-	)
-	(port
-		(pt 184 48)
-		(output)
-		(text "W_negative" (rect 0 0 59 12)(font "Arial" ))
-		(text "W_negative" (rect 114 43 163 55)(font "Arial" ))
-		(line (pt 184 48)(pt 168 48))
-	)
-	(port
-		(pt 184 64)
-		(output)
-		(text "carry" (rect 0 0 25 12)(font "Arial" ))
-		(text "carry" (rect 142 59 163 71)(font "Arial" ))
-		(line (pt 184 64)(pt 168 64))
-	)
-	(drawing
-		(rectangle (rect 16 16 168 96))
-	)
 )
 (symbol
 	(rect 1936 -336 2048 -248)
@@ -1047,7 +1020,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 2104 208 2360 384)
+	(rect 2088 208 2344 384)
 	(text "predictor_prediction_check" (rect 5 0 135 12)(font "Arial" ))
 	(text "inst15" (rect 8 160 37 172)(font "Arial" ))
 	(port
@@ -1088,8 +1061,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 112)
 		(input)
-		(text "W_negative" (rect 0 0 59 12)(font "Arial" ))
-		(text "W_negative" (rect 21 107 80 119)(font "Arial" ))
+		(text "W_positive" (rect 0 0 55 12)(font "Arial" ))
+		(text "W_positive" (rect 21 107 76 119)(font "Arial" ))
 		(line (pt 0 112)(pt 16 112))
 	)
 	(port
@@ -1661,6 +1634,106 @@ https://fpgasoftware.intel.com/eula.
 		(rectangle (rect 16 16 232 128))
 	)
 )
+(symbol
+	(rect -16 40 32 72)
+	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
+	(text "inst5" (rect 3 21 26 33)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 13 16))
+	)
+	(port
+		(pt 48 16)
+		(output)
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 32 7 46 19)(font "Courier New" (bold))(invisible))
+		(line (pt 39 16)(pt 48 16))
+	)
+	(drawing
+		(line (pt 13 25)(pt 13 7))
+		(line (pt 13 7)(pt 31 16))
+		(line (pt 13 25)(pt 31 16))
+		(circle (rect 31 12 39 20))
+	)
+)
+(symbol
+	(rect 72 24 136 72)
+	(text "AND2" (rect 1 0 25 10)(font "Arial" (font_size 6)))
+	(text "inst6" (rect 3 37 26 49)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 14 32))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 62 27)(font "Courier New" (bold))(invisible))
+		(line (pt 42 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 14 12)(pt 30 12))
+		(line (pt 14 37)(pt 31 37))
+		(line (pt 14 12)(pt 14 37))
+		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
+	)
+)
+(symbol
+	(rect 1760 320 1944 432)
+	(text "predictor_execution_check" (rect 5 0 135 12)(font "Arial" ))
+	(text "inst2" (rect 8 96 31 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "W[15..0]" (rect 0 0 42 12)(font "Arial" ))
+		(text "W[15..0]" (rect 21 27 63 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "CY" (rect 0 0 16 12)(font "Arial" ))
+		(text "CY" (rect 21 43 37 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 184 32)
+		(output)
+		(text "W_zero" (rect 0 0 36 12)(font "Arial" ))
+		(text "W_zero" (rect 133 27 163 39)(font "Arial" ))
+		(line (pt 184 32)(pt 168 32))
+	)
+	(port
+		(pt 184 48)
+		(output)
+		(text "W_positive" (rect 0 0 55 12)(font "Arial" ))
+		(text "W_positive" (rect 117 43 163 55)(font "Arial" ))
+		(line (pt 184 48)(pt 168 48))
+	)
+	(port
+		(pt 184 64)
+		(output)
+		(text "carry" (rect 0 0 25 12)(font "Arial" ))
+		(text "carry" (rect 142 59 163 71)(font "Arial" ))
+		(line (pt 184 64)(pt 168 64))
+	)
+	(drawing
+		(rectangle (rect 16 16 168 96))
+	)
+)
 (connector
 	(text "unconditional_jump" (rect 866 -216 959 -199)(font "Intel Clear" ))
 	(pt 960 -200)
@@ -1710,35 +1783,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 2024 384)
 )
 (connector
-	(pt 1992 352)
-	(pt 1992 304)
-)
-(connector
-	(pt 2008 368)
-	(pt 2008 320)
-)
-(connector
-	(pt 2024 384)
-	(pt 2024 336)
-)
-(connector
-	(pt 1992 304)
-	(pt 2104 304)
-)
-(connector
-	(pt 2008 320)
-	(pt 2104 320)
-)
-(connector
-	(pt 2024 336)
-	(pt 2104 336)
-)
-(connector
-	(text "branch_result" (rect 2370 240 2434 257)(font "Intel Clear" ))
-	(pt 2360 256)
-	(pt 2472 256)
-)
-(connector
 	(text "latched_W[15..0]" (rect 1674 336 1755 353)(font "Intel Clear" ))
 	(pt 1760 352)
 	(pt 1664 352)
@@ -1748,12 +1792,6 @@ https://fpgasoftware.intel.com/eula.
 	(text "latched_exec_done" (rect 1122 320 1214 337)(font "Intel Clear" ))
 	(pt 1112 336)
 	(pt 1208 336)
-)
-(connector
-	(text "failback_addr[10..0]" (rect 2370 256 2464 273)(font "Intel Clear" ))
-	(pt 2360 272)
-	(pt 2472 272)
-	(bus)
 )
 (connector
 	(text "latched_branch_addr[10..0]" (rect 706 -760 835 -743)(font "Intel Clear" ))
@@ -1827,11 +1865,6 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "prediction_failed" (rect 2370 224 2449 241)(font "Intel Clear" ))
-	(pt 2360 240)
-	(pt 2472 240)
-)
-(connector
 	(text "output_trigger" (rect 2114 -288 2181 -271)(font "Intel Clear" ))
 	(pt 2104 -272)
 	(pt 2200 -272)
@@ -1858,10 +1891,6 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 264 -328)
 	(pt 576 -328)
-)
-(connector
-	(pt 176 48)
-	(pt 224 48)
 )
 (connector
 	(text "update_enable" (rect 410 96 481 113)(font "Intel Clear" ))
@@ -1899,10 +1928,6 @@ https://fpgasoftware.intel.com/eula.
 	(text "output_trigger" (rect 2394 32 2461 49)(font "Intel Clear" ))
 	(pt 2384 48)
 	(pt 2480 48)
-)
-(connector
-	(pt 2544 32)
-	(pt 2600 32)
 )
 (connector
 	(text "latched_exec_done" (rect 2186 8 2278 25)(font "Intel Clear" ))
@@ -2078,28 +2103,6 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "fifo_branch_addr[10..0]" (rect 1946 224 2055 241)(font "Intel Clear" ))
-	(pt 1944 240)
-	(pt 2104 240)
-	(bus)
-)
-(connector
-	(text "fifo_jump_addr[10..0]" (rect 1946 240 2047 257)(font "Intel Clear" ))
-	(pt 1944 256)
-	(pt 2104 256)
-	(bus)
-)
-(connector
-	(text "fifo_branch_type[1..0]" (rect 1946 256 2049 273)(font "Intel Clear" ))
-	(pt 1944 272)
-	(pt 2104 272)
-	(bus)
-)
-(connector
-	(pt 1944 288)
-	(pt 2104 288)
-)
-(connector
 	(pt 2048 -288)
 	(pt 2200 -288)
 	(bus)
@@ -2162,4 +2165,87 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 1248 -80)
 	(pt 1424 -80)
+)
+(connector
+	(pt 32 56)
+	(pt 72 56)
+)
+(connector
+	(pt -48 40)
+	(pt 72 40)
+)
+(connector
+	(pt 136 48)
+	(pt 224 48)
+)
+(connector
+	(pt 1992 352)
+	(pt 1992 304)
+)
+(connector
+	(pt 2008 368)
+	(pt 2008 320)
+)
+(connector
+	(pt 2024 384)
+	(pt 2024 336)
+)
+(connector
+	(pt 1992 304)
+	(pt 2088 304)
+)
+(connector
+	(pt 2008 320)
+	(pt 2088 320)
+)
+(connector
+	(pt 2024 336)
+	(pt 2088 336)
+)
+(connector
+	(text "fifo_branch_addr[10..0]" (rect 1930 224 2039 241)(font "Intel Clear" ))
+	(pt 1944 240)
+	(pt 2088 240)
+	(bus)
+)
+(connector
+	(text "fifo_jump_addr[10..0]" (rect 1930 240 2031 257)(font "Intel Clear" ))
+	(pt 1944 256)
+	(pt 2088 256)
+	(bus)
+)
+(connector
+	(text "fifo_branch_type[1..0]" (rect 1930 256 2033 273)(font "Intel Clear" ))
+	(pt 1944 272)
+	(pt 2088 272)
+	(bus)
+)
+(connector
+	(pt 1944 288)
+	(pt 2088 288)
+)
+(connector
+	(text "prediction_failed" (rect 2354 224 2433 241)(font "Intel Clear" ))
+	(pt 2344 240)
+	(pt 2456 240)
+)
+(connector
+	(text "branch_result" (rect 2354 240 2418 257)(font "Intel Clear" ))
+	(pt 2344 256)
+	(pt 2456 256)
+)
+(connector
+	(text "failback_addr[10..0]" (rect 2354 256 2448 273)(font "Intel Clear" ))
+	(pt 2344 272)
+	(pt 2456 272)
+	(bus)
+)
+(connector
+	(text "reset_fifo" (rect 2554 16 2598 33)(font "Intel Clear" ))
+	(pt 2544 32)
+	(pt 2600 32)
+)
+(connector
+	(pt -48 56)
+	(pt -16 56)
 )
