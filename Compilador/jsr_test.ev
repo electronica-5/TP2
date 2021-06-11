@@ -1,0 +1,16 @@
+CPL W
+CPL W
+CPL W
+BSR 10
+JMP 4
+CPL W
+CPL W
+CPL W
+CPL W
+CPL W
+CPL W
+CPL W
+CPL W
+MOK W,#129 // Subrutina
+ANK W,#65
+RET
