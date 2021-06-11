@@ -181,67 +181,6 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 1504 184 1744 296)
-	(text "IRegister" (rect 5 0 49 12)(font "Arial" ))
-	(text "inst4" (rect 8 96 31 108)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "PR_code[21..0]" (rect 0 0 76 12)(font "Arial" ))
-		(text "PR_code[21..0]" (rect 21 27 97 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "enable" (rect 0 0 31 12)(font "Arial" ))
-		(text "enable" (rect 21 43 52 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 240 32)
-		(output)
-		(text "IR_code[21..0]" (rect 0 0 73 12)(font "Arial" ))
-		(text "IR_code[21..0]" (rect 158 27 231 39)(font "Arial" ))
-		(line (pt 240 32)(pt 224 32)(line_width 3))
-	)
-	(port
-		(pt 240 48)
-		(output)
-		(text "relative_jump[9..0]" (rect 0 0 92 12)(font "Arial" ))
-		(text "relative_jump[9..0]" (rect 142 43 234 55)(font "Arial" ))
-		(line (pt 240 48)(pt 224 48)(line_width 3))
-	)
-	(port
-		(pt 240 64)
-		(output)
-		(text "bsr_det" (rect 0 0 36 12)(font "Arial" ))
-		(text "bsr_det" (rect 189 59 225 71)(font "Arial" ))
-		(line (pt 240 64)(pt 224 64))
-	)
-	(port
-		(pt 240 80)
-		(output)
-		(text "ret_det" (rect 0 0 34 12)(font "Arial" ))
-		(text "ret_det" (rect 191 75 225 87)(font "Arial" ))
-		(line (pt 240 80)(pt 224 80))
-	)
-	(parameter
-		"bsr"
-		"011100000000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"ret"
-		"0000011000000000000000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(drawing
-		(rectangle (rect 16 16 224 96))
-	)
-	(annotation_block (parameter)(rect 1584 224 1632 256))
-)
-(symbol
 	(rect -368 64 -304 144)
 	(text "DFF" (rect 1 0 19 10)(font "Arial" (font_size 6)))
 	(text "inst30" (rect 3 68 31 85)(font "Intel Clear" ))
@@ -969,7 +908,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 248 184 480 328)
+	(rect 240 184 472 328)
 	(text "PC" (rect 5 0 20 12)(font "Arial" ))
 	(text "inst1" (rect 8 128 31 140)(font "Arial" ))
 	(port
@@ -1590,6 +1529,81 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 0)(pt 0 0))
 	)
 )
+(symbol
+	(rect 1504 184 1744 296)
+	(text "IRegister" (rect 5 0 49 12)(font "Arial" ))
+	(text "inst4" (rect 8 96 31 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "PR_code[21..0]" (rect 0 0 76 12)(font "Arial" ))
+		(text "PR_code[21..0]" (rect 21 27 97 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "enable" (rect 0 0 31 12)(font "Arial" ))
+		(text "enable" (rect 21 43 52 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "enable_current" (rect 0 0 71 12)(font "Arial" ))
+		(text "enable_current" (rect 21 59 92 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "enable_next" (rect 0 0 59 12)(font "Arial" ))
+		(text "enable_next" (rect 21 75 80 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 240 32)
+		(output)
+		(text "IR_code[21..0]" (rect 0 0 73 12)(font "Arial" ))
+		(text "IR_code[21..0]" (rect 158 27 219 39)(font "Arial" ))
+		(line (pt 240 32)(pt 224 32)(line_width 3))
+	)
+	(port
+		(pt 240 48)
+		(output)
+		(text "relative_jump[9..0]" (rect 0 0 92 12)(font "Arial" ))
+		(text "relative_jump[9..0]" (rect 142 43 219 55)(font "Arial" ))
+		(line (pt 240 48)(pt 224 48)(line_width 3))
+	)
+	(port
+		(pt 240 64)
+		(output)
+		(text "bsr_det" (rect 0 0 36 12)(font "Arial" ))
+		(text "bsr_det" (rect 189 59 219 71)(font "Arial" ))
+		(line (pt 240 64)(pt 224 64))
+	)
+	(port
+		(pt 240 80)
+		(output)
+		(text "ret_det" (rect 0 0 34 12)(font "Arial" ))
+		(text "ret_det" (rect 191 75 219 87)(font "Arial" ))
+		(line (pt 240 80)(pt 224 80))
+	)
+	(parameter
+		"bsr"
+		"011100000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ret"
+		"0000011000000000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 224 96))
+	)
+	(annotation_block (parameter)(rect 1584 224 1632 256))
+)
 (connector
 	(pt -424 480)
 	(pt -544 480)
@@ -1671,37 +1685,6 @@ https://fpgasoftware.intel.com/eula.
 	(text "n_hold" (rect -46 208 -13 225)(font "Intel Clear" ))
 	(pt -64 224)
 	(pt 40 224)
-)
-(connector
-	(text "latched_preload_addr[10..0]" (rect 130 232 264 249)(font "Intel Clear" ))
-	(pt 112 248)
-	(pt 248 248)
-	(bus)
-)
-(connector
-	(text "latched_preload" (rect 122 216 199 233)(font "Intel Clear" ))
-	(pt 248 232)
-	(pt 112 232)
-)
-(connector
-	(text "latched_jsr" (rect 122 264 173 281)(font "Intel Clear" ))
-	(pt 248 280)
-	(pt 112 280)
-)
-(connector
-	(text "latched_ret" (rect 122 280 176 297)(font "Intel Clear" ))
-	(pt 248 296)
-	(pt 112 296)
-)
-(connector
-	(text "latched_relative_jump[9..0]" (rect 128 248 258 265)(font "Intel Clear" ))
-	(pt 112 264)
-	(pt 248 264)
-	(bus)
-)
-(connector
-	(pt 104 216)
-	(pt 248 216)
 )
 (connector
 	(pt 928 296)
@@ -1833,25 +1816,8 @@ https://fpgasoftware.intel.com/eula.
 	(pt 2024 424)
 )
 (connector
-	(pt 624 200)
-	(pt 624 216)
-	(bus)
-)
-(connector
 	(pt 672 200)
 	(pt 624 200)
-	(bus)
-)
-(connector
-	(text "incr_pc[10..0]" (rect 490 216 552 233)(font "Intel Clear" ))
-	(pt 480 232)
-	(pt 672 232)
-	(bus)
-)
-(connector
-	(text "pc[10..0]" (rect 490 200 530 217)(font "Intel Clear" ))
-	(pt 480 216)
-	(pt 624 216)
 	(bus)
 )
 (connector
@@ -1895,16 +1861,6 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 928 296)
 	(pt 928 360)
-)
-(connector
-	(text "dec_inst1" (rect 1138 328 1182 345)(font "Intel Clear" ))
-	(pt 1232 344)
-	(pt 1128 344)
-)
-(connector
-	(text "dec_instr2" (rect 1138 344 1186 361)(font "Intel Clear" ))
-	(pt 1232 360)
-	(pt 1128 360)
 )
 (connector
 	(pt 1296 352)
@@ -2066,8 +2022,92 @@ https://fpgasoftware.intel.com/eula.
 	(pt -448 624)
 	(pt -448 640)
 )
+(connector
+	(text "latched_preload_addr[10..0]" (rect 122 232 256 249)(font "Intel Clear" ))
+	(pt 104 248)
+	(pt 240 248)
+	(bus)
+)
+(connector
+	(text "latched_preload" (rect 114 216 191 233)(font "Intel Clear" ))
+	(pt 240 232)
+	(pt 104 232)
+)
+(connector
+	(text "latched_jsr" (rect 114 264 165 281)(font "Intel Clear" ))
+	(pt 240 280)
+	(pt 104 280)
+)
+(connector
+	(text "latched_ret" (rect 114 280 168 297)(font "Intel Clear" ))
+	(pt 240 296)
+	(pt 104 296)
+)
+(connector
+	(text "latched_relative_jump[9..0]" (rect 120 248 250 265)(font "Intel Clear" ))
+	(pt 104 264)
+	(pt 240 264)
+	(bus)
+)
+(connector
+	(pt 104 216)
+	(pt 240 216)
+)
+(connector
+	(pt 624 200)
+	(pt 624 216)
+	(bus)
+)
+(connector
+	(text "pc[10..0]" (rect 482 200 522 217)(font "Intel Clear" ))
+	(pt 472 216)
+	(pt 624 216)
+	(bus)
+)
+(connector
+	(text "incr_pc[10..0]" (rect 482 216 544 233)(font "Intel Clear" ))
+	(pt 472 232)
+	(pt 672 232)
+	(bus)
+)
+(connector
+	(pt 1504 248)
+	(pt 1208 248)
+)
+(connector
+	(pt 1208 248)
+	(pt 1208 344)
+)
+(connector
+	(pt 1208 344)
+	(pt 1128 344)
+)
+(connector
+	(pt 1504 264)
+	(pt 1224 264)
+)
+(connector
+	(pt 1224 264)
+	(pt 1224 360)
+)
+(connector
+	(text "dec_instr2" (rect 1138 344 1186 361)(font "Intel Clear" ))
+	(pt 1232 360)
+	(pt 1224 360)
+)
+(connector
+	(pt 1224 360)
+	(pt 1128 360)
+)
+(connector
+	(text "dec_instr1" (rect 1138 328 1186 345)(font "Intel Clear" ))
+	(pt 1232 344)
+	(pt 1208 344)
+)
 (junction (pt 2272 232))
 (junction (pt 2208 432))
 (junction (pt -448 624))
 (junction (pt 904 216))
 (junction (pt 880 360))
+(junction (pt 1208 344))
+(junction (pt 1224 360))

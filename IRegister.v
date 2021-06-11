@@ -5,8 +5,12 @@ module IRegister(
 	IR_code,
 	relative_jump,
 	bsr_det,
-	ret_det);
+	ret_det,
+	enable_current,
+	enable_next);
 	
+	input enable_current;
+	input enable_next;
 	input [21:0]PR_code;
 	input enable;
 	
@@ -24,30 +28,19 @@ module IRegister(
 		end
 
 		
-	always @(PR_code)
-	begin
-		if( PR_code == ret )
-			begin
-				ret_det=1;
-				bsr_det=0;
-					
-			end
-		else if (PR_code[21:10] == bsr)
-			begin
-					bsr_det=1;
-					ret_det=0;
-					relative_jump = PR_code[9:0];
-			end
-			
-		else
-			begin
-					bsr_det=0;
-					ret_det=0;
-			end
-		
-		
+	always @(posedge enable_current)	begin
+		if( PR_code == ret) begin
+			ret_det=1;
+			bsr_det=0;
+		end
+		else if (PR_code[21:10] == bsr) begin
+			bsr_det=1;
+			ret_det=0;
+			relative_jump = PR_code[9:0];
+		end else begin
+			bsr_det=0;
+			ret_det=0;
+		end
 	end
-		
-
-	endmodule
 	
+endmodule
