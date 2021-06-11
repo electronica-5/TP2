@@ -166,7 +166,15 @@ if __name__ == "__main__":
 	instructions = string.splitlines()
 	f.close()
 	out_file = open(f"Program_memory.mif", "w")
-	out_file.write("""-- Compilator made By G3 EV21 ITBA 2021""")
+	out_file.write("""-- Compilator made By G3 EV21 ITBA 2021\n
+
+WIDTH=22;
+DEPTH=2048;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;\n
+
+CONTENT BEGIN\n""")
 	line = f"		0	:	0000000000000000000000;\n"
 	out_file.write(line)
 	if len(instructions) < 2047:
