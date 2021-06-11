@@ -57,7 +57,7 @@ module MI_ROM (
 					Bus_A=5'b00000;
 					micro_instruction= {ALU,SH,Kmx,MR,MW,Bus_B,Bus_C,T_word,Bus_A};
 				end
-			else if(instruction[21:11] == 11'b11000000000) //jne X      linea 5
+			else if(instruction[21:11] == 11'b11000000000) //JP0 X      linea 5
 				begin
 					
 					ALU=0;

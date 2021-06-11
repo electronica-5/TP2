@@ -20,7 +20,7 @@ def decode_instr(instruction, data, instruction_line):
 		except :
 			print_comp_error(instruction, data, instruction_line)
 
-	elif instr == 'JNE':
+	elif instr == 'JPO':
 		output |= 0b1100000000000000000000
 		try:
 			output |= int(data)
