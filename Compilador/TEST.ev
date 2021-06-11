@@ -14,3 +14,5 @@ ADW 2,1     //R2 = R1+W+CY  ->R2 = 46
 MOV W,2     //W=R2          ->W=46
 NOP
 NOP //hola
+
+ADK W,#-1
