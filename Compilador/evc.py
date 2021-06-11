@@ -152,75 +152,55 @@ def decode_instr(instruction, data, instruction_line):
 	elif instr == 'RET':
 		output |= 0b0000011000000000000000
 
+	elif instr == 'NOP':
+		output |= 0b1111110000000000000000
+
 	else:
 		print(f"Compilation Error! Instruccion {instruction} no exists! Line {instruction_line}")
 
 	return output
 
 if __name__ == "__main__":
-    f = open(f"{sys.argv[1]}.ev", "r")
-    string = f.read()
-    instructions = string.splitlines()
-    f.close()
-    out_file = open(f"Program_memory.mif", "w")
-    out_file.write("""-- Copyright (C) 2020  Intel Corporation. All rights reserved.
--- Your use of Intel Corporations design tools, logic functions 
--- and other software and tools, and any partner logic 
--- functions, and any output files from any of the foregoing 
--- (including device programming or simulation files), and any 
--- associated documentation or information are expressly subject 
--- to the terms and conditions of the Intel Program License 
--- Subscription Agreement, the Intel Quartus Prime License Agreement,
--- the Intel FPGA IP License Agreement, or other applicable license
--- agreement, including, without limitation, that your use is for
--- the sole purpose of programming logic devices manufactured by
--- Intel and sold by Intel or its authorized distributors.  Please
--- refer to the applicable agreement for further details, at
--- https://fpgasoftware.intel.com/eula.
+	f = open(f"{sys.argv[1]}.ev", "r")
+	string = f.read()
+	instructions = string.splitlines()
+	f.close()
+	out_file = open(f"Program_memory.mif", "w")
+	out_file.write("""-- Compilator made By G3 EV21 ITBA 2021""")
+	line = f"		0	:	0000000000000000000000;\n"
+	out_file.write(line)
+	if len(instructions) < 2047:
+		for i, instruction in enumerate(instructions):
+			line = instruction.split()
+			if (len(line) >= 2 or (len(line) == 1 and (line[0] == 'RET' or line[0] == 'NOP'))) and line[0][0] != '/' and line[0][1] != '/': 
+				if line[0] == 'RET' or  line[0] == 'NOP':
+					instr = line[0]
+					data = ""
+				else:
+					instr, data = [line[0], line[1]]
+				
+				if len(line) > 2 and line[2][0] != '/' and line[2][1] != '/':
+					print(f"Compilation error at line {i+1}. Comments begin with '//'")
 
--- Quartus Prime generated Memory Initialization File (.mif)
+				
+				temp_string = bin(decode_instr(instr, data, i+1))[2:]
+				temp_string = temp_string.rjust(22,'0')
+				if i != len(instructions) - 1 :
+					line = f"		{i+1}	:	{temp_string};  -- {instr} {data}\n"
+					out_file.write(line)
+				else:
+					line = f"		{i+1}	:	{temp_string};  -- {instr} {data}\n"
+					out_file.write(line)
+					line = f"		[{i+2}..2047]	:	0000000000000000000000;\n"
+					out_file.write(line)
+			else:
+				if len(line) >= 1:
+					if line[0][0] != '/' or line[0][1] != '/':
+						print(f"Compilation error at line {i+1}. Intruction no exists, comments begin with '//'")
 
-WIDTH=22;
-DEPTH=2048;
-
-ADDRESS_RADIX=UNS;
-DATA_RADIX=BIN;
-
-CONTENT BEGIN
-""")
-    line = f"		0	:	0000000000000000000000;\n"
-    out_file.write(line)
-    if len(instructions) < 2047:
-        for i, instruction in enumerate(instructions):
-            line = instruction.split()
-            if (len(line) >= 2 or (len(line) == 1 and line[0] == 'RET')) and line[0][0] != '/' and line[0][1] != '/': 
-                if line[0] == 'RET' :
-                    instr = line[0]
-                else:
-                    instr, data = [line[0], line[1]]
-                
-                if len(line) > 2 and line[2][0] != '/' and line[2][1] != '/':
-                    print(f"Compilation error at line {i+1}. Comments begin with '//'")
-
-                
-                temp_string = bin(decode_instr(instr, data, i+1))[2:]
-                temp_string = temp_string.rjust(22,'0')
-                if i != len(instructions) - 1 :
-                    line = f"		{i+1}	:	{temp_string};  -- {instr} {data}\n"
-                    out_file.write(line)
-                else:
-                    line = f"		{i+1}	:	{temp_string};  -- {instr} {data}\n"
-                    out_file.write(line)
-                    line = f"		[{i+2}..2047]	:	0000000000000000000000;\n"
-                    out_file.write(line)
-            else:
-                if len(line) >= 1:
-                    if line[0][0] != '/' or line[0][1] != '/':
-                        print(f"Compilation error at line {i+1}. Intruction no exists, comments begin with '//'")
-
-        out_file.write("END;")
-        out_file.close()
-        print("Compilation Success!")
-    else:
-        out_file.close()
-        print(f"The actual Program is too long for the EV21, it supports a maximum of 2047 instructions and the current program is {len(instructions)}!")
+		out_file.write("END;")
+		out_file.close()
+		print("Compilation Success!")
+	else:
+		out_file.close()
+		print(f"The actual Program is too long for the EV21, it supports a maximum of 2047 instructions and the current program is {len(instructions)}!")

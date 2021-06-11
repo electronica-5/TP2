@@ -12,3 +12,5 @@ ADW 1,0     //R1 = R0+W+CY  ->R1 = 17
 MOM W,0     //W=M(0)        ->W = 29
 ADW 2,1     //R2 = R1+W+CY  ->R2 = 46
 MOV W,2     //W=R2          ->W=46
+NOP
+NOP //hola
