@@ -206,10 +206,10 @@ CONTENT BEGIN
                 temp_string = bin(decode_instr(instr, data, i+1))[2:]
                 temp_string = temp_string.rjust(22,'0')
                 if i != len(instructions) - 1 :
-                    line = f"		{i+1}	:	{temp_string};\n"
+                    line = f"		{i+1}	:	{temp_string};  -- {instr} {data}\n"
                     out_file.write(line)
                 else:
-                    line = f"		{i+1}	:	{temp_string};\n"
+                    line = f"		{i+1}	:	{temp_string};  -- {instr} {data}\n"
                     out_file.write(line)
                     line = f"		[{i+2}..2047]	:	0000000000000000000000;\n"
                     out_file.write(line)
