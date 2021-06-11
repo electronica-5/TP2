@@ -158,12 +158,12 @@ def decode_instr(instruction, data, instruction_line):
 	return output
 
 if __name__ == "__main__":
-	f = open(f"{sys.argv[1]}.ev", "r")
-	string = f.read()
-	instructions = string.splitlines()
-	f.close()
-	out_file = open(f"Program_memory.mif", "w")
-	out_file.write("""-- Copyright (C) 2020  Intel Corporation. All rights reserved.
+    f = open(f"{sys.argv[1]}.ev", "r")
+    string = f.read()
+    instructions = string.splitlines()
+    f.close()
+    out_file = open(f"Program_memory.mif", "w")
+    out_file.write("""-- Copyright (C) 2020  Intel Corporation. All rights reserved.
 -- Your use of Intel Corporations design tools, logic functions 
 -- and other software and tools, and any partner logic 
 -- functions, and any output files from any of the foregoing 
@@ -188,38 +188,39 @@ DATA_RADIX=BIN;
 
 CONTENT BEGIN
 """)
-	lines = []
-	if len(instructions) < 2047:
-		for i, instruction in enumerate(instructions):
-			line = instruction.split()
-			if (len(line) >= 2 or (len(line) == 1 and line[0] == 'RET')) and line[0][0] != '/' and line[0][1] != '/': 
-				if line[0] == 'RET' :
-					instr = line[0]
-				else:
-					instr, data = [line[0], line[1]]
-				
-				if len(line) > 2 and line[2][0] != '/' and line[2][1] != '/':
-					print(f"Compilation error at line {i+1}. Comments begin with '//'")
+    line = f"		0	:	0000000000000000000000;\n"
+    out_file.write(line)
+    if len(instructions) < 2047:
+        for i, instruction in enumerate(instructions):
+            line = instruction.split()
+            if (len(line) >= 2 or (len(line) == 1 and line[0] == 'RET')) and line[0][0] != '/' and line[0][1] != '/': 
+                if line[0] == 'RET' :
+                    instr = line[0]
+                else:
+                    instr, data = [line[0], line[1]]
+                
+                if len(line) > 2 and line[2][0] != '/' and line[2][1] != '/':
+                    print(f"Compilation error at line {i+1}. Comments begin with '//'")
 
-				
-				temp_string = bin(decode_instr(instr, data, i+1))[2:]
-				temp_string = temp_string.rjust(22,'0')
-				if i != len(instructions) - 1 :
-					line = f"		{i}	:	{temp_string};\n"
-					out_file.write(line)
-				else:
-					line = f"		{i}	:	{temp_string};\n"
-					out_file.write(line)
-					line = f"		[{i+1}..2047]	:	0000000000000000000000;\n"
-					out_file.write(line)
-			else:
-				if len(line) >= 1:
-					if line[0][0] != '/' or line[0][1] != '/':
-						print(f"Compilation error at line {i+1}. Intruction no exists, comments begin with '//'")
+                
+                temp_string = bin(decode_instr(instr, data, i+1))[2:]
+                temp_string = temp_string.rjust(22,'0')
+                if i != len(instructions) - 1 :
+                    line = f"		{i+1}	:	{temp_string};\n"
+                    out_file.write(line)
+                else:
+                    line = f"		{i+1}	:	{temp_string};\n"
+                    out_file.write(line)
+                    line = f"		[{i+2}..2047]	:	0000000000000000000000;\n"
+                    out_file.write(line)
+            else:
+                if len(line) >= 1:
+                    if line[0][0] != '/' or line[0][1] != '/':
+                        print(f"Compilation error at line {i+1}. Intruction no exists, comments begin with '//'")
 
-		out_file.write("END;")
-		out_file.close()
-		print("Compilation Success!")
-	else:
-		out_file.close()
-		print(f"The actual Program is too long for the EV21, it supports a maximum of 2047 instructions and the current program is {len(instructions)}!")
+        out_file.write("END;")
+        out_file.close()
+        print("Compilation Success!")
+    else:
+        out_file.close()
+        print(f"The actual Program is too long for the EV21, it supports a maximum of 2047 instructions and the current program is {len(instructions)}!")
