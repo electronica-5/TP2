@@ -1,15 +1,14 @@
 module fetch_trigger_control (	input 		clock,
-								input 		n_clock,
-								output reg	latch_trigger,
-								output reg 	update_pc_trigger,
-								output reg	fethc_prog_mem1_trigger,
-								output reg	fethc_prog_mem2_trigger,
-								output reg	decode_instr1_trigger,
-								output reg	decode_instr2_trigger,
-								output reg	out_latch_trigger,
-								output reg	mem_mux_control,
-								output reg 	demux_control);
-																		
+											output reg	latch_trigger,
+											output reg 	update_pc_trigger,
+											output reg	fethc_prog_mem1_trigger,
+											output reg	fethc_prog_mem2_trigger,
+											output reg	decode_instr1_trigger,
+											output reg	decode_instr2_trigger,
+											output reg	out_latch_trigger,
+											output reg	mem_mux_control,
+											output reg 	demux_control);
+																					
 	integer i = 0; 
 	integer j = 0;											
 	always @ (posedge clock) begin

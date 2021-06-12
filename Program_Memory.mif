@@ -1,19 +1,5 @@
--- Copyright (C) 2020  Intel Corporation. All rights reserved.
--- Your use of Intel Corporations design tools, logic functions 
--- and other software and tools, and any partner logic 
--- functions, and any output files from any of the foregoing 
--- (including device programming or simulation files), and any 
--- associated documentation or information are expressly subject 
--- to the terms and conditions of the Intel Program License 
--- Subscription Agreement, the Intel Quartus Prime License Agreement,
--- the Intel FPGA IP License Agreement, or other applicable license
--- agreement, including, without limitation, that your use is for
--- the sole purpose of programming logic devices manufactured by
--- Intel and sold by Intel or its authorized distributors.  Please
--- refer to the applicable agreement for further details, at
--- https://fpgasoftware.intel.com/eula.
+-- Compilator made By G3 EV21 ITBA 2021
 
--- Quartus Prime generated Memory Initialization File (.mif)
 
 WIDTH=22;
 DEPTH=2048;
@@ -21,22 +7,26 @@ DEPTH=2048;
 ADDRESS_RADIX=UNS;
 DATA_RADIX=BIN;
 
+
 CONTENT BEGIN
 		0	:	0000000000000000000000;
-		1	:	0000000000000000000000;
-		2	:	0000000000000000000000;
-		3	:	0111000000000000001010;
-		4	:	1000000000000000000100;
-		5	:	0000000000000000000000;
-		6	:	0000000000000000000000;
-		7	:	0000000000000000000000;
-		8	:	0000000000000000000000;
-		9	:	0000000000000000000000;
-		10	:	0000000000000000000000;
-		11	:	0000000000000000000000;
-		12	:	0000000000000000000000;
-		13	:	0001000000000010000001;
-		14	:	0001010000000001000001;
-		15	:	0000011000000000000000;
-		[16..2047]	:	0000000000000000000000;
+		1	:	0000000000000000000000;  -- CPL W
+		2	:	0000000000000000000000;  -- CPL W
+		3	:	0000000000000000000000;  -- CPL W
+		4	:	0001000000000000000001;  -- MOK W,#1
+		5	:	1010000000000000010000;  -- JZE 16
+		6	:	1111110000000000000000;  -- NOP 
+		7	:	1100000000000000010000;  -- JPO 16
+		8	:	0001000000000010000000;  -- MOK W,#128
+		9	:	0001000000000001000000;  -- MOK W,#64
+		10	:	0001000000000000100000;  -- MOK W,#32
+		11	:	0001000000000000010000;  -- MOK W,#16
+		12	:	0001000000000000001000;  -- MOK W,#8
+		13	:	0001000000000000000100;  -- MOK W,#4
+		14	:	0001000000000000000010;  -- MOK W,#2
+		15	:	0001000000000000000001;  -- MOK W,#1
+		16	:	0001000000000000000000;  -- MOK W,#0
+		17	:	1111110000000000000000;  -- NOP 
+		18	:	1000000000000000000100;  -- JMP 4
+		[19..2047]	:	0000000000000000000000;
 END;
