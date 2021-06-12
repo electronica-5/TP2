@@ -520,6 +520,38 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 78 12)(pt 82 8))
 	)
 )
+(pin
+	(output)
+	(rect 1184 -16 1360 0)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "incr_isntr[21..0]" (rect 90 0 166 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 1184 0 1360 16)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "incr_pc[10..0]" (rect 90 0 152 17)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
 (symbol
 	(rect 2488 -56 2672 104)
 	(text "ALU_SHIFTER_CYBLOCK_LATCH" (rect 5 0 202 19)(font "Intel Clear" (font_size 8)))
@@ -1402,7 +1434,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 1472 272 1592 384)
 	(text "LPM_RAM_DQ" (rect 16 0 121 16)(font "Arial" (font_size 10)))
-	(text "inst5" (rect 3 101 25 118)(font "Intel Clear" ))
+	(text "inst5" (rect 3 101 30 115)(font "Arial" (font_size 8)))
 	(port
 		(pt 0 56)
 		(input)
@@ -1442,7 +1474,7 @@ https://fpgasoftware.intel.com/eula.
 		(pt 120 56)
 		(output)
 		(text "q[LPM_WIDTH-1..0]" (rect 88 49 196 63)(font "Arial" (font_size 8)))
-		(text "q[]" (rect 88 49 102 63)(font "Arial" (font_size 8)))
+		(text "q[]" (rect 88 49 99 63)(font "Arial" (font_size 8)))
 		(line (pt 104 56)(pt 120 56)(line_width 3))
 	)
 	(parameter
@@ -1469,10 +1501,10 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(parameter
 		"LPM_OUTDATA"
-		"\"UNREGISTERED\""
+		"UNREGISTERED"
 		"Should the output data be registered?"
 		"\"REGISTERED\"" "\"UNREGISTERED\"" 
-	)
+		(type "PARAMETER_STRING")	)
 	(parameter
 		"LPM_WIDTH"
 		"16"
@@ -1608,18 +1640,6 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 1352 -24)
 	(pt 1432 -24)
-	(bus)
-)
-(connector
-	(text "incr_pc[10..0]" (rect 1106 -8 1168 9)(font "Intel Clear" ))
-	(pt 1200 8)
-	(pt 1080 8)
-	(bus)
-)
-(connector
-	(text "incr_instr[21..0]" (rect 1106 -24 1177 -7)(font "Intel Clear" ))
-	(pt 1200 -8)
-	(pt 1080 -8)
 	(bus)
 )
 (connector
@@ -2171,6 +2191,18 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 2248 392)
 	(pt 2472 392)
+	(bus)
+)
+(connector
+	(text "incr_instr[21..0]" (rect 1090 -24 1161 -7)(font "Intel Clear" ))
+	(pt 1080 -8)
+	(pt 1184 -8)
+	(bus)
+)
+(connector
+	(text "incr_pc[10..0]" (rect 1090 -8 1152 9)(font "Intel Clear" ))
+	(pt 1080 8)
+	(pt 1184 8)
 	(bus)
 )
 (junction (pt 2440 360))

@@ -23,7 +23,7 @@ module PC ( input               	clock,
         end else if (ret) begin
             pc = addr_mem + 1;
         end else if(preload) begin
-            pc = preload_addr; 
+            pc = preload_addr;
 		  end else begin
             pc = curr_pc + 1;
         end
