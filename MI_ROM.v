@@ -391,7 +391,7 @@ module MI_ROM (
 					Bus_A= 5'b00000;
 					micro_instruction= {ALU,SH,Kmx,MR,MW,Bus_B,Bus_C,T_word,Bus_A};		
 				end
-            else if(instruction == 22'b1111110000000000000000) //NOP Linea 30 Excel 
+            else if(instruction == 22'b0111111111111111111111) //NOP Linea 30 Excel 
 				begin
 					ALU=4'b1111;
 					SH=2'b00;

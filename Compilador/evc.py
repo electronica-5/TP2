@@ -157,7 +157,7 @@ def decode_instr(instruction, data, instruction_line):
 		output |= 0b0000011000000000000000
 
 	elif instr == 'NOP':
-		output |= 0b1111110000000000000000
+		output |= 0b0111111111111111111111
 
 	else:
 		print(f"Compilation Error! Instruccion {instruction} no exists! Line {instruction_line}")
