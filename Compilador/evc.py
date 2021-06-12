@@ -1,5 +1,9 @@
 import sys
 
+bin16 = lambda x : ''.join(reversed( [str((x >> i) & 1) for i in range(16)] ) )
+
+
+
 def print_comp_error(ins,data,line):
 	print(f"Compilation Error! Intruction {ins} has wrong data: {data} Line: {line}")
 	return
@@ -92,7 +96,7 @@ def decode_instr(instruction, data, instruction_line):
 		if data.split(',')[1][0] == '#':
 			output |= 0b0001000000000000000000
 			try:
-				output |= int(data.split(',')[1][1:])
+				output |= int(bin16(int(data.split(',')[1][1:])),2)
 			except:
 				print_comp_error(instruction, data, instruction_line)
 		else :
@@ -101,21 +105,21 @@ def decode_instr(instruction, data, instruction_line):
 	elif instr == 'ANK':
 		output |= 0b0001010000000000000000
 		try:
-			output |= int(data.split(',')[1][1:])
+			output |= int(bin16(int(data.split(',')[1][1:])),2)
 		except:
 			print_comp_error(instruction, data, instruction_line)
 
 	elif instr == 'ORK':
 		output |= 0b0001100000000000000000
 		try:
-			output |= int(data.split(',')[1][1:])
+			output |= int(bin16(int(data.split(',')[1][1:])),2)
 		except:
 			print_comp_error(instruction, data, instruction_line)
 
 	elif instr == 'ADK':
 		output |= 0b0001110000000000000000
 		try:
-			output |= int(data.split(',')[1][1:])
+			output |= int(bin16(int(data.split(',')[1][1:])),2)
 		except:
 			print_comp_error(instruction, data, instruction_line)
 
