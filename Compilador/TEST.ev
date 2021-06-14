@@ -2,9 +2,6 @@ MOK W,#10   //W=10
 MOV 0,W     //R0 = W
 MOK W,#19   //W=19
 ADW 1,0     //R1=W+R0+CY
-
-//Hasta aca quedan R0=10, W= 19, R1=29
-
 MOV W,1     //W=R1  -> W=29
 MOM 0,W     //M(0) = W  
 MOK W,#7    //W=7   
@@ -14,5 +11,4 @@ ADW 2,1     //R2 = R1+W+CY  ->R2 = 46
 MOV W,2     //W=R2          ->W=46
 NOP
 NOP //hola
-
 ADK W,#-1
