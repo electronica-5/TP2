@@ -70,23 +70,6 @@ https://fpgasoftware.intel.com/eula.
 	(annotation_block (location)(rect 784 680 840 704))
 )
 (pin
-	(input)
-	(rect 816 704 992 720)
-	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "RESET_BUTTON" (rect 5 0 83 17)(font "Intel Clear" ))
-	(pt 176 8)
-	(drawing
-		(line (pt 92 12)(pt 117 12))
-		(line (pt 92 4)(pt 117 4))
-		(line (pt 121 8)(pt 176 8))
-		(line (pt 92 12)(pt 92 4))
-		(line (pt 117 4)(pt 121 8))
-		(line (pt 117 12)(pt 121 8))
-	)
-	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 752 720 816 744))
-)
-(pin
 	(output)
 	(rect 2280 320 2456 336)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
@@ -134,7 +117,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 2696 368 2752 392))
+	(annotation_block (location)(rect 2512 368 2752 680))
 )
 (pin
 	(output)
@@ -1065,7 +1048,7 @@ https://fpgasoftware.intel.com/eula.
 	(annotation_block (parameter)(rect 1448 400 1716 552))
 )
 (symbol
-	(rect 768 -152 1080 104)
+	(rect 760 -152 1072 104)
 	(text "fetch_stage" (rect 5 0 73 19)(font "Intel Clear" (font_size 8)))
 	(text "inst" (rect 8 235 24 252)(font "Intel Clear" ))
 	(port
@@ -1185,7 +1168,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 1016 608 1280 792)
+	(rect 1008 608 1272 792)
 	(text "CLOCK_PLL" (rect 95 0 182 16)(font "Arial" (font_size 10)))
 	(text "inst2" (rect 8 168 30 185)(font "Intel Clear" ))
 	(port
@@ -1364,6 +1347,23 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 14 37)(pt 31 37))
 		(line (pt 14 12)(pt 14 37))
 		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
+	)
+)
+(symbol
+	(rect 984 736 1016 768)
+	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
+	(text "graundddddddasdasdfasf" (rect 3 21 122 38)(font "Intel Clear" )(invisible))
+	(port
+		(pt 16 0)
+		(output)
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(line (pt 16 8)(pt 16 0))
+	)
+	(drawing
+		(line (pt 8 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 8))
+		(line (pt 8 8)(pt 24 8))
 	)
 )
 (connector
@@ -1729,40 +1729,8 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(pt 392 -104)
-	(pt 768 -104)
-	(bus)
-)
-(connector
-	(pt 392 144)
-	(pt 392 -104)
-	(bus)
-)
-(connector
-	(text "HOLD" (rect 634 -88 662 -71)(font "Intel Clear" ))
-	(pt 624 -72)
-	(pt 768 -72)
-)
-(connector
 	(pt 1432 -24)
 	(pt 1352 -24)
-	(bus)
-)
-(connector
-	(text "IR_OUT[21..0]" (rect 1224 -120 1290 -103)(font "Intel Clear" ))
-	(pt 1080 -104)
-	(pt 1352 -104)
-	(bus)
-)
-(connector
-	(pt 1352 -104)
-	(pt 1352 -24)
-	(bus)
-)
-(connector
-	(text "incr_pc[10..0]" (rect 1090 -88 1152 -71)(font "Intel Clear" ))
-	(pt 1080 -72)
-	(pt 1184 -72)
 	(bus)
 )
 (connector
@@ -1781,40 +1749,12 @@ https://fpgasoftware.intel.com/eula.
 	(pt 144 -112)
 )
 (connector
-	(pt 352 -120)
-	(pt 768 -120)
-)
-(connector
-	(pt 1280 672)
-	(pt 1448 672)
-)
-(connector
-	(pt 1280 688)
-	(pt 1392 688)
-)
-(connector
-	(pt 1392 688)
-	(pt 1392 728)
-)
-(connector
 	(pt 1392 728)
 	(pt 1448 728)
 )
 (connector
-	(pt 1280 704)
-	(pt 1384 704)
-)
-(connector
-	(pt 1384 704)
-	(pt 1384 784)
-)
-(connector
 	(pt 1448 784)
 	(pt 1384 784)
-)
-(connector
-	(pt 1280 720)
-	(pt 1424 720)
 )
 (connector
 	(pt 1424 688)
@@ -1823,14 +1763,6 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 1424 744)
 	(pt 1448 744)
-)
-(connector
-	(pt 1424 688)
-	(pt 1424 720)
-)
-(connector
-	(pt 1424 720)
-	(pt 1424 744)
 )
 (connector
 	(pt 1424 744)
@@ -1861,15 +1793,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 592 296)
 )
 (connector
-	(text "FETCH_CLK" (rect 610 -104 667 -87)(font "Intel Clear" ))
-	(pt 600 -88)
-	(pt 768 -88)
-)
-(connector
-	(pt 1008 672)
-	(pt 1016 672)
-)
-(connector
 	(pt 392 144)
 	(pt 904 144)
 	(bus)
@@ -1878,18 +1801,6 @@ https://fpgasoftware.intel.com/eula.
 	(text "PRELOAD" (rect 864 216 912 233)(font "Intel Clear" ))
 	(pt 864 232)
 	(pt 1008 232)
-)
-(connector
-	(text "incr_instr[21..0]" (rect 1090 -104 1161 -87)(font "Intel Clear" ))
-	(pt 1080 -88)
-	(pt 1184 -88)
-	(bus)
-)
-(connector
-	(text "pc[10..0]" (rect 1090 -136 1130 -119)(font "Intel Clear" ))
-	(pt 1080 -120)
-	(pt 1272 -120)
-	(bus)
 )
 (connector
 	(text "BRANCH_UPDATE" (rect 504 264 592 281)(font "Intel Clear" ))
@@ -1929,20 +1840,101 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(pt 1000 688)
-	(pt 1000 712)
+	(pt 392 -104)
+	(pt 760 -104)
+	(bus)
 )
 (connector
-	(pt 1000 712)
-	(pt 992 712)
+	(pt 392 144)
+	(pt 392 -104)
+	(bus)
+)
+(connector
+	(text "HOLD" (rect 626 -88 654 -71)(font "Intel Clear" ))
+	(pt 616 -72)
+	(pt 760 -72)
+)
+(connector
+	(pt 1352 -24)
+	(pt 1352 -104)
+	(bus)
+)
+(connector
+	(pt 352 -120)
+	(pt 760 -120)
+)
+(connector
+	(text "FETCH_CLK" (rect 602 -104 659 -87)(font "Intel Clear" ))
+	(pt 592 -88)
+	(pt 760 -88)
+)
+(connector
+	(text "pc[10..0]" (rect 1082 -136 1122 -119)(font "Intel Clear" ))
+	(pt 1072 -120)
+	(pt 1264 -120)
+	(bus)
+)
+(connector
+	(text "IR_OUT[21..0]" (rect 1216 -120 1282 -103)(font "Intel Clear" ))
+	(pt 1072 -104)
+	(pt 1352 -104)
+	(bus)
+)
+(connector
+	(text "incr_instr[21..0]" (rect 1082 -104 1153 -87)(font "Intel Clear" ))
+	(pt 1072 -88)
+	(pt 1176 -88)
+	(bus)
+)
+(connector
+	(text "incr_pc[10..0]" (rect 1082 -88 1144 -71)(font "Intel Clear" ))
+	(pt 1072 -72)
+	(pt 1176 -72)
+	(bus)
+)
+(connector
+	(pt 1392 688)
+	(pt 1272 688)
+)
+(connector
+	(pt 1392 728)
+	(pt 1392 688)
+)
+(connector
+	(pt 1384 704)
+	(pt 1272 704)
+)
+(connector
+	(pt 1384 784)
+	(pt 1384 704)
+)
+(connector
+	(pt 1424 720)
+	(pt 1272 720)
 )
 (connector
 	(pt 1000 688)
-	(pt 1016 688)
+	(pt 1008 688)
+)
+(connector
+	(pt 1000 736)
+	(pt 1000 688)
+)
+(connector
+	(pt 1272 672)
+	(pt 1448 672)
+)
+(connector
+	(pt 1424 688)
+	(pt 1424 720)
+)
+(connector
+	(pt 1424 720)
+	(pt 1424 744)
 )
 (junction (pt 2440 360))
 (junction (pt 1736 -24))
 (junction (pt 1008 248))
 (junction (pt 1848 -304))
-(junction (pt 1424 720))
 (junction (pt 1424 744))
+(junction (pt 1424 720))
