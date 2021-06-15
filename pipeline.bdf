@@ -616,42 +616,42 @@ https://fpgasoftware.intel.com/eula.
 		(pt 304 32)
 		(output)
 		(text "M3[1..0]" (rect 0 0 40 12)(font "Arial" ))
-		(text "M3[1..0]" (rect 250 27 283 39)(font "Arial" ))
+		(text "M3[1..0]" (rect 250 27 290 39)(font "Arial" ))
 		(line (pt 304 32)(pt 288 32)(line_width 3))
 	)
 	(port
 		(pt 304 48)
 		(output)
 		(text "ALU3[3..0]" (rect 0 0 53 12)(font "Arial" ))
-		(text "ALU3[3..0]" (rect 239 43 283 55)(font "Arial" ))
+		(text "ALU3[3..0]" (rect 239 43 292 55)(font "Arial" ))
 		(line (pt 304 48)(pt 288 48)(line_width 3))
 	)
 	(port
 		(pt 304 64)
 		(output)
 		(text "SH3[1..0]" (rect 0 0 47 12)(font "Arial" ))
-		(text "SH3[1..0]" (rect 244 59 283 71)(font "Arial" ))
+		(text "SH3[1..0]" (rect 244 59 291 71)(font "Arial" ))
 		(line (pt 304 64)(pt 288 64)(line_width 3))
 	)
 	(port
 		(pt 304 80)
 		(output)
 		(text "C3[5..0]" (rect 0 0 40 12)(font "Arial" ))
-		(text "C3[5..0]" (rect 250 75 283 87)(font "Arial" ))
+		(text "C3[5..0]" (rect 250 75 290 87)(font "Arial" ))
 		(line (pt 304 80)(pt 288 80)(line_width 3))
 	)
 	(port
 		(pt 304 96)
 		(output)
 		(text "T3[6..0]" (rect 0 0 37 12)(font "Arial" ))
-		(text "T3[6..0]" (rect 252 91 283 103)(font "Arial" ))
+		(text "T3[6..0]" (rect 252 91 289 103)(font "Arial" ))
 		(line (pt 304 96)(pt 288 96)(line_width 3))
 	)
 	(port
 		(pt 304 112)
 		(output)
 		(text "DATA_ADDR_3[10..0]" (rect 0 0 109 12)(font "Arial" ))
-		(text "DATA_ADDR_3[10..0]" (rect 191 107 283 119)(font "Arial" ))
+		(text "DATA_ADDR_3[10..0]" (rect 191 107 300 119)(font "Arial" ))
 		(line (pt 304 112)(pt 288 112)(line_width 3))
 	)
 	(parameter
@@ -757,63 +757,63 @@ https://fpgasoftware.intel.com/eula.
 		(pt 288 32)
 		(output)
 		(text "ALU2[3..0]" (rect 0 0 53 12)(font "Arial" ))
-		(text "ALU2[3..0]" (rect 223 27 267 39)(font "Arial" ))
+		(text "ALU2[3..0]" (rect 223 27 276 39)(font "Arial" ))
 		(line (pt 288 32)(pt 272 32)(line_width 3))
 	)
 	(port
 		(pt 288 48)
 		(output)
 		(text "SH2[1..0]" (rect 0 0 47 12)(font "Arial" ))
-		(text "SH2[1..0]" (rect 228 43 267 55)(font "Arial" ))
+		(text "SH2[1..0]" (rect 228 43 275 55)(font "Arial" ))
 		(line (pt 288 48)(pt 272 48)(line_width 3))
 	)
 	(port
 		(pt 288 64)
 		(output)
 		(text "KMx2" (rect 0 0 27 12)(font "Arial" ))
-		(text "KMx2" (rect 245 59 267 71)(font "Arial" ))
+		(text "KMx2" (rect 245 59 272 71)(font "Arial" ))
 		(line (pt 288 64)(pt 272 64))
 	)
 	(port
 		(pt 288 80)
 		(output)
 		(text "M2[1..0]" (rect 0 0 40 12)(font "Arial" ))
-		(text "M2[1..0]" (rect 234 75 267 87)(font "Arial" ))
+		(text "M2[1..0]" (rect 234 75 274 87)(font "Arial" ))
 		(line (pt 288 80)(pt 272 80)(line_width 3))
 	)
 	(port
 		(pt 288 96)
 		(output)
 		(text "B2[5..0]" (rect 0 0 38 12)(font "Arial" ))
-		(text "B2[5..0]" (rect 235 91 267 103)(font "Arial" ))
+		(text "B2[5..0]" (rect 235 91 273 103)(font "Arial" ))
 		(line (pt 288 96)(pt 272 96)(line_width 3))
 	)
 	(port
 		(pt 288 112)
 		(output)
 		(text "C2[5..0]" (rect 0 0 40 12)(font "Arial" ))
-		(text "C2[5..0]" (rect 234 107 267 119)(font "Arial" ))
+		(text "C2[5..0]" (rect 234 107 274 119)(font "Arial" ))
 		(line (pt 288 112)(pt 272 112)(line_width 3))
 	)
 	(port
 		(pt 288 128)
 		(output)
 		(text "T2[6..0]" (rect 0 0 37 12)(font "Arial" ))
-		(text "T2[6..0]" (rect 236 123 267 135)(font "Arial" ))
+		(text "T2[6..0]" (rect 236 123 273 135)(font "Arial" ))
 		(line (pt 288 128)(pt 272 128)(line_width 3))
 	)
 	(port
 		(pt 288 144)
 		(output)
 		(text "A2[4..0]" (rect 0 0 38 12)(font "Arial" ))
-		(text "A2[4..0]" (rect 235 139 267 151)(font "Arial" ))
+		(text "A2[4..0]" (rect 235 139 273 151)(font "Arial" ))
 		(line (pt 288 144)(pt 272 144)(line_width 3))
 	)
 	(port
 		(pt 288 160)
 		(output)
 		(text "data_address_out[10..0]" (rect 0 0 119 12)(font "Arial" ))
-		(text "data_address_out[10..0]" (rect 167 155 267 167)(font "Arial" ))
+		(text "data_address_out[10..0]" (rect 167 155 286 167)(font "Arial" ))
 		(line (pt 288 160)(pt 272 160)(line_width 3))
 	)
 	(drawing
@@ -877,42 +877,42 @@ https://fpgasoftware.intel.com/eula.
 		(pt 304 32)
 		(output)
 		(text "ALU4[3..0]" (rect 0 0 53 12)(font "Arial" ))
-		(text "ALU4[3..0]" (rect 239 27 283 39)(font "Arial" ))
+		(text "ALU4[3..0]" (rect 239 27 292 39)(font "Arial" ))
 		(line (pt 304 32)(pt 288 32)(line_width 3))
 	)
 	(port
 		(pt 304 48)
 		(output)
 		(text "SH4[1..0]" (rect 0 0 47 12)(font "Arial" ))
-		(text "SH4[1..0]" (rect 244 43 283 55)(font "Arial" ))
+		(text "SH4[1..0]" (rect 244 43 291 55)(font "Arial" ))
 		(line (pt 304 48)(pt 288 48)(line_width 3))
 	)
 	(port
 		(pt 304 64)
 		(output)
 		(text "C4[5..0]" (rect 0 0 40 12)(font "Arial" ))
-		(text "C4[5..0]" (rect 250 59 283 71)(font "Arial" ))
+		(text "C4[5..0]" (rect 250 59 290 71)(font "Arial" ))
 		(line (pt 304 64)(pt 288 64)(line_width 3))
 	)
 	(port
 		(pt 304 80)
 		(output)
 		(text "T4[6..0]" (rect 0 0 37 12)(font "Arial" ))
-		(text "T4[6..0]" (rect 252 75 283 87)(font "Arial" ))
+		(text "T4[6..0]" (rect 252 75 289 87)(font "Arial" ))
 		(line (pt 304 80)(pt 288 80)(line_width 3))
 	)
 	(port
 		(pt 304 96)
 		(output)
 		(text "DATA_ADDR_4[10..0]" (rect 0 0 109 12)(font "Arial" ))
-		(text "DATA_ADDR_4[10..0]" (rect 191 91 283 103)(font "Arial" ))
+		(text "DATA_ADDR_4[10..0]" (rect 191 91 300 103)(font "Arial" ))
 		(line (pt 304 96)(pt 288 96)(line_width 3))
 	)
 	(port
 		(pt 304 112)
 		(output)
 		(text "M4[1..0]" (rect 0 0 40 12)(font "Arial" ))
-		(text "M4[1..0]" (rect 250 107 283 119)(font "Arial" ))
+		(text "M4[1..0]" (rect 250 107 290 119)(font "Arial" ))
 		(line (pt 304 112)(pt 288 112)(line_width 3))
 	)
 	(drawing
@@ -962,33 +962,245 @@ https://fpgasoftware.intel.com/eula.
 		(pt 304 32)
 		(output)
 		(text "C5[5..0]" (rect 0 0 40 12)(font "Arial" ))
-		(text "C5[5..0]" (rect 250 27 283 39)(font "Arial" ))
+		(text "C5[5..0]" (rect 250 27 290 39)(font "Arial" ))
 		(line (pt 304 32)(pt 288 32)(line_width 3))
 	)
 	(port
 		(pt 304 48)
 		(output)
 		(text "T5[6..0]" (rect 0 0 37 12)(font "Arial" ))
-		(text "T5[6..0]" (rect 252 43 283 55)(font "Arial" ))
+		(text "T5[6..0]" (rect 252 43 289 55)(font "Arial" ))
 		(line (pt 304 48)(pt 288 48)(line_width 3))
 	)
 	(port
 		(pt 304 64)
 		(output)
 		(text "DATA_ADDR_5[10..0]" (rect 0 0 109 12)(font "Arial" ))
-		(text "DATA_ADDR_5[10..0]" (rect 191 59 283 71)(font "Arial" ))
+		(text "DATA_ADDR_5[10..0]" (rect 191 59 300 71)(font "Arial" ))
 		(line (pt 304 64)(pt 288 64)(line_width 3))
 	)
 	(port
 		(pt 304 80)
 		(output)
 		(text "M5[1..0]" (rect 0 0 40 12)(font "Arial" ))
-		(text "M5[1..0]" (rect 250 75 283 87)(font "Arial" ))
+		(text "M5[1..0]" (rect 250 75 290 87)(font "Arial" ))
 		(line (pt 304 80)(pt 288 80)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 288 128))
 	)
+)
+(symbol
+	(rect 1352 600 1528 744)
+	(text "LPM_FF" (rect 19 0 78 16)(font "Arial" (font_size 10)))
+	(text "inst17" (rect 3 133 31 150)(font "Intel Clear" ))
+	(port
+		(pt 0 104)
+		(input)
+		(text "enable" (rect 20 97 57 111)(font "Arial" (font_size 8)))
+		(text "enable" (rect 20 97 57 111)(font "Arial" (font_size 8)))
+		(line (pt 0 104)(pt 16 104))
+	)
+	(port
+		(pt 0 88)
+		(input)
+		(text "clock" (rect 20 81 49 95)(font "Arial" (font_size 8))(invisible))
+		(text "clock" (rect 20 81 49 95)(font "Arial" (font_size 8))(invisible))
+		(line (pt 0 88)(pt 16 88))
+	)
+	(port
+		(pt 0 24)
+		(input)
+		(text "aload" (rect 20 17 50 31)(font "Arial" (font_size 8)))
+		(text "aload" (rect 20 17 50 31)(font "Arial" (font_size 8)))
+		(line (pt 0 24)(pt 16 24))
+	)
+	(port
+		(pt 0 40)
+		(input)
+		(text "sset" (rect 20 33 44 47)(font "Arial" (font_size 8)))
+		(text "sset" (rect 20 33 44 47)(font "Arial" (font_size 8)))
+		(line (pt 0 40)(pt 16 40))
+	)
+	(port
+		(pt 0 56)
+		(input)
+		(text "sload" (rect 20 49 50 63)(font "Arial" (font_size 8)))
+		(text "sload" (rect 20 49 50 63)(font "Arial" (font_size 8)))
+		(line (pt 0 56)(pt 16 56))
+	)
+	(port
+		(pt 88 0)
+		(input)
+		(text "aset" (rect 79 17 103 31)(font "Arial" (font_size 8)))
+		(text "aset" (rect 79 17 103 31)(font "Arial" (font_size 8)))
+		(line (pt 88 16)(pt 88 0))
+	)
+	(port
+		(pt 0 120)
+		(input)
+		(text "sclr" (rect 20 113 41 127)(font "Arial" (font_size 8)))
+		(text "sclr" (rect 20 113 41 127)(font "Arial" (font_size 8)))
+		(line (pt 0 120)(pt 16 120))
+	)
+	(port
+		(pt 88 144)
+		(input)
+		(text "aclr" (rect 80 113 101 127)(font "Arial" (font_size 8)))
+		(text "aclr" (rect 80 113 101 127)(font "Arial" (font_size 8)))
+		(line (pt 88 144)(pt 88 128))
+	)
+	(port
+		(pt 0 72)
+		(input)
+		(text "data[LPM_WIDTH-1..0]" (rect 20 63 146 77)(font "Arial" (font_size 8)))
+		(text "data[]" (rect 20 63 51 77)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 16 72)(line_width 3))
+	)
+	(port
+		(pt 176 88)
+		(output)
+		(text "q[LPM_WIDTH-1..0]" (rect 144 81 252 95)(font "Arial" (font_size 8)))
+		(text "q[]" (rect 144 81 158 95)(font "Arial" (font_size 8)))
+		(line (pt 160 88)(pt 176 88)(line_width 3))
+	)
+	(parameter
+		"LPM_AVALUE"
+		""
+		"Unsigned value associated with the aset port"
+	)
+	(parameter
+		"LPM_FFTYPE"
+		"DFF"
+		"Selects behavior as DFF or TFF"
+		"\"DFF\"" "\"TFF\"" 
+		(type "PARAMETER_STRING")	)
+	(parameter
+		"LPM_SVALUE"
+		""
+		"Unsigned value associated with the sset port"
+	)
+	(parameter
+		"LPM_WIDTH"
+		"11"
+		"Width of I/O, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" "40" "48" "56" "64" 
+	)
+	(drawing
+		(line (pt 16 16)(pt 160 16))
+		(line (pt 16 128)(pt 160 128))
+		(line (pt 160 128)(pt 160 16))
+		(line (pt 16 128)(pt 16 16))
+		(line (pt 16 80)(pt 24 88))
+		(line (pt 24 88)(pt 16 96))
+	)
+	(annotation_block (parameter)(rect 1368 496 1510 591))
+)
+(symbol
+	(rect 1616 616 1792 760)
+	(text "LPM_FF" (rect 19 0 78 16)(font "Arial" (font_size 10)))
+	(text "inst18" (rect 3 133 31 150)(font "Intel Clear" ))
+	(port
+		(pt 0 104)
+		(input)
+		(text "enable" (rect 20 97 57 111)(font "Arial" (font_size 8)))
+		(text "enable" (rect 20 97 57 111)(font "Arial" (font_size 8)))
+		(line (pt 0 104)(pt 16 104))
+	)
+	(port
+		(pt 0 88)
+		(input)
+		(text "clock" (rect 20 81 49 95)(font "Arial" (font_size 8))(invisible))
+		(text "clock" (rect 20 81 49 95)(font "Arial" (font_size 8))(invisible))
+		(line (pt 0 88)(pt 16 88))
+	)
+	(port
+		(pt 0 24)
+		(input)
+		(text "aload" (rect 20 17 50 31)(font "Arial" (font_size 8)))
+		(text "aload" (rect 20 17 50 31)(font "Arial" (font_size 8)))
+		(line (pt 0 24)(pt 16 24))
+	)
+	(port
+		(pt 0 40)
+		(input)
+		(text "sset" (rect 20 33 44 47)(font "Arial" (font_size 8)))
+		(text "sset" (rect 20 33 44 47)(font "Arial" (font_size 8)))
+		(line (pt 0 40)(pt 16 40))
+	)
+	(port
+		(pt 0 56)
+		(input)
+		(text "sload" (rect 20 49 50 63)(font "Arial" (font_size 8)))
+		(text "sload" (rect 20 49 50 63)(font "Arial" (font_size 8)))
+		(line (pt 0 56)(pt 16 56))
+	)
+	(port
+		(pt 88 0)
+		(input)
+		(text "aset" (rect 79 17 103 31)(font "Arial" (font_size 8)))
+		(text "aset" (rect 79 17 103 31)(font "Arial" (font_size 8)))
+		(line (pt 88 16)(pt 88 0))
+	)
+	(port
+		(pt 0 120)
+		(input)
+		(text "sclr" (rect 20 113 41 127)(font "Arial" (font_size 8)))
+		(text "sclr" (rect 20 113 41 127)(font "Arial" (font_size 8)))
+		(line (pt 0 120)(pt 16 120))
+	)
+	(port
+		(pt 88 144)
+		(input)
+		(text "aclr" (rect 80 113 101 127)(font "Arial" (font_size 8)))
+		(text "aclr" (rect 80 113 101 127)(font "Arial" (font_size 8)))
+		(line (pt 88 144)(pt 88 128))
+	)
+	(port
+		(pt 0 72)
+		(input)
+		(text "data[LPM_WIDTH-1..0]" (rect 20 63 146 77)(font "Arial" (font_size 8)))
+		(text "data[]" (rect 20 63 51 77)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 16 72)(line_width 3))
+	)
+	(port
+		(pt 176 88)
+		(output)
+		(text "q[LPM_WIDTH-1..0]" (rect 144 81 252 95)(font "Arial" (font_size 8)))
+		(text "q[]" (rect 144 81 158 95)(font "Arial" (font_size 8)))
+		(line (pt 160 88)(pt 176 88)(line_width 3))
+	)
+	(parameter
+		"LPM_AVALUE"
+		""
+		"Unsigned value associated with the aset port"
+	)
+	(parameter
+		"LPM_FFTYPE"
+		"DFF"
+		"Selects behavior as DFF or TFF"
+		"\"DFF\"" "\"TFF\"" 
+		(type "PARAMETER_STRING")	)
+	(parameter
+		"LPM_SVALUE"
+		""
+		"Unsigned value associated with the sset port"
+	)
+	(parameter
+		"LPM_WIDTH"
+		"11"
+		"Width of I/O, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" "40" "48" "56" "64" 
+	)
+	(drawing
+		(line (pt 16 16)(pt 160 16))
+		(line (pt 16 128)(pt 160 128))
+		(line (pt 160 128)(pt 160 16))
+		(line (pt 16 128)(pt 16 16))
+		(line (pt 16 80)(pt 24 88))
+		(line (pt 24 88)(pt 16 96))
+	)
+	(annotation_block (parameter)(rect 1632 512 1774 607))
 )
 (connector
 	(text "A2[4..0]" (rect 896 552 932 569)(font "Intel Clear" ))
@@ -1481,26 +1693,54 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "DATA_ADDR_5[10..0]" (rect 512 664 614 681)(font "Intel Clear" ))
-	(pt 584 680)
-	(pt 608 680)
-	(bus)
-)
-(connector
 	(text "M3[1..0]" (rect 1562 384 1600 401)(font "Intel Clear" ))
 	(pt 1632 400)
 	(pt 1552 400)
 	(bus)
 )
 (connector
+	(text "M5[1..0]" (rect 2466 352 2504 369)(font "Intel Clear" ))
+	(pt 2456 368)
+	(pt 2576 368)
+	(bus)
+)
+(connector
+	(text "M4[1..0]" (rect 1946 368 1984 385)(font "Intel Clear" ))
 	(pt 1936 384)
 	(pt 2152 384)
 	(bus)
 )
 (connector
-	(text "M5[1..0]" (rect 2466 352 2504 369)(font "Intel Clear" ))
-	(pt 2456 368)
-	(pt 2576 368)
+	(pt 1528 688)
+	(pt 1616 688)
+	(bus)
+)
+(connector
+	(text "DATA_ADDR_5[10..0]" (rect 1256 656 1358 673)(font "Intel Clear" ))
+	(pt 1248 672)
+	(pt 1352 672)
+	(bus)
+)
+(connector
+	(text "CLK" (rect 1288 672 1308 689)(font "Intel Clear" ))
+	(pt 1248 688)
+	(pt 1352 688)
+)
+(connector
+	(text "CLK" (rect 1552 688 1572 705)(font "Intel Clear" ))
+	(pt 1552 704)
+	(pt 1616 704)
+)
+(connector
+	(text "DATA_ADDR_7[10..0]" (rect 1800 688 1902 705)(font "Intel Clear" ))
+	(pt 1792 704)
+	(pt 1896 704)
+	(bus)
+)
+(connector
+	(text "DATA_ADDR_7[10..0]" (rect 512 664 614 681)(font "Intel Clear" ))
+	(pt 504 680)
+	(pt 608 680)
 	(bus)
 )
 (connector

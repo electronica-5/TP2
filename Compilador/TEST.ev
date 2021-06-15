@@ -12,3 +12,4 @@ MOV W,2     //W=R2          ->W=46
 NOP
 NOP //hola
 ADK W,#-1
+JMP 1
