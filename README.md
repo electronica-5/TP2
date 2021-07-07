@@ -69,6 +69,7 @@ The execute Stage consist of the `Microinstruction 2` Block located under the `U
 Finally the Retire stage consist of the `Microinstruction 3` Block located under the `Microinstruction 2`. The main purpose of this stage is to save the results of the ALU in the corresponding register of the `Register Bank`.
 
 # Instruction Set
+>[Table of contents](#table-of-contents)
 
 The intruction set used for this Processor is as follows:
 
@@ -77,6 +78,7 @@ The intruction set used for this Processor is as follows:
 You can see, that as many other RISC Processors, there are only two instructions for memory management, `MOM Y,W` and `MOM W,Y`.
 
 # Tests
+>[Table of contents](#table-of-contents)
 
 To test the implementation of this processor a compiler was made from mnemonic notation in the instruction set to machine language instructions. The compiler can be found in `./Compilador` and the usage is as follows:
 
