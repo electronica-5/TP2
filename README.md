@@ -1,6 +1,6 @@
-# Pix2Pix-Image-Colorizer
+# EV21 Processor
 
-Deep Neural Network to colorize images in black and white colors using the Pix2Pix Architecture. Documentation can be found in [TPF Redes Neuronales](https://github.com/iancraz/Pix2Pix-Image-Colorizer/blob/main/docs/TPF%20Redes%20Neuronales.pdf) (in Spanish).
+RISC Processor called EV21 implemented it in Quartus for the Altera Cyclone IV FPGA. It runs over a 87.5 MHz base clock, has branch prediction algorithms and a 5 stage pipeline.
 
 # Table of contents
 
@@ -15,23 +15,27 @@ Deep Neural Network to colorize images in black and white colors using the Pix2P
 # Introduction
 >[Table of contents](#table-of-contents)
 
-The Pix2Pix architecture has proven effective for natural images, and the authors of the original paper claim that it can perform well the problem of image-to-image translation. However, synthetic images may present a challenging use scenario. 
+In the world of processors, there is two main types of implementations that are currently running in modern day applications:
 
-In this work, we use the Pix2Pix architecture for a colorization of art pictures in black and white.
+* CISC Processors (Complex Instruction Set Computer) That in short, have many intructions in its instruction set
 
-# Dataset
+* RISC Processors (Reduced Instruction Set Computer) That in the other hand, they are characterized for having a low amount of instructions to use.
+
+In this work, we focused on implementing a RISC Processor that was capable of implementing a 5 stage pipeline. The main focus was to make the branch prediction algorithm for jumps in code, the most optimized possible. In the next section we will get into a little more detail on how this was implemented.
+
+
+# Implementation
 >[Table of contents](#table-of-contents)
 
-The dataset used in this work is the `Art Images: Drawing/Painting/Sculptures/Engravings.` provided in [Kaggle](https://www.kaggle.com/thedownhill/art-images-drawings-painting-sculpture-engraving). The dataset consist of images of artworks in different forms, such as Drawings, Sculptures, etc. However, in this work we used only the Draweings part of the dataset discarding the rest.
+To implement this processor we used the Altera Cyclone IV in the DE0 Nano FPGA Evaluation Board. To program this design we used Quartus as the main compilation and debugging program, and the code was written in Verilog.
 
-Here you can see some examples of this dataset:
-
-![alt text](https://github.com/iancraz/Pix2Pix-Image-Colorizer/blob/main/docs/example1.jpg?raw=true "Example 1")
+The main structure of the Processor can be seen as follows:
 
 
-![alt text](https://github.com/iancraz/Pix2Pix-Image-Colorizer/blob/main/docs/example2.jpg?raw=true "Example 2")
+![alt text](https://github.com/iancraz/EV1-Processor/blob/main/docs/Diagram.png?raw=true "Input")
 
-However, this dataset is already included in this repository, credits to Danil.
+
+
 
 # Quick Reference
 >[Table of contents](#table-of-contents)
