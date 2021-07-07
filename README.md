@@ -30,12 +30,11 @@ To implement this processor we used the Altera Cyclone IV in the DE0 Nano FPGA E
 
 The main structure of the Processor can be seen as follows:
 
-
-![alt text](https://github.com/iancraz/EV21-Processor/blob/main/docs/Diagram.png?raw=true "Input")
+<img src="https://github.com/iancraz/EV21-Processor/blob/main/docs/Diagram.png?raw=true" width=800 align=center>
 
 Also, the Register Bank is implemented as:
 
-![alt text](https://github.com/iancraz/EV21-Processor/blob/main/docs/Register_bank.png?raw=true "Input")
+<img src="https://github.com/iancraz/EV21-Processor/blob/main/docs/Register_bank.png?raw=true" width=800 align=center>
 
 As you can see, it is separeted in different modules, that working together they implement the 5 stage pipeline, it cosists of:
 
@@ -73,10 +72,9 @@ Finally the Retire stage consist of the `Microinstruction 3` Block located under
 
 The intruction set used for this Processor is as follows:
 
-![alt text](https://github.com/iancraz/EV21-Processor/blob/main/docs/Instr_set.png?raw=true "Input")
+<img src="https://github.com/iancraz/EV21-Processor/blob/main/docs/Instr_set.png?raw=true" width=800 align=center>
 
 You can see, that as many other RISC Processors, there are only two instructions for memory management, `MOM Y,W` and `MOM W,Y`.
-
 
 # Tests
 
@@ -115,7 +113,7 @@ And the waveform read by an oscilloscope can be seen as Follows:
 
 <img src="https://github.com/iancraz/EV21-Processor/blob/main/Mediciones/TEST1%20-%20Program.png?raw=true" width=800 align=center>
 
-## Test 1: Counter
+## Test 2: Counter
 
 The second Test program used was a simple counter program shown as:
 
