@@ -10,6 +10,6 @@ MOM W,0     //W=M(0)        ->W = 29
 ADW 2,1     //R2 = R1+W+CY  ->R2 = 46
 MOV W,2     //W=R2          ->W=46
 NOP
-NOP //hola
+NOP
 ADK W,#-1
 JMP 1
