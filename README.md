@@ -5,10 +5,9 @@ RISC Processor called EV21 implemented it in Quartus for the Altera Cyclone IV F
 # Table of contents
 
 * [Introduction](#Introduction)
-* [Dataset](#Dataset)
-* [Quick-Reference](#Quick-Reference)
-* [Training](#Training)
-* [Training](#training)
+* [Implementation](#Implementation)
+* [Instruction Set](#Instruction-Set)
+* [Tests](#Tests)
 * [Contact](#Contact)
 * [License](#License)
 
@@ -27,7 +26,7 @@ In this work, we focused on implementing a RISC Processor that was capable of im
 # Implementation
 >[Table of contents](#table-of-contents)
 
-To implement this processor we used the Altera Cyclone IV in the DE0 Nano FPGA Evaluation Board. To program this design we used Quartus as the main compilation and debugging program, and the code was written in Verilog.
+To implement this processor we used the Altera Cyclone IV in the DE0 Nano FPGA Evaluation Board. To program this design we used [Quartus](https://fpgasoftware.intel.com/?edition=lite) as the main compilation and debugging program, and the code was written in Verilog.
 
 The main structure of the Processor can be seen as follows:
 
@@ -116,7 +115,53 @@ And the waveform read by an oscilloscope can be seen as Follows:
 
 <img src="https://github.com/iancraz/EV21-Processor/blob/main/Mediciones/TEST1%20-%20Program.png?raw=true" width=800 align=center>
 
+## Test 1: Counter
 
+The second Test program used was a simple counter program shown as:
+
+```
+NOP
+NOP
+MOK W,#1
+MOV 0,W
+MOK W,#0
+NOP
+NOP
+NOP
+NOP
+ADR W,0
+NOP
+NOP
+JMP 7
+NOP
+```
+
+And the waveform read by an oscilloscope can be seen as Follows:
+
+<img src="https://github.com/iancraz/EV21-Processor/blob/main/Mediciones/TEST3%20-%20Contador.png?raw=true" width=800 align=center>
+
+## Test 3: Input/Output
+
+The third Test program implemented was a program to check if the input and output system was working propperly, for this, we inseted values on the input bus, and made the Processor copy thosw values on the Output bus.
+
+```
+NOP
+NOP
+NOP
+NOP
+NOP
+MOV 30,28
+NOP
+NOP
+NOP
+NOP
+JMP 3
+
+```
+
+And the waveform read by an oscilloscope can be seen as Follows:
+
+<img src="https://github.com/iancraz/EV21-Processor/blob/main/Mediciones/TEST4%20-%20Copiador%20de%20INPUT%20a%20OUTPUT.png?raw=true" width=800 align=center>
 
 
 # Contact
