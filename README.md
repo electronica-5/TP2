@@ -34,77 +34,35 @@ The main structure of the Processor can be seen as follows:
 
 ![alt text](https://github.com/iancraz/EV1-Processor/blob/main/docs/Diagram.png?raw=true "Input")
 
+Also, the Register Bank is implemented as:
+
+![alt text](https://github.com/iancraz/EV1-Processor/blob/main/docs/Register_bank.png?raw=true "Input")
+
+As you can see, it is separeted in different modules, that working together they implement the 5 stage pipeline, it cosists of:
+
+`Fetch --> Decode --> Operand --> Execute --> Retire`
+
+Each of this stages will be explained in the following sections.
+
+## Fetch
+
+## Decode
+
+## Operand
+
+## Execute
+
+## Retire
+
+# Instruction Set
+
+The intruction set used for this Processor is as follows:
+
+![alt text](https://github.com/iancraz/EV1-Processor/blob/main/docs/Instr_set.png?raw=true "Input")
+
+You can see, that as many other RISC Processors, there are only two instructions for memory management, `MOM Y,W` and `MOM W,Y`.
 
 
-
-# Quick Reference
->[Table of contents](#table-of-contents)
-
-To run this example, you need to clone this repository:
-
-```
-git clone https://github.com/iancraz/Pix2Pix-Image-Colorizer.git
-```
-
-After you have cloned this repository you need to create the directories `./Dataset/train/` and `./checkpoints/`, once you created this directories you can download this pretrained model so as not to have to retrain the model. The link to the checkpoint is:
-
-[Checkpoint](https://drive.google.com/file/d/10uJ-W6xV7viHc0UWiHsMUY4xFCFt4Ab5/view?usp=sharing)
-
-[Checkpoint Index](https://drive.google.com/file/d/10xVxfjFAN9A9nUKLIAe_3dh6yIP0_9Mw/view?usp=sharing)
-
-Once you have downloaded this checkpoints you must save them in the `./checkpoints/` folder.
-
-Now you are ready to test this model, you must run all the Jupyter Notebook (Remember to update the paths in the file so that it matches your computer), and the model should run smoothly. 
-
-If you don't want to reatrain your model and prefer to use the pretrained one you **MUST NOT** run the cell:
-
-```Python
-train(train_dataset, 100)
-```
-
-You can test the model with the function:
-
-```Python
-generate_images(model, test_input, tar, save_filename=False, display_imgs=True)
-```
-
-# Training
->[Table of contents](#table-of-contents)
-
-The training was done in 25 epochs whit 32 long batchsizes, the results are shown as follows:
-
-Input Image:
-
-![alt text](https://github.com/iancraz/Pix2Pix-Image-Colorizer/blob/main/docs/input.jpg?raw=true "Input")
-
-Target Image:
-
-![alt text](https://github.com/iancraz/Pix2Pix-Image-Colorizer/blob/main/docs/target.jpg?raw=true "Target")
-
-Epoch 1:
-
-<img src="https://github.com/iancraz/Pix2Pix-Image-Colorizer/blob/main/docs/0_0.jpg?raw=true" width=300 align=center>
-
-Epoch 5:
-
-<img src="https://github.com/iancraz/Pix2Pix-Image-Colorizer/blob/main/docs/0_5.jpg?raw=true" width=300 align=center>
-
-Epoch 10:
-
-<img src="https://github.com/iancraz/Pix2Pix-Image-Colorizer/blob/main/docs/0_10.jpg?raw=true" width=300 align=center>
-
-Epoch 15:
-
-<img src="https://github.com/iancraz/Pix2Pix-Image-Colorizer/blob/main/docs/0_15.jpg?raw=true" width=300 align=center>
-
-Epoch 20:
-
-<img src="https://github.com/iancraz/Pix2Pix-Image-Colorizer/blob/main/docs/0_20.jpg?raw=true" width=300 align=center>
-
-
-Epoch 25:
-
-<img src="https://github.com/iancraz/Pix2Pix-Image-Colorizer/blob/main/docs/0_25.jpg?raw=true" width=300 align=center>
 
 If you prefer you can watch the complete epochs gif as follows:
 
