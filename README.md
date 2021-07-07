@@ -32,11 +32,11 @@ To implement this processor we used the Altera Cyclone IV in the DE0 Nano FPGA E
 The main structure of the Processor can be seen as follows:
 
 
-![alt text](https://github.com/iancraz/EV1-Processor/blob/main/docs/Diagram.png?raw=true "Input")
+![alt text](https://github.com/iancraz/EV21-Processor/blob/main/docs/Diagram.png?raw=true "Input")
 
 Also, the Register Bank is implemented as:
 
-![alt text](https://github.com/iancraz/EV1-Processor/blob/main/docs/Register_bank.png?raw=true "Input")
+![alt text](https://github.com/iancraz/EV21-Processor/blob/main/docs/Register_bank.png?raw=true "Input")
 
 As you can see, it is separeted in different modules, that working together they implement the 5 stage pipeline, it cosists of:
 
@@ -46,27 +46,78 @@ Each of this stages will be explained in the following sections.
 
 ## Fetch
 
+The Fetch Stage consist of four modules:
+
+* `PC`(Program Counter)
+* `Program Memory`
+* `Instruction Register`
+
+Where the Program counter must increment its counter so that it reads one instruction for every clock cylcle. It is important to note that the PC must be driven by the Processor clock and by the branch prediction Block (called `Bloque 1` in the diagram). The program Memory is an internal ROM memory containing the instructions uploaded to the processor. Finally the instruction Register must take the data from the program memory and output its Instruction code.
+
 ## Decode
+
+The decode Stage is composed by the Micro Instruction ROM, and its purpose is to translate the instruction received from the Instruction Register to a corresponding Microinstruction Set by the programmers. It is important to know that in this design, every instruction is composed by one and only one microinstruction.
 
 ## Operand
 
+The operand Stage consist of the output of the `Microinstruction 1` Block, this block is the block positionated on top of the `UC-1` block. This stage main purpose is to load the operand in the correspondign positions for the ALU (Aritmetic Logic Unit) to perform the correspondign operation over those operands.
+
 ## Execute
 
+The execute Stage consist of the `Microinstruction 2` Block located under the `UC-1` block. The purpose of this stage is to tell the ALU to perform the operation to the operands previously loaded.
+
 ## Retire
+
+Finally the Retire stage consist of the `Microinstruction 3` Block located under the `Microinstruction 2`. The main purpose of this stage is to save the results of the ALU in the corresponding register of the `Register Bank`.
 
 # Instruction Set
 
 The intruction set used for this Processor is as follows:
 
-![alt text](https://github.com/iancraz/EV1-Processor/blob/main/docs/Instr_set.png?raw=true "Input")
+![alt text](https://github.com/iancraz/EV21-Processor/blob/main/docs/Instr_set.png?raw=true "Input")
 
 You can see, that as many other RISC Processors, there are only two instructions for memory management, `MOM Y,W` and `MOM W,Y`.
 
 
+# Tests
 
-If you prefer you can watch the complete epochs gif as follows:
+To test the implementation of this processor a compiler was made from mnemonic notation in the instruction set to machine language instructions. The compiler can be found in `./Compilador` and the usage is as follows:
 
-<img src="https://github.com/iancraz/Pix2Pix-Image-Colorizer/blob/main/docs/Training_epochs.gif?raw=true" width=300 align=center>
+```
+python evc.py <Name of the .ev Program to compile>
+```
+A `Program_memory.mif` file will be created if no error in the code has been found, to load this program in the Processor you must move this file to the `./EV21/` folder and compile the Quartus Project.
+
+Some program examples can be found in the compilator folder.
+
+## Test 1: Simple Program
+
+The first program we have tested is the following:
+
+```
+MOK W,#10   //W=10
+MOV 0,W     //R0 = W
+MOK W,#19   //W=19
+ADW 1,0     //R1=W+R0+CY
+MOV W,1     //W=R1  -> W=29
+MOM 0,W     //M(0) = W  
+MOK W,#7    //W=7   
+ADW 1,0     //R1 = R0+W+CY  ->R1 = 17
+MOM W,0     //W=M(0)        ->W = 29
+ADW 2,1     //R2 = R1+W+CY  ->R2 = 46
+MOV W,2     //W=R2          ->W=46
+NOP
+NOP
+ADK W,#-1
+JMP 1
+```
+
+And the waveform read by an oscilloscope can be seen as Follows:
+
+<img src="https://github.com/iancraz/EV21-Processor/blob/main/Mediciones/TEST1%20-%20Program.png?raw=true" width=800 align=center>
+
+
+
 
 # Contact
 >[Table of contents](#table-of-contents)
