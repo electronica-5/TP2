@@ -8,7 +8,6 @@ RISC Processor called EV21 implemented it in Quartus for the Altera Cyclone IV F
 * [Implementation](#Implementation)
 * [Instruction Set](#Instruction-Set)
 * [Tests](#Tests)
-* [Contact](#Contact)
 * [License](#License)
 
 # Introduction
@@ -162,16 +161,6 @@ JMP 3
 And the waveform read by an oscilloscope can be seen as Follows:
 
 <img src="https://github.com/iancraz/EV21-Processor/blob/main/Mediciones/TEST4%20-%20Copiador%20de%20INPUT%20a%20OUTPUT.png?raw=true" width=800 align=center>
-
-
-# Contact
->[Table of contents](#table-of-contents)
-
-Please do not hesitate to reach out to me if you find any issue with the code or if you have any questions.
-
-* Personal email: [idiaz@itba.edu.ar](mailto:idiaz@itba.edu.ar)
-
-* LinkedIn Profile: [https://www.linkedin.com/in/iancraz/](https://www.linkedin.com/in/iancraz/)
 
 # License
 >[Table of contents](#table-of-contents)
